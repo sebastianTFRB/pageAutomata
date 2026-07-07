@@ -1,0 +1,100 @@
+import time
+import paramiko
+
+from modules.logger import log
+
+
+class SSHClient:
+
+    def __init__(self, ip, usuario="admin", password="P@sto2025"):
+
+        self.ip = ip
+        self.usuario = usuario
+        self.password = password
+
+        self.client = None
+        self.shell = None
+
+    def connect(self):
+
+        log.info(f"[{self.ip}] Conectando por SSH...")
+
+        self.client = paramiko.SSHClient()
+
+        self.client.set_missing_host_key_policy(
+            paramiko.AutoAddPolicy()
+        )
+
+        # El login SSH del TI-G102i NO usa contraseña
+        self.client.connect(
+            hostname=self.ip,
+            username=self.usuario,
+            password="",
+            timeout=10,
+            look_for_keys=False,
+            allow_agent=False
+        )
+
+        self.shell = self.client.invoke_shell()
+
+        time.sleep(1)
+
+        bienvenida = self.read()
+
+        log.info(bienvenida)
+
+        log.info(f"[{self.ip}] SSH conectado")
+
+    def read(self):
+
+        texto = ""
+
+        time.sleep(0.5)
+
+        while self.shell.recv_ready():
+
+            texto += self.shell.recv(65535).decode(
+                errors="ignore"
+            )
+
+        return texto
+
+    def send(self, comando):
+
+        log.info(f"[{self.ip}] >>> {comando}")
+
+        self.shell.send(comando + "\n")
+
+        time.sleep(1)
+
+        salida = self.read()
+
+        log.info(salida)
+
+        return salida
+
+    def enable(self):
+
+        salida = self.send("enable")
+
+        if "user:" in salida.lower():
+
+            salida = self.send(self.usuario)
+
+        if "password:" in salida.lower():
+
+            salida = self.send(self.password)
+
+        if "#" not in salida:
+
+            raise Exception("No fue posible entrar al modo ENABLE")
+
+        log.info(f"[{self.ip}] Modo ENABLE correcto")
+
+    def disconnect(self):
+
+        if self.client:
+
+            self.client.close()
+
+            log.info(f"[{self.ip}] SSH cerrado")

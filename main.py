@@ -2,7 +2,7 @@ from playwright.sync_api import sync_playwright
 
 from modules.logger import log
 from modules.excel import ExcelManager
-
+from modules.ssh import SSHClient
 from modules.trendnet import TrendnetSwitch
 from modules.statistics import Statistics
 from modules.timer import Timer
@@ -71,6 +71,26 @@ def main():
                 sw.enable_ssh()
 
                 sw.save_configuration()
+                log.info(f"[{datos['ip']}] Esperando servicio SSH...")
+
+                page.wait_for_timeout(5000)
+
+                ssh = SSHClient(
+                    datos["ip"],
+                    datos["usuario"],
+                    datos["password"]
+                )
+
+                ssh.connect()
+
+                ssh.enable()
+
+                print(
+                    ssh.send("show system-info")
+                )
+
+                ssh.disconnect()
+                ssh.disconnect()
 
                 stats.ok += 1
 
