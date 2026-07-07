@@ -1,20 +1,31 @@
 from playwright.sync_api import sync_playwright
 
-
-import modules
-from modules.trendnet import TrendnetSwitch
 from modules.logger import log
+from modules.excel import ExcelManager
+
+from modules.trendnet import TrendnetSwitch
+from modules.statistics import Statistics
+from modules.timer import Timer
+from modules.ping import ping
 
 
 def main():
 
+    timer = Timer()
+
+    timer.start()
+
     log.info("===== INICIO DEL PROCESO =====")
 
-    excel = modules.excel.ExcelManager("switches.xlsx")
+    excel = ExcelManager("switches.xlsx")
 
     excel.abrir()
 
     switches = excel.obtener_switches()
+
+    stats = Statistics()
+
+    stats.iniciar(len(switches))
 
     with sync_playwright() as p:
 
@@ -23,6 +34,23 @@ def main():
         )
 
         for datos in switches:
+
+            stats.siguiente()
+
+            stats.mostrar_progreso(
+                datos["nombre"]
+            )
+
+            if not ping(datos["ip"]):
+
+                log.warning(
+                    f"[{datos['ip']}] Sin respuesta al ping"
+                )
+
+                stats.error += 1
+                stats.sin_ping += 1
+
+                continue
 
             page = browser.new_page()
 
@@ -44,31 +72,62 @@ def main():
 
                 sw.save_configuration()
 
-                excel.actualizar_resultado(
-                    datos["fila"],
-                    "OK",
-                    "",
-                    "SSH habilitado"
-                )
+                stats.ok += 1
 
             except Exception as e:
 
-                log.error(str(e))
+                texto = str(e)
 
-                excel.actualizar_resultado(
-                    datos["fila"],
-                    "ERROR",
-                    str(e),
-                    ""
-                )
+                log.error(texto)
+
+                stats.error += 1
+
+                if "login" in texto.lower():
+
+                    stats.login += 1
+
+                elif "ssh" in texto.lower():
+
+                    stats.ssh += 1
+
+                elif "save" in texto.lower():
+
+                    stats.guardado += 1
+
+                else:
+
+                    stats.otros += 1
+
+                try:
+
+                    page.screenshot(
+                        path=f"screenshots/{datos['ip']}.png",
+                        full_page=True
+                    )
+
+                except:
+
+                    pass
 
             finally:
 
-                sw.close()
+                try:
+
+                    sw.close()
+
+                except:
+
+                    pass
 
         browser.close()
 
-    excel.guardar()
+    stats.resumen()
+
+    tiempo = timer.stop()
+
+    print()
+
+    print(f"Tiempo total: {tiempo} segundos")
 
     log.info("===== FIN DEL PROCESO =====")
 

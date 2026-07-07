@@ -7,6 +7,7 @@ class TrendnetSwitch:
     def __init__(self, page, ip):
         self.page = page
         self.ip = ip
+        self.page.set_default_timeout(10000)
 
     def open(self):
 
