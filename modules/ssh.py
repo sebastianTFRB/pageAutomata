@@ -62,11 +62,11 @@ class SSHClient:
 
         while self.channel.recv_ready():
 
-            salida += self.channel.recv(
-                65535
-            ).decode(
-                errors="ignore"
-            )
+            datos = self.channel.recv(65535).decode(errors="ignore")
+
+            print(repr(datos))
+
+            salida += datos
 
         return salida
 
@@ -90,39 +90,56 @@ class SSHClient:
 
         self.channel.send("enable\n")
 
-        time.sleep(0.5)
+        salida = ""
 
-        salida = self._leer()
-
-        log.info(salida)
-
-        if "user" in salida.lower():
-
-            self.channel.send(self.usuario + "\n")
+        for _ in range(20):
 
             time.sleep(0.5)
 
-            salida = self._leer()
+            salida += self._leer()
 
-            log.info(salida)
+            if "user:" in salida.lower():
+                break
 
-        if "password" in salida.lower():
+        log.info(salida)
 
-            self.channel.send(self.password + "\n")
+        if "user:" not in salida.lower():
+            raise Exception("El switch nunca pidió el usuario")
 
-            time.sleep(1)
+        self.channel.send(self.usuario + "\n")
 
-            salida = self._leer()
+        salida = ""
 
-            log.info(salida)
+        for _ in range(20):
 
-        if "#" in salida:
+            time.sleep(0.5)
 
-            log.info(f"[{self.ip}] Enable correcto")
+            salida += self._leer()
 
-        else:
+            if "password:" in salida.lower():
+                break
 
+        log.info(salida)
+
+        self.channel.send(self.password + "\n")
+
+        salida = ""
+
+        for _ in range(20):
+
+            time.sleep(0.5)
+
+            salida += self._leer()
+
+            if "#" in salida:
+                break
+
+        log.info(salida)
+
+        if "#" not in salida:
             raise Exception("No fue posible entrar en modo enable")
+
+        log.info(f"[{self.ip}] Enable correcto")
 
     def disconnect(self):
 
