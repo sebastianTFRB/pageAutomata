@@ -1,0 +1,6 @@
+USERNAME = "admin"
+PASSWORD = "P@sto2025"
+
+HEADLESS = False
+
+TIMEOUT = 15000

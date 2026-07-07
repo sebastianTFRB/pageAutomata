@@ -1,0 +1,104 @@
+22:29:48 | INFO     | ===== INICIO DEL PROCESO =====
+22:29:48 | INFO     | [172.16.0.170] Abriendo switch
+22:31:40 | INFO     | ===== INICIO DEL PROCESO =====
+22:31:41 | INFO     | [172.16.0.170] Abriendo switch
+22:31:41 | INFO     | [172.16.0.170] Iniciando sesión
+22:31:48 | INFO     | [172.16.0.170] Login correcto
+22:31:48 | INFO     | [172.16.0.170] Entrando a SSH
+22:36:08 | INFO     | ===== INICIO DEL PROCESO =====
+22:36:09 | INFO     | [172.16.0.170] Abriendo switch
+22:36:09 | INFO     | [172.16.0.170] Iniciando sesión
+22:36:16 | INFO     | [172.16.0.170] Login correcto
+22:36:16 | INFO     | [172.16.0.170] Entrando a SSH
+22:36:30 | INFO     | ===== INICIO DEL PROCESO =====
+22:36:31 | INFO     | [172.16.0.170] Abriendo switch
+22:36:32 | INFO     | [172.16.0.170] Iniciando sesión
+22:36:38 | INFO     | [172.16.0.170] Login correcto
+22:36:38 | INFO     | [172.16.0.170] Entrando a SSH
+22:39:30 | INFO     | ===== INICIO DEL PROCESO =====
+22:39:31 | INFO     | [172.16.0.170] Abriendo switch
+22:39:31 | INFO     | [172.16.0.170] Iniciando sesión
+22:39:38 | INFO     | [172.16.0.170] Login correcto
+22:39:38 | INFO     | URL actual: http://172.16.0.170/webctrl.cgi?action=cgi_home_page&csrf_token=8e68be26a4ec607bf8cf6d1bfaf20d09
+22:39:38 | INFO     | [172.16.0.170] Entrando a SSH
+22:42:12 | INFO     | ===== INICIO DEL PROCESO =====
+22:42:12 | INFO     | [172.16.0.170] Abriendo switch
+22:42:13 | INFO     | [172.16.0.170] Iniciando sesión
+22:42:19 | INFO     | [172.16.0.170] Login correcto
+22:42:19 | INFO     | URL actual: http://172.16.0.170/webctrl.cgi?action=cgi_home_page&csrf_token=80afb9bc50510a495d5e5d34d3470f9f
+22:42:19 | INFO     | [172.16.0.170] Abriendo configuración SSH
+22:44:24 | INFO     | ===== INICIO DEL PROCESO =====
+22:44:25 | INFO     | [172.16.0.170] Abriendo switch
+22:44:25 | INFO     | [172.16.0.170] Iniciando sesión
+22:44:32 | INFO     | [172.16.0.170] Login correcto
+22:44:32 | INFO     | URL actual: http://172.16.0.170/webctrl.cgi?action=cgi_home_page&csrf_token=19d1edc27d71944d4d6e4f6cfa42382a
+22:44:32 | INFO     | [172.16.0.170] Abriendo configuración SSH
+22:44:33 | INFO     | [172.16.0.170] SSH activado
+22:44:35 | INFO     | [172.16.0.170] Apply enviado
+22:44:35 | INFO     | [172.16.0.170] Guardando configuración
+22:58:43 | INFO     | ===== INICIO DEL PROCESO =====
+22:58:44 | INFO     | [172.16.0.170] Abriendo switch
+22:58:45 | INFO     | [172.16.0.170] Iniciando sesión
+23:01:01 | INFO     | ===== INICIO DEL PROCESO =====
+23:01:02 | INFO     | [172.16.0.170] Abriendo switch
+23:01:02 | INFO     | [172.16.0.170] Iniciando sesión
+23:01:09 | INFO     | [172.16.0.170] Login correcto
+23:01:09 | INFO     | [172.16.0.170] URL: http://172.16.0.170/webctrl.cgi?action=cgi_home_page&csrf_token=8e8cc2afd729d6576d6ddd944907f136
+23:01:09 | INFO     | [172.16.0.170] Abriendo menú SSH
+23:04:36 | INFO     | ===== INICIO DEL PROCESO =====
+23:04:37 | INFO     | [172.16.0.170] Abriendo switch
+23:04:37 | INFO     | [172.16.0.170] Iniciando sesión
+23:04:44 | INFO     | [172.16.0.170] Login correcto
+23:04:44 | INFO     | [172.16.0.170] URL: http://172.16.0.170/webctrl.cgi?action=cgi_home_page&csrf_token=bec207c4485db459ce1f385632dab052
+23:04:44 | INFO     | [172.16.0.170] Abriendo configuración SSH
+23:04:44 | INFO     | [172.16.0.170] Estado SSH actual: 1
+23:04:44 | INFO     | [172.16.0.170] SSH ya estaba habilitado
+23:04:44 | INFO     | http://172.16.0.170/webctrl.cgi?action=cgi_app_switch_cfg_ssh&csrf_token=bec207c4485db459ce1f385632dab052
+23:04:44 | INFO     | [172.16.0.170] Abriendo página Save
+23:04:55 | INFO     | [172.16.0.170] Configuración guardada
+23:04:55 | INFO     | http://172.16.0.170/webctrl.cgi
+23:04:55 | INFO     | ===== FIN DEL PROCESO =====
+23:10:56 | INFO     | ===== INICIO DEL PROCESO =====
+23:10:57 | INFO     | [172.16.0.170] Abriendo switch
+23:10:58 | INFO     | [172.16.0.170] Iniciando sesión
+23:11:04 | INFO     | [172.16.0.170] Login correcto
+23:11:04 | INFO     | [172.16.0.170] URL: http://172.16.0.170/webctrl.cgi?action=cgi_home_page&csrf_token=9bc21794c95380ecdfb7eb88625d71b6
+23:11:04 | INFO     | [172.16.0.170] Abriendo configuración SSH
+23:11:05 | INFO     | [172.16.0.170] Estado SSH actual: 0
+23:11:08 | INFO     | [172.16.0.170] SSH activado
+23:11:08 | INFO     | http://172.16.0.170/webctrl.cgi
+23:11:08 | INFO     | [172.16.0.170] Abriendo página Save
+23:11:23 | INFO     | ===== INICIO DEL PROCESO =====
+23:11:24 | INFO     | [172.16.0.170] Abriendo switch
+23:11:25 | INFO     | [172.16.0.170] Iniciando sesión
+23:11:45 | INFO     | ===== INICIO DEL PROCESO =====
+23:11:45 | INFO     | [172.16.0.170] Abriendo switch
+23:11:46 | INFO     | [172.16.0.170] Iniciando sesión
+23:12:27 | INFO     | ===== INICIO DEL PROCESO =====
+23:12:28 | INFO     | [172.16.0.170] Abriendo switch
+23:12:29 | INFO     | [172.16.0.170] Iniciando sesión
+23:19:27 | INFO     | ===== INICIO DEL PROCESO =====
+23:19:28 | INFO     | [172.16.0.170] Abriendo switch
+23:19:28 | INFO     | [172.16.0.170] Iniciando sesión
+23:19:35 | INFO     | [172.16.0.170] Login correcto
+23:19:35 | INFO     | [172.16.0.170] URL: http://172.16.0.170/webctrl.cgi?action=cgi_home_page&csrf_token=74805151ac1ba4689a27cce80a729501
+23:19:35 | INFO     | [172.16.0.170] Abriendo configuración SSH
+23:19:36 | INFO     | [172.16.0.170] Estado SSH actual: 0
+23:19:38 | INFO     | [172.16.0.170] Esperando aplicación de cambios...
+23:19:43 | WARNING  | [172.16.0.170] El switch aún está procesando...
+23:19:48 | INFO     | [172.16.0.170] SSH activado
+23:19:48 | INFO     | [172.16.0.170] URL actual: http://172.16.0.170/webctrl.cgi
+23:19:48 | INFO     | [172.16.0.170] Abriendo página Save
+23:21:25 | INFO     | ===== INICIO DEL PROCESO =====
+23:21:26 | INFO     | [172.16.0.170] Abriendo switch
+23:21:27 | INFO     | [172.16.0.170] Iniciando sesión
+23:21:33 | INFO     | [172.16.0.170] Login correcto
+23:21:33 | INFO     | [172.16.0.170] URL: http://172.16.0.170/webctrl.cgi?action=cgi_home_page&csrf_token=008edffb505e533e74d9b16c8324b440
+23:21:33 | INFO     | [172.16.0.170] Abriendo configuración SSH
+23:21:34 | INFO     | [172.16.0.170] Estado SSH actual: 1
+23:21:34 | INFO     | [172.16.0.170] SSH ya estaba habilitado
+23:21:34 | INFO     | URL después de Apply: http://172.16.0.170/webctrl.cgi?action=cgi_app_switch_cfg_ssh&csrf_token=008edffb505e533e74d9b16c8324b440
+23:21:34 | INFO     | [172.16.0.170] Abriendo página Save
+23:21:45 | INFO     | [172.16.0.170] Configuración guardada
+23:21:45 | INFO     | URL final: http://172.16.0.170/webctrl.cgi
+23:21:45 | INFO     | ===== FIN DEL PROCESO =====
