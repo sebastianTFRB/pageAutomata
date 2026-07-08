@@ -692,3 +692,583 @@ TI-G102i#
 10:21:33 | WARNING  | [172.16.0.183] Sin respuesta al ping
 10:21:34 | WARNING  | [172.16.0.181] Sin respuesta al ping
 10:21:34 | INFO     | ===== FIN DEL PROCESO =====
+10:27:26 | INFO     | ===== INICIO DEL PROCESO =====
+10:27:26 | INFO     | Abriendo Excel: switches.xlsx
+10:27:26 | INFO     | Se encontraron 79 switches
+10:27:28 | WARNING  | [171.16.0.131] Sin respuesta al ping
+10:27:29 | WARNING  | [172.16.0.135] Sin respuesta al ping
+10:27:30 | WARNING  | [172.16.0.134] Sin respuesta al ping
+10:27:31 | WARNING  | [172.16.0.133] Sin respuesta al ping
+10:27:32 | WARNING  | [172.16.0.132] Sin respuesta al ping
+10:27:33 | WARNING  | [172.16.0.139] Sin respuesta al ping
+10:27:34 | WARNING  | [172.16.0.140] Sin respuesta al ping
+10:27:35 | WARNING  | [172.16.0.136] Sin respuesta al ping
+10:27:36 | WARNING  | [172.16.0.137] Sin respuesta al ping
+10:27:37 | WARNING  | [172.16.0.138] Sin respuesta al ping
+10:27:38 | WARNING  | [172.16.0.190] Sin respuesta al ping
+10:27:39 | WARNING  | [172.16.0.161] Sin respuesta al ping
+10:27:40 | WARNING  | [172.16.0.165] Sin respuesta al ping
+10:27:41 | WARNING  | [172.16.0.162] Sin respuesta al ping
+10:27:42 | WARNING  | [172.16.0.167] Sin respuesta al ping
+10:27:43 | WARNING  | [172.16.0.174] Sin respuesta al ping
+10:27:46 | WARNING  | [RESPALDO] Sin respuesta al ping
+10:27:47 | WARNING  | [172.16.0.175] Sin respuesta al ping
+10:27:48 | WARNING  | [172.16.0.187] Sin respuesta al ping
+10:27:49 | WARNING  | [172.16.0.169] Sin respuesta al ping
+10:27:50 | WARNING  | [172.16.0.190] Sin respuesta al ping
+10:27:51 | WARNING  | [172.16.0.188] Sin respuesta al ping
+10:27:52 | WARNING  | [172.16.0.191] Sin respuesta al ping
+10:27:53 | WARNING  | [172.16.0.192] Sin respuesta al ping
+10:27:54 | WARNING  | [172.16.0.189] Sin respuesta al ping
+10:27:57 | WARNING  | [RESPALDO] Sin respuesta al ping
+10:27:57 | WARNING  | [172.16.0.195] Sin respuesta al ping
+10:27:58 | WARNING  | [172.16.0.196] Sin respuesta al ping
+10:27:59 | WARNING  | [172.16.0.194] Sin respuesta al ping
+10:28:00 | WARNING  | [172.16.0.193] Sin respuesta al ping
+10:28:01 | WARNING  | [172.16.0.151] Sin respuesta al ping
+10:28:02 | WARNING  | [172.16.0.152] Sin respuesta al ping
+10:28:03 | WARNING  | [172.16.0.153] Sin respuesta al ping
+10:28:04 | WARNING  | [172.16.0.154] Sin respuesta al ping
+10:28:05 | WARNING  | [172.16.0.155] Sin respuesta al ping
+10:28:06 | WARNING  | [172.16.0.159] Sin respuesta al ping
+10:28:07 | WARNING  | [172.16.0.172] Sin respuesta al ping
+10:28:08 | WARNING  | [172.16.0.158] Sin respuesta al ping
+10:28:09 | WARNING  | [172.16.0.157] Sin respuesta al ping
+10:28:10 | WARNING  | [172.16.0.156] Sin respuesta al ping
+10:28:11 | WARNING  | [172.16.0.125] Sin respuesta al ping
+10:28:12 | WARNING  | [172.16.0.126] Sin respuesta al ping
+10:28:13 | WARNING  | [172.16.0.124] Sin respuesta al ping
+10:28:14 | WARNING  | [172.16.0.123] Sin respuesta al ping
+10:28:15 | WARNING  | [172.16.0.129] Sin respuesta al ping
+10:28:16 | WARNING  | [172.16.0.122] Sin respuesta al ping
+10:28:17 | WARNING  | [172.16.0.121] Sin respuesta al ping
+10:28:18 | WARNING  | [172.16.0.128] Sin respuesta al ping
+10:28:19 | WARNING  | [172.16.0.127] Sin respuesta al ping
+10:28:20 | WARNING  | [172.16.0.130] Sin respuesta al ping
+10:28:21 | WARNING  | [172.16.0.163] Sin respuesta al ping
+10:28:21 | INFO     | [172.16.0.170] Abriendo switch
+10:28:22 | INFO     | [172.16.0.170] Iniciando sesión
+10:28:29 | INFO     | [172.16.0.170] Login correcto
+10:28:29 | INFO     | [172.16.0.170] URL: http://172.16.0.170/webctrl.cgi?action=cgi_home_page&csrf_token=c478220531114b7673e17f6b6362a2a9
+10:28:29 | INFO     | [172.16.0.170] Abriendo configuración SSH
+10:28:29 | INFO     | [172.16.0.170] Estado SSH actual: 1
+10:28:29 | INFO     | [172.16.0.170] SSH ya estaba habilitado
+10:28:29 | INFO     | URL después de Apply: http://172.16.0.170/webctrl.cgi?action=cgi_app_switch_cfg_ssh&csrf_token=c478220531114b7673e17f6b6362a2a9
+10:28:29 | INFO     | [172.16.0.170] Abriendo página Save
+10:28:40 | ERROR    | Timeout 640ms exceeded.
+=========================== logs ===========================
+"domcontentloaded" event fired
+"load" event fired
+============================================================
+10:28:41 | WARNING  | [172.16.0.171] Sin respuesta al ping
+10:28:42 | WARNING  | [172.16.0.164] Sin respuesta al ping
+10:28:43 | WARNING  | [172.16.0.176] Sin respuesta al ping
+10:28:44 | WARNING  | [172.16.0.160] Sin respuesta al ping
+10:28:45 | WARNING  | [172.16.0.168] Sin respuesta al ping
+10:28:46 | WARNING  | [172.16.0.166] Sin respuesta al ping
+10:28:47 | WARNING  | [172.16.0.173] Sin respuesta al ping
+10:28:48 | WARNING  | [172.16.0.177] Sin respuesta al ping
+10:28:49 | WARNING  | [172.16.0.150] Sin respuesta al ping
+10:28:50 | WARNING  | [172.16.0.148] Sin respuesta al ping
+10:28:51 | WARNING  | [172.16.0.149] Sin respuesta al ping
+10:28:52 | WARNING  | [172.16.0.147] Sin respuesta al ping
+10:28:53 | WARNING  | [172.16.0.146] Sin respuesta al ping
+10:28:54 | WARNING  | [172.16.0.141] Sin respuesta al ping
+10:28:55 | WARNING  | [172.16.0.142] Sin respuesta al ping
+10:28:56 | WARNING  | [172.16.0.143] Sin respuesta al ping
+10:28:57 | WARNING  | [172.16.0.144] Sin respuesta al ping
+10:28:58 | WARNING  | [172.16.0.145] Sin respuesta al ping
+10:28:59 | WARNING  | [172.16.0.178] Sin respuesta al ping
+10:29:00 | WARNING  | [172.16.0.180] Sin respuesta al ping
+10:29:01 | WARNING  | [172.16.0.185] Sin respuesta al ping
+10:29:02 | WARNING  | [172.16.0.186] Sin respuesta al ping
+10:29:03 | WARNING  | [172.16.0.179] Sin respuesta al ping
+10:29:04 | WARNING  | [172.16.0.182] Sin respuesta al ping
+10:29:05 | WARNING  | [172.16.0.184] Sin respuesta al ping
+10:29:06 | WARNING  | [172.16.0.183] Sin respuesta al ping
+10:29:07 | WARNING  | [172.16.0.181] Sin respuesta al ping
+10:29:08 | INFO     | ===== FIN DEL PROCESO =====
+10:44:12 | INFO     | ===== INICIO DEL PROCESO =====
+10:44:12 | INFO     | Abriendo Excel: switches.xlsx
+10:44:12 | INFO     | Se encontraron 79 switches
+10:44:13 | WARNING  | [171.16.0.131] Sin respuesta al ping
+10:44:14 | WARNING  | [172.16.0.135] Sin respuesta al ping
+10:44:15 | WARNING  | [172.16.0.134] Sin respuesta al ping
+10:44:16 | WARNING  | [172.16.0.133] Sin respuesta al ping
+10:44:17 | WARNING  | [172.16.0.132] Sin respuesta al ping
+10:44:18 | WARNING  | [172.16.0.139] Sin respuesta al ping
+10:44:19 | WARNING  | [172.16.0.140] Sin respuesta al ping
+10:44:20 | WARNING  | [172.16.0.136] Sin respuesta al ping
+10:44:21 | WARNING  | [172.16.0.137] Sin respuesta al ping
+10:44:22 | WARNING  | [172.16.0.138] Sin respuesta al ping
+10:44:23 | WARNING  | [172.16.0.190] Sin respuesta al ping
+10:44:24 | WARNING  | [172.16.0.161] Sin respuesta al ping
+10:44:25 | WARNING  | [172.16.0.165] Sin respuesta al ping
+10:44:26 | WARNING  | [172.16.0.162] Sin respuesta al ping
+10:44:27 | WARNING  | [172.16.0.167] Sin respuesta al ping
+10:44:28 | WARNING  | [172.16.0.174] Sin respuesta al ping
+10:44:31 | WARNING  | [RESPALDO] Sin respuesta al ping
+10:44:32 | WARNING  | [172.16.0.175] Sin respuesta al ping
+10:44:33 | WARNING  | [172.16.0.187] Sin respuesta al ping
+10:44:34 | WARNING  | [172.16.0.169] Sin respuesta al ping
+10:44:35 | WARNING  | [172.16.0.190] Sin respuesta al ping
+10:44:36 | WARNING  | [172.16.0.188] Sin respuesta al ping
+10:44:37 | WARNING  | [172.16.0.191] Sin respuesta al ping
+10:44:38 | WARNING  | [172.16.0.192] Sin respuesta al ping
+10:44:39 | WARNING  | [172.16.0.189] Sin respuesta al ping
+10:44:42 | WARNING  | [RESPALDO] Sin respuesta al ping
+10:44:42 | WARNING  | [172.16.0.195] Sin respuesta al ping
+10:44:43 | WARNING  | [172.16.0.196] Sin respuesta al ping
+10:44:44 | WARNING  | [172.16.0.194] Sin respuesta al ping
+10:44:45 | WARNING  | [172.16.0.193] Sin respuesta al ping
+10:44:46 | WARNING  | [172.16.0.151] Sin respuesta al ping
+10:44:47 | WARNING  | [172.16.0.152] Sin respuesta al ping
+10:44:48 | WARNING  | [172.16.0.153] Sin respuesta al ping
+10:44:49 | WARNING  | [172.16.0.154] Sin respuesta al ping
+10:44:50 | WARNING  | [172.16.0.155] Sin respuesta al ping
+10:44:51 | WARNING  | [172.16.0.159] Sin respuesta al ping
+10:44:52 | WARNING  | [172.16.0.172] Sin respuesta al ping
+10:44:53 | WARNING  | [172.16.0.158] Sin respuesta al ping
+10:44:54 | WARNING  | [172.16.0.157] Sin respuesta al ping
+10:44:55 | WARNING  | [172.16.0.156] Sin respuesta al ping
+10:44:56 | WARNING  | [172.16.0.125] Sin respuesta al ping
+10:44:57 | WARNING  | [172.16.0.126] Sin respuesta al ping
+10:44:58 | WARNING  | [172.16.0.124] Sin respuesta al ping
+10:44:59 | WARNING  | [172.16.0.123] Sin respuesta al ping
+10:45:00 | WARNING  | [172.16.0.129] Sin respuesta al ping
+10:45:01 | WARNING  | [172.16.0.122] Sin respuesta al ping
+10:45:02 | WARNING  | [172.16.0.121] Sin respuesta al ping
+10:45:03 | WARNING  | [172.16.0.128] Sin respuesta al ping
+10:45:04 | WARNING  | [172.16.0.127] Sin respuesta al ping
+10:45:05 | WARNING  | [172.16.0.130] Sin respuesta al ping
+10:45:06 | WARNING  | [172.16.0.163] Sin respuesta al ping
+10:45:06 | INFO     | [172.16.0.170] Abriendo switch
+10:45:07 | INFO     | [172.16.0.170] Iniciando sesión
+10:45:13 | INFO     | [172.16.0.170] Login correcto
+10:45:13 | INFO     | [172.16.0.170] URL: http://172.16.0.170/webctrl.cgi?action=cgi_home_page&csrf_token=935e80554c5e28a6a5f1f2c908f4cac5
+10:45:13 | INFO     | [172.16.0.170] Abriendo configuración SSH
+10:45:15 | INFO     | [172.16.0.170] Estado SSH actual: 1
+10:45:15 | INFO     | [172.16.0.170] SSH ya estaba habilitado
+10:45:15 | INFO     | URL después de Apply: http://172.16.0.170/webctrl.cgi?action=cgi_app_switch_cfg_ssh&csrf_token=935e80554c5e28a6a5f1f2c908f4cac5
+10:45:15 | INFO     | [172.16.0.170] Abriendo página Save
+10:45:25 | INFO     | [172.16.0.170] Configuración guardada
+10:45:25 | INFO     | URL final: http://172.16.0.170/webctrl.cgi
+10:45:25 | INFO     | [172.16.0.170] Esperando servicio SSH...
+10:45:30 | INFO     | [172.16.0.170] Conectando por SSH...
+10:45:30 | INFO     | Connected (version 2.0, client dropbear_2024.84)
+10:45:31 | INFO     | Authentication (none) successful!
+10:45:31 | INFO     | [172.16.0.170] Autenticado mediante NONE
+10:45:32 | INFO     | [172.16.0.170] Consola lista
+10:45:32 | INFO     | [172.16.0.170] Entrando a modo enable
+10:45:34 | INFO     | enable
+TI-G102i>enable
+user:
+10:45:34 | INFO     | admin
+password:
+10:45:36 | INFO     | 
+TI-G102i#
+10:45:36 | INFO     | [172.16.0.170] Enable correcto
+10:45:36 | INFO     | [172.16.0.170] >> show system-info
+10:45:37 | INFO     | show system-info
+CLI auto-logout: 5 minutes.
+CPU loading: 28.48%
+Memory info: total 127636 KB, free 110256 KB, usage 13.62%
+
+TI-G102i#
+10:45:37 | INFO     | [172.16.0.170] SSH cerrado
+10:45:37 | INFO     | [172.16.0.170] SSH cerrado
+10:45:38 | WARNING  | [172.16.0.171] Sin respuesta al ping
+10:45:39 | WARNING  | [172.16.0.164] Sin respuesta al ping
+10:45:40 | WARNING  | [172.16.0.176] Sin respuesta al ping
+10:45:41 | WARNING  | [172.16.0.160] Sin respuesta al ping
+10:45:42 | WARNING  | [172.16.0.168] Sin respuesta al ping
+10:45:43 | WARNING  | [172.16.0.166] Sin respuesta al ping
+10:45:44 | WARNING  | [172.16.0.173] Sin respuesta al ping
+10:45:45 | WARNING  | [172.16.0.177] Sin respuesta al ping
+10:45:46 | WARNING  | [172.16.0.150] Sin respuesta al ping
+10:45:47 | WARNING  | [172.16.0.148] Sin respuesta al ping
+10:45:48 | WARNING  | [172.16.0.149] Sin respuesta al ping
+10:45:49 | WARNING  | [172.16.0.147] Sin respuesta al ping
+10:45:50 | WARNING  | [172.16.0.146] Sin respuesta al ping
+10:45:51 | WARNING  | [172.16.0.141] Sin respuesta al ping
+10:45:52 | WARNING  | [172.16.0.142] Sin respuesta al ping
+10:45:53 | WARNING  | [172.16.0.143] Sin respuesta al ping
+10:45:54 | WARNING  | [172.16.0.144] Sin respuesta al ping
+10:45:55 | WARNING  | [172.16.0.145] Sin respuesta al ping
+10:45:56 | WARNING  | [172.16.0.178] Sin respuesta al ping
+10:45:57 | WARNING  | [172.16.0.180] Sin respuesta al ping
+10:45:58 | WARNING  | [172.16.0.185] Sin respuesta al ping
+10:45:59 | WARNING  | [172.16.0.186] Sin respuesta al ping
+10:46:00 | WARNING  | [172.16.0.179] Sin respuesta al ping
+10:46:01 | WARNING  | [172.16.0.182] Sin respuesta al ping
+10:46:02 | WARNING  | [172.16.0.184] Sin respuesta al ping
+10:46:03 | WARNING  | [172.16.0.183] Sin respuesta al ping
+10:46:04 | WARNING  | [172.16.0.181] Sin respuesta al ping
+10:46:04 | INFO     | ===== FIN DEL PROCESO =====
+11:15:13 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\assets
+11:15:13 | INFO     | Starting up TCP server on localhost:62228
+11:15:13 | INFO     | Flet app has started...
+11:15:15 | INFO     | App URL: tcp://localhost:62228
+11:15:15 | INFO     | Starting Flet View app...
+11:15:15 | INFO     | Downloading Flet v0.85.3 from https://github.com/flet-dev/flet/releases/download/v0.85.3/flet-windows.zip
+11:15:22 | INFO     | Extracting Flet client from C:\Users\sebax\AppData\Local\Temp\flet-windows.zip.qI1wLtUUBl to C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3.cJRPqqhw
+11:15:23 | INFO     | App session started
+11:15:29 | INFO     | Abriendo Excel: switches.xlsx
+11:15:29 | INFO     | Se encontraron 79 switches
+11:16:24 | INFO     | [172.16.0.170] Abriendo switch
+11:16:25 | INFO     | [172.16.0.170] Iniciando sesión
+11:16:31 | INFO     | [172.16.0.170] Login correcto
+11:16:31 | INFO     | [172.16.0.170] URL: http://172.16.0.170/webctrl.cgi?action=cgi_home_page&csrf_token=d5c3154887e955ed8868417139fe994a
+11:16:31 | INFO     | [172.16.0.170] Abriendo configuración SSH
+11:16:32 | INFO     | [172.16.0.170] Estado SSH actual: 1
+11:16:32 | INFO     | [172.16.0.170] SSH ya estaba habilitado
+11:16:32 | INFO     | URL después de Apply: http://172.16.0.170/webctrl.cgi?action=cgi_app_switch_cfg_ssh&csrf_token=d5c3154887e955ed8868417139fe994a
+11:16:32 | INFO     | [172.16.0.170] Abriendo página Save
+11:16:42 | INFO     | [172.16.0.170] Configuración guardada
+11:16:42 | INFO     | URL final: http://172.16.0.170/webctrl.cgi
+11:16:47 | INFO     | [172.16.0.170] Conectando por SSH...
+11:16:47 | INFO     | Connected (version 2.0, client dropbear_2024.84)
+11:16:49 | INFO     | Authentication (none) successful!
+11:16:49 | INFO     | [172.16.0.170] Autenticado mediante NONE
+11:16:50 | INFO     | [172.16.0.170] Consola lista
+11:16:50 | INFO     | [172.16.0.170] Entrando a modo enable
+11:16:51 | INFO     | enable
+TI-G102i>enable
+user:
+11:16:52 | INFO     | admin
+password:
+11:16:53 | INFO     | 
+TI-G102i#
+11:16:53 | INFO     | [172.16.0.170] Enable correcto
+11:16:53 | INFO     | [172.16.0.170] >> show system-info
+11:16:54 | INFO     | show system-info
+CLI auto-logout: 5 minutes.
+CPU loading: 56.61%
+Memory info: total 127636 KB, free 110284 KB, usage 13.59%
+
+TI-G102i#
+11:16:54 | INFO     | [172.16.0.170] SSH cerrado
+11:23:31 | INFO     | Session was garbage collected: Sq2WuxUtfLLc5Mk8
+11:23:32 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\assets
+11:23:32 | INFO     | Starting up TCP server on localhost:60626
+11:23:32 | INFO     | Flet app has started...
+11:23:32 | INFO     | App URL: tcp://localhost:60626
+11:23:32 | INFO     | Starting Flet View app...
+11:23:32 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+11:23:32 | INFO     | App session started
+11:23:34 | INFO     | Session was garbage collected: FU7UmM4mneCPwheT
+11:23:49 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\assets
+11:23:49 | INFO     | Starting up TCP server on localhost:60630
+11:23:49 | INFO     | Flet app has started...
+11:23:49 | INFO     | App URL: tcp://localhost:60630
+11:23:49 | INFO     | Starting Flet View app...
+11:23:49 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+11:23:49 | INFO     | App session started
+11:23:49 | ERROR    | Unhandled error in main() handler
+Traceback (most recent call last):
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\app.py", line 354, in on_session_created
+    main(session.page)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 50, in main
+    icon=ft.icons.ROCKET_LAUNCH_ROUNDED,
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'flet.controls.material.icons' has no attribute 'ROCKET_LAUNCH_ROUNDED'
+11:23:56 | INFO     | Session was garbage collected: JZmbFwg8RphlGFC8
+11:23:56 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\assets
+11:23:56 | INFO     | Starting up TCP server on localhost:60637
+11:23:56 | INFO     | Flet app has started...
+11:23:56 | INFO     | App URL: tcp://localhost:60637
+11:23:56 | INFO     | Starting Flet View app...
+11:23:56 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+11:23:56 | INFO     | App session started
+11:23:56 | ERROR    | Unhandled error in main() handler
+Traceback (most recent call last):
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\app.py", line 354, in on_session_created
+    main(session.page)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 50, in main
+    icon=ft.icons.ROCKET_LAUNCH_ROUNDED,
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'flet.controls.material.icons' has no attribute 'ROCKET_LAUNCH_ROUNDED'
+11:23:58 | INFO     | Session was garbage collected: wE8rJsb67BMgvWwb
+11:27:16 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\assets
+11:27:16 | INFO     | Starting up TCP server on localhost:60860
+11:27:16 | INFO     | Flet app has started...
+11:27:16 | INFO     | App URL: tcp://localhost:60860
+11:27:16 | INFO     | Starting Flet View app...
+11:27:16 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+11:27:16 | INFO     | App session started
+11:27:16 | ERROR    | Unhandled error in main() handler
+Traceback (most recent call last):
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\app.py", line 354, in on_session_created
+    main(session.page)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 50, in main
+    icon=ft.icons.ROCKET_LAUNCH,
+         ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'flet.controls.material.icons' has no attribute 'ROCKET_LAUNCH'
+11:30:03 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\assets
+11:30:03 | INFO     | Starting up TCP server on localhost:59242
+11:30:03 | INFO     | Flet app has started...
+11:30:03 | INFO     | App URL: tcp://localhost:59242
+11:30:03 | INFO     | Starting Flet View app...
+11:30:03 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+11:30:04 | INFO     | App session started
+11:30:04 | ERROR    | Unhandled error in main() handler
+Traceback (most recent call last):
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\app.py", line 354, in on_session_created
+    main(session.page)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 50, in main
+    icon=ft.icons.ROCKET_LAUNCH,
+         ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'flet.controls.material.icons' has no attribute 'ROCKET_LAUNCH'
+11:30:34 | INFO     | Session was garbage collected: KecTQYf8kiVeQ9G8
+11:30:34 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\assets
+11:30:34 | INFO     | Starting up TCP server on localhost:50354
+11:30:34 | INFO     | Flet app has started...
+11:30:34 | INFO     | App URL: tcp://localhost:50354
+11:30:34 | INFO     | Starting Flet View app...
+11:30:34 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+11:30:35 | INFO     | App session started
+11:30:35 | ERROR    | Unhandled error in main() handler
+Traceback (most recent call last):
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\app.py", line 354, in on_session_created
+    main(session.page)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 50, in main
+    icon=ft.icons.PLAY_ARROW,
+         ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'flet.controls.material.icons' has no attribute 'ROCKET_LAUNCH'
+11:30:36 | INFO     | Session was garbage collected: cxqe73m7X6H3ZNKS
+11:30:41 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\assets
+11:30:41 | INFO     | Starting up TCP server on localhost:50358
+11:30:41 | INFO     | Flet app has started...
+11:30:41 | INFO     | App URL: tcp://localhost:50358
+11:30:41 | INFO     | Starting Flet View app...
+11:30:41 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+11:30:42 | INFO     | App session started
+11:30:42 | ERROR    | Unhandled error in main() handler
+Traceback (most recent call last):
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\app.py", line 354, in on_session_created
+    main(session.page)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 50, in main
+    icon=ft.icons.PLAY_ARROW,
+         ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'flet.controls.material.icons' has no attribute 'PLAY_ARROW'
+11:31:47 | INFO     | Session was garbage collected: J5rCSnyNMcZIPTxD
+11:31:47 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\assets
+11:31:47 | INFO     | Starting up TCP server on localhost:64729
+11:31:47 | INFO     | Flet app has started...
+11:31:47 | INFO     | App URL: tcp://localhost:64729
+11:31:47 | INFO     | Starting Flet View app...
+11:31:47 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+11:31:48 | INFO     | App session started
+11:31:48 | ERROR    | Unhandled error in main() handler
+Traceback (most recent call last):
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\app.py", line 354, in on_session_created
+    main(session.page)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 50, in main
+    icon=ft.icons.PLAY_ARROW,
+         ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'flet.controls.material.icons' has no attribute 'PLAY_ARROW'
+11:31:49 | INFO     | Session was garbage collected: dwwaSyq1pTZhQ6Tt
+11:32:02 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\assets
+11:32:02 | INFO     | Starting up TCP server on localhost:64738
+11:32:02 | INFO     | Flet app has started...
+11:32:02 | INFO     | App URL: tcp://localhost:64738
+11:32:02 | INFO     | Starting Flet View app...
+11:32:02 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+11:32:02 | INFO     | App session started
+11:32:02 | ERROR    | Unhandled error in main() handler
+Traceback (most recent call last):
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\app.py", line 354, in on_session_created
+    main(session.page)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 50, in main
+    icon=ft.icons.PLAY_ARROW,
+         ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'flet.controls.material.icons' has no attribute 'PLAY_ARROW'
+11:32:05 | INFO     | Session was garbage collected: 0yxwIeXXN396frHo
+11:32:05 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\assets
+11:32:05 | INFO     | Starting up TCP server on localhost:64743
+11:32:05 | INFO     | Flet app has started...
+11:32:05 | INFO     | App URL: tcp://localhost:64743
+11:32:05 | INFO     | Starting Flet View app...
+11:32:05 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+11:32:05 | INFO     | App session started
+11:32:05 | ERROR    | Unhandled error in main() handler
+Traceback (most recent call last):
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\app.py", line 354, in on_session_created
+    main(session.page)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 50, in main
+    icon=ft.icons.PLAY_ARROW,
+         ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'flet.controls.material.icons' has no attribute 'PLAY_ARROW'
+11:33:16 | INFO     | Session was garbage collected: ug34RYzkupCYlr5h
+11:33:20 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\assets
+11:33:20 | INFO     | Starting up TCP server on localhost:65334
+11:33:20 | INFO     | Flet app has started...
+11:33:20 | INFO     | App URL: tcp://localhost:65334
+11:33:20 | INFO     | Starting Flet View app...
+11:33:20 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+11:33:20 | INFO     | App session started
+11:33:20 | ERROR    | Unhandled error in main() handler
+Traceback (most recent call last):
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\app.py", line 354, in on_session_created
+    main(session.page)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 48, in main
+    boton = ft.ElevatedButton(
+            ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\utils\deprecated.py", line 122, in new_init
+    orig_init(self, *args, **kwargs)
+TypeError: Button.__init__() got an unexpected keyword argument 'text'
+11:33:25 | INFO     | Session was garbage collected: SfZABtx8hOrAfrjz
+11:33:25 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\assets
+11:33:25 | INFO     | Starting up TCP server on localhost:65341
+11:33:25 | INFO     | Flet app has started...
+11:33:25 | INFO     | App URL: tcp://localhost:65341
+11:33:25 | INFO     | Starting Flet View app...
+11:33:25 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+11:33:25 | INFO     | App session started
+11:33:25 | ERROR    | Unhandled error in main() handler
+Traceback (most recent call last):
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\app.py", line 354, in on_session_created
+    main(session.page)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 48, in main
+    boton = ft.ElevatedButton(
+            ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\utils\deprecated.py", line 122, in new_init
+    orig_init(self, *args, **kwargs)
+TypeError: Button.__init__() got an unexpected keyword argument 'text'
+11:33:27 | INFO     | Session was garbage collected: Uo5ucrFWj6mIHxmg
+11:34:35 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\assets
+11:34:35 | INFO     | Starting up TCP server on localhost:55571
+11:34:35 | INFO     | Flet app has started...
+11:34:35 | INFO     | App URL: tcp://localhost:55571
+11:34:35 | INFO     | Starting Flet View app...
+11:34:35 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+11:34:36 | INFO     | App session started
+11:34:36 | ERROR    | Unhandled error in main() handler
+Traceback (most recent call last):
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\app.py", line 354, in on_session_created
+    main(session.page)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 116, in main
+    ft.Icon(ft.icons.TERMINAL, color=COLOR_MUTED, size=20),
+            ^^^^^^^^^^^^^^^^^
+AttributeError: module 'flet.controls.material.icons' has no attribute 'TERMINAL'
+11:34:41 | INFO     | Session was garbage collected: KJzuYTpJyL7eOSsr
+11:34:41 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\assets
+11:34:41 | INFO     | Starting up TCP server on localhost:55578
+11:34:41 | INFO     | Flet app has started...
+11:34:41 | INFO     | App URL: tcp://localhost:55578
+11:34:41 | INFO     | Starting Flet View app...
+11:34:41 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+11:34:42 | INFO     | App session started
+11:34:42 | ERROR    | Unhandled error in main() handler
+Traceback (most recent call last):
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\app.py", line 354, in on_session_created
+    main(session.page)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 116, in main
+    ft.Icon(ft.icons.TERMINAL, color=COLOR_MUTED, size=20),
+            ^^^^^^^^^^^^^^^^^
+AttributeError: module 'flet.controls.material.icons' has no attribute 'TERMINAL'
+11:34:43 | INFO     | Session was garbage collected: apHQRGAcFnmd0tyH
+11:35:59 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\assets
+11:35:59 | INFO     | Starting up TCP server on localhost:61950
+11:35:59 | INFO     | Flet app has started...
+11:35:59 | INFO     | App URL: tcp://localhost:61950
+11:35:59 | INFO     | Starting Flet View app...
+11:35:59 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+11:35:59 | INFO     | App session started
+11:36:15 | INFO     | Session was garbage collected: k38E4D3OtsNZ1Boq
+11:36:15 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\assets
+11:36:15 | INFO     | Starting up TCP server on localhost:61720
+11:36:15 | INFO     | Flet app has started...
+11:36:15 | INFO     | App URL: tcp://localhost:61720
+11:36:15 | INFO     | Starting Flet View app...
+11:36:15 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+11:36:15 | INFO     | App session started
+11:36:21 | INFO     | Session was garbage collected: gvCxRpyY9SxR2YWq
+11:38:16 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\assets
+11:38:16 | INFO     | Starting up TCP server on localhost:50864
+11:38:16 | INFO     | Flet app has started...
+11:38:16 | INFO     | App URL: tcp://localhost:50864
+11:38:16 | INFO     | Starting Flet View app...
+11:38:16 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+11:38:17 | INFO     | App session started
+11:38:22 | INFO     | Session was garbage collected: Qob0Zud0zWlUbLTx
+11:38:23 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\assets
+11:38:23 | INFO     | Starting up TCP server on localhost:50872
+11:38:23 | INFO     | Flet app has started...
+11:38:23 | INFO     | App URL: tcp://localhost:50872
+11:38:23 | INFO     | Starting Flet View app...
+11:38:23 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+11:38:23 | INFO     | App session started
+11:38:25 | INFO     | Session was garbage collected: GEsg40Ain4SUy5gf
+11:38:47 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\assets
+11:38:47 | INFO     | Starting up TCP server on localhost:50880
+11:38:47 | INFO     | Flet app has started...
+11:38:47 | INFO     | App URL: tcp://localhost:50880
+11:38:47 | INFO     | Starting Flet View app...
+11:38:47 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+11:38:47 | INFO     | App session started
+11:38:51 | INFO     | Session was garbage collected: odUyXKkV7DpRnedq
+11:38:51 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\assets
+11:38:51 | INFO     | Starting up TCP server on localhost:50885
+11:38:51 | INFO     | Flet app has started...
+11:38:51 | INFO     | App URL: tcp://localhost:50885
+11:38:51 | INFO     | Starting Flet View app...
+11:38:51 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+11:38:52 | INFO     | App session started
+11:39:44 | INFO     | Session was garbage collected: KqqUaRknk7l8aokE
+11:39:48 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\assets
+11:39:48 | INFO     | Starting up TCP server on localhost:56108
+11:39:48 | INFO     | Flet app has started...
+11:39:48 | INFO     | App URL: tcp://localhost:56108
+11:39:48 | INFO     | Starting Flet View app...
+11:39:48 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+11:39:48 | INFO     | App session started
+11:40:31 | INFO     | Session was garbage collected: 1m2OU27jUgmQFrEE
+11:40:31 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\assets
+11:40:31 | INFO     | Starting up TCP server on localhost:51362
+11:40:31 | INFO     | Flet app has started...
+11:40:31 | INFO     | App URL: tcp://localhost:51362
+11:40:31 | INFO     | Starting Flet View app...
+11:40:31 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+11:40:31 | INFO     | App session started
+11:40:33 | INFO     | Session was garbage collected: BierApERGvKDpzLL
+11:44:44 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\assets
+11:45:21 | INFO     | Starting Flet web server on port 61628...
+11:45:21 | INFO     | Web renderer configured: WebRenderer.AUTO
+11:45:21 | INFO     | Route URL strategy configured: RouteUrlStrategy.PATH
+11:45:21 | INFO     | No CDN configured: False
+11:45:21 | INFO     | Flet app has started...
+11:45:21 | INFO     | Starting up Flet App Manager
+11:45:21 | INFO     | App URL: http://127.0.0.1:61628
+11:45:21 | INFO     | Temp dir created for patched index and manifest: C:\Users\sebax\AppData\Local\Temp\tmpdxpqfsax
+11:45:21 | INFO     | Web root: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet_web\web
+11:45:21 | INFO     | assets_dir does not exist: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\assets
+11:45:21 | INFO     | Assets dir: None
+11:45:22 | INFO     | New FletApp: azlNXFOv
+11:45:22 | INFO     | New session created (1 total): _4KIezvZAOQTPzTSG_17b7f2f5ca16d0169999ee51421b7189155e27ff
+11:45:22 | INFO     | Start session: 4KIezvZAOQTPzTSG
+12:00:25 | INFO     | Session disconnected: _4KIezvZAOQTPzTSG_17b7f2f5ca16d0169999ee51421b7189155e27ff
+12:00:25 | INFO     | Disposing FletApp: azlNXFOv
+12:00:25 | INFO     | FletApp was garbage collected: azlNXFOv
+12:00:37 | INFO     | New FletApp: 8I3lcAbD
+12:00:37 | INFO     | Session reconnected: _4KIezvZAOQTPzTSG_17b7f2f5ca16d0169999ee51421b7189155e27ff
+13:03:29 | INFO     | Session disconnected: _4KIezvZAOQTPzTSG_17b7f2f5ca16d0169999ee51421b7189155e27ff
+13:03:29 | INFO     | Disposing FletApp: 8I3lcAbD
+13:03:29 | INFO     | FletApp was garbage collected: 8I3lcAbD
+14:20:10 | INFO     | Delete session (0 left): _4KIezvZAOQTPzTSG_17b7f2f5ca16d0169999ee51421b7189155e27ff
+14:20:16 | INFO     | New FletApp: OjeoJr2R
+14:20:17 | INFO     | New session created (1 total): _6GhFkQ5DMgD5KarS_17b7f2f5ca16d0169999ee51421b7189155e27ff
+14:20:17 | INFO     | Start session: 6GhFkQ5DMgD5KarS
+14:20:20 | INFO     | Session was garbage collected: 4KIezvZAOQTPzTSG
+14:21:35 | INFO     | Session disconnected: _6GhFkQ5DMgD5KarS_17b7f2f5ca16d0169999ee51421b7189155e27ff
+14:21:35 | INFO     | Disposing FletApp: OjeoJr2R
+14:21:35 | INFO     | FletApp was garbage collected: OjeoJr2R
+15:51:28 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\assets
+15:51:28 | INFO     | Starting up TCP server on localhost:64003
+15:51:28 | INFO     | Flet app has started...
+15:51:28 | INFO     | App URL: tcp://localhost:64003
+15:51:28 | INFO     | Starting Flet View app...
+15:51:28 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+15:51:29 | INFO     | App session started
+15:51:39 | INFO     | Abriendo Excel: switches.xlsx
+15:51:40 | INFO     | Se encontraron 79 switches
