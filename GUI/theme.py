@@ -1,12 +1,12 @@
 """
-Tokens de marca Maintolabs.solution.
+Tokens de marca MaintoLabSL ECHOSECURE.
 Un solo lugar para colores, tipografia y helpers visuales
 compartidos entre todas las pantallas.
 """
 
 import flet as ft
 
-APP_NAME = "Maintolabs.solution"
+APP_NAME = "MaintoLabSL ECHOSECURE"
 
 # ---- Paleta ----
 NAVY_900 = "#0B1D33"   # fondo principal

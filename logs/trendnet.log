@@ -2074,3 +2074,339 @@ TI-G102i#
 00:10:38 | INFO     | Abriendo SQLite: switches.db
 00:10:38 | INFO     | Se encontraron 80 switches
 00:11:51 | INFO     | Session was garbage collected: pBYgmbeuXza35mAC
+10:14:27 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+10:14:27 | INFO     | Starting up TCP server on localhost:50754
+10:14:27 | INFO     | Flet app has started...
+10:14:27 | INFO     | App URL: tcp://localhost:50754
+10:14:27 | INFO     | Starting Flet View app...
+10:14:27 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+10:14:28 | INFO     | App session started
+10:14:28 | INFO     | Abriendo SQLite: switches.db
+10:14:28 | INFO     | Se encontraron 80 switches
+10:17:12 | INFO     | Abriendo SQLite: switches.db
+10:17:12 | INFO     | Se encontraron 80 switches
+10:30:18 | INFO     | Session was garbage collected: Dk9p4e5zIkgHaLnC
+10:30:22 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+10:30:22 | INFO     | Starting up TCP server on localhost:51528
+10:30:22 | INFO     | Flet app has started...
+10:30:22 | INFO     | App URL: tcp://localhost:51528
+10:30:22 | INFO     | Starting Flet View app...
+10:30:22 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+10:30:22 | INFO     | App session started
+10:30:22 | INFO     | Abriendo SQLite: switches.db
+10:30:22 | INFO     | Se encontraron 80 switches
+10:30:22 | ERROR    | Unhandled error in main() handler
+Traceback (most recent call last):
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\app.py", line 354, in on_session_created
+    main(session.page)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 132, in main
+    show_login()
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 129, in show_login
+    page.add(LoginScreen(on_login=handle_login))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\screens\login_screen.py", line 69, in __init__
+    content=ft.Icon(ft.Icons.SHIELD_SHAPED, color=AMBER_400, size=24),
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\controls\material\icons.py", line 72, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: SHIELD_SHAPED
+10:44:22 | INFO     | Session was garbage collected: xlHm60NxjmLFnHcP
+10:44:26 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+10:44:26 | INFO     | Starting up TCP server on localhost:50727
+10:44:26 | INFO     | Flet app has started...
+10:44:26 | INFO     | App URL: tcp://localhost:50727
+10:44:26 | INFO     | Starting Flet View app...
+10:44:26 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+10:44:27 | INFO     | App session started
+10:44:27 | INFO     | Abriendo SQLite: switches.db
+10:44:27 | INFO     | Se encontraron 80 switches
+10:44:59 | INFO     | Abriendo SQLite: switches.db
+10:44:59 | INFO     | Se encontraron 80 switches
+10:51:40 | INFO     | Session was garbage collected: 7jEbIvP0cXB0Qgdy
+10:51:59 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+10:51:59 | INFO     | Starting up TCP server on localhost:53041
+10:51:59 | INFO     | Flet app has started...
+10:51:59 | INFO     | App URL: tcp://localhost:53041
+10:51:59 | INFO     | Starting Flet View app...
+10:51:59 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+10:51:59 | INFO     | App session started
+10:51:59 | INFO     | Abriendo SQLite: switches.db
+10:51:59 | INFO     | Se encontraron 80 switches
+10:52:15 | INFO     | Abriendo SQLite: switches.db
+10:52:15 | INFO     | Se encontraron 80 switches
+11:00:50 | INFO     | Session was garbage collected: NrzpBdm5dL4u9Lpc
+11:02:51 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+11:02:51 | INFO     | Starting up TCP server on localhost:53821
+11:02:51 | INFO     | Flet app has started...
+11:02:51 | INFO     | App URL: tcp://localhost:53821
+11:02:51 | INFO     | Starting Flet View app...
+11:02:51 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+11:02:52 | INFO     | App session started
+11:02:52 | INFO     | Abriendo SQLite: switches.db
+11:02:52 | INFO     | Se encontraron 80 switches
+11:03:01 | INFO     | Session was garbage collected: 7XKVTlTcz8CE2XQc
+11:03:19 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+11:03:19 | INFO     | Starting up TCP server on localhost:50987
+11:03:19 | INFO     | Flet app has started...
+11:03:19 | INFO     | App URL: tcp://localhost:50987
+11:03:19 | INFO     | Starting Flet View app...
+11:03:19 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+11:03:19 | INFO     | App session started
+11:03:19 | INFO     | Abriendo SQLite: switches.db
+11:03:19 | INFO     | Se encontraron 80 switches
+11:04:28 | INFO     | Abriendo SQLite: switches.db
+11:04:28 | INFO     | Se encontraron 80 switches
+11:04:57 | INFO     | Session was garbage collected: RLRyT9C6QggQNDbq
+11:05:00 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+11:05:00 | INFO     | Starting up TCP server on localhost:61374
+11:05:00 | INFO     | Flet app has started...
+11:05:00 | INFO     | App URL: tcp://localhost:61374
+11:05:00 | INFO     | Starting Flet View app...
+11:05:00 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+11:05:01 | INFO     | App session started
+11:05:01 | INFO     | Abriendo SQLite: switches.db
+11:05:01 | INFO     | Se encontraron 80 switches
+11:05:45 | INFO     | Session was garbage collected: eRFQOLHU7HaPBFMn
+11:05:51 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+11:05:51 | INFO     | Starting up TCP server on localhost:49733
+11:05:51 | INFO     | Flet app has started...
+11:05:51 | INFO     | App URL: tcp://localhost:49733
+11:05:51 | INFO     | Starting Flet View app...
+11:05:51 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+11:05:51 | INFO     | App session started
+11:05:51 | INFO     | Abriendo SQLite: switches.db
+11:05:51 | INFO     | Se encontraron 80 switches
+11:13:54 | INFO     | Session was garbage collected: MkzOeyQT5TnNV5z8
+11:13:58 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+11:13:58 | INFO     | Starting up TCP server on localhost:57518
+11:13:58 | INFO     | Flet app has started...
+11:13:58 | INFO     | App URL: tcp://localhost:57518
+11:13:58 | INFO     | Starting Flet View app...
+11:13:58 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+11:13:58 | INFO     | App session started
+11:13:58 | INFO     | Abriendo SQLite: switches.db
+11:13:58 | INFO     | Se encontraron 80 switches
+11:14:24 | INFO     | Abriendo SQLite: switches.db
+11:14:24 | INFO     | Se encontraron 80 switches
+11:14:53 | INFO     | Abriendo SQLite: switches.db
+11:14:53 | INFO     | Se encontraron 80 switches
+11:17:36 | INFO     | Abriendo SQLite: switches.db
+11:17:36 | INFO     | Se encontraron 80 switches
+11:22:52 | INFO     | Session was garbage collected: i98JTdYcuFDI6uVd
+11:27:12 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+11:27:12 | INFO     | Starting up TCP server on localhost:64975
+11:27:12 | INFO     | Flet app has started...
+11:27:12 | INFO     | App URL: tcp://localhost:64975
+11:27:12 | INFO     | Starting Flet View app...
+11:27:12 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+11:27:13 | INFO     | App session started
+11:27:13 | INFO     | Abriendo SQLite: switches.db
+11:27:13 | INFO     | Se encontraron 80 switches
+11:27:31 | ERROR    | Unhandled error in 'on_click' handler
+Traceback (most recent call last):
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\messaging\session.py", line 417, in dispatch_event
+    await control._trigger_event(event_name, event_data)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\controls\base_control.py", line 478, in _trigger_event
+    event_handler(e)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\screens\login_screen.py", line 194, in _submit
+    self.on_login(user)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 59, in handle_login
+    shell = AppShell(
+            ^^^^^^^^^
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\widget\app_sell.py", line 25, in __init__
+    self.page = page
+    ^^^^^^^^^
+AttributeError: property 'page' of 'AppShell' object has no setter
+11:28:05 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+11:28:05 | INFO     | Starting up TCP server on localhost:50746
+11:28:05 | INFO     | Flet app has started...
+11:28:05 | INFO     | App URL: tcp://localhost:50746
+11:28:05 | INFO     | Starting Flet View app...
+11:28:05 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+11:28:06 | INFO     | App session started
+11:28:06 | INFO     | Abriendo SQLite: switches.db
+11:28:06 | INFO     | Se encontraron 80 switches
+11:28:12 | ERROR    | Unhandled error in 'on_click' handler
+Traceback (most recent call last):
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\messaging\session.py", line 417, in dispatch_event
+    await control._trigger_event(event_name, event_data)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\controls\base_control.py", line 478, in _trigger_event
+    event_handler(e)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\screens\login_screen.py", line 194, in _submit
+    self.on_login(user)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 59, in handle_login
+    shell = AppShell(
+            ^^^^^^^^^
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\widget\app_sell.py", line 25, in __init__
+    self.page = page
+    ^^^^^^^^^
+AttributeError: property 'page' of 'AppShell' object has no setter
+11:31:50 | INFO     | Session was garbage collected: DGKxxhtymPe9ynM7
+11:31:57 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+11:31:57 | INFO     | Starting up TCP server on localhost:56403
+11:31:57 | INFO     | Flet app has started...
+11:31:57 | INFO     | App URL: tcp://localhost:56403
+11:31:57 | INFO     | Starting Flet View app...
+11:31:57 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+11:31:58 | INFO     | App session started
+11:31:58 | INFO     | Abriendo SQLite: switches.db
+11:31:58 | INFO     | Se encontraron 80 switches
+11:32:04 | INFO     | Abriendo SQLite: switches.db
+11:32:04 | INFO     | Se encontraron 80 switches
+11:32:14 | INFO     | Abriendo SQLite: switches.db
+11:32:14 | INFO     | Se encontraron 80 switches
+11:35:33 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+11:35:33 | INFO     | Starting up TCP server on localhost:53863
+11:35:33 | INFO     | Flet app has started...
+11:35:33 | INFO     | App URL: tcp://localhost:53863
+11:35:33 | INFO     | Starting Flet View app...
+11:35:33 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+11:35:34 | INFO     | App session started
+11:35:34 | INFO     | Abriendo SQLite: switches.db
+11:35:34 | INFO     | Se encontraron 80 switches
+11:35:42 | INFO     | Abriendo SQLite: switches.db
+11:35:42 | INFO     | Se encontraron 80 switches
+11:38:23 | INFO     | Session was garbage collected: lEwH2ib48oX1G6Nq
+11:49:10 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+11:49:10 | INFO     | Starting up TCP server on localhost:53898
+11:49:10 | INFO     | Flet app has started...
+11:49:10 | INFO     | App URL: tcp://localhost:53898
+11:49:10 | INFO     | Starting Flet View app...
+11:49:10 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+11:49:11 | INFO     | App session started
+11:49:11 | INFO     | Abriendo SQLite: switches.db
+11:49:11 | INFO     | Se encontraron 80 switches
+11:49:19 | ERROR    | Unhandled error in 'on_click' handler
+Traceback (most recent call last):
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\messaging\session.py", line 417, in dispatch_event
+    await control._trigger_event(event_name, event_data)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\controls\base_control.py", line 478, in _trigger_event
+    event_handler(e)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\screens\login_screen.py", line 194, in _submit
+    self.on_login(user)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 68, in handle_login
+    shell.show()
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\widget\app_sell.py", line 135, in show
+    self.header.set_user(self.current_user["name"])
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\widget\app_header.py", line 107, in set_user
+    self.update()
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\controls\base_control.py", line 375, in update
+    if not self.page:
+           ^^^^^^^^^
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\controls\base_control.py", line 279, in page
+    raise RuntimeError(
+RuntimeError: AppHeader(898) Control must be added to the page first
+11:51:09 | INFO     | Session was garbage collected: EYo4NK0bhBMJ3vMR
+11:51:14 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+11:51:14 | INFO     | Starting up TCP server on localhost:55560
+11:51:14 | INFO     | Flet app has started...
+11:51:14 | INFO     | App URL: tcp://localhost:55560
+11:51:14 | INFO     | Starting Flet View app...
+11:51:14 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+11:51:14 | INFO     | App session started
+11:51:14 | INFO     | Abriendo SQLite: switches.db
+11:51:14 | INFO     | Se encontraron 80 switches
+11:51:22 | INFO     | Abriendo SQLite: switches.db
+11:51:22 | INFO     | Se encontraron 80 switches
+11:52:43 | INFO     | Abriendo SQLite: switches.db
+11:52:43 | INFO     | Se encontraron 80 switches
+11:52:49 | INFO     | [172.16.0.170] Abriendo switch
+11:52:50 | INFO     | [172.16.0.170] Iniciando sesión
+11:52:57 | INFO     | [172.16.0.170] Login correcto
+11:52:57 | INFO     | [172.16.0.170] URL: http://172.16.0.170/webctrl.cgi?action=cgi_home_page&csrf_token=caa284070f48515b6d216eb3b684bb36
+11:52:57 | INFO     | [172.16.0.170] Abriendo configuración SSH
+11:52:58 | INFO     | [172.16.0.170] Estado SSH actual: 1
+11:52:58 | INFO     | [172.16.0.170] SSH ya estaba habilitado
+11:52:58 | INFO     | URL después de Apply: http://172.16.0.170/webctrl.cgi?action=cgi_app_switch_cfg_ssh&csrf_token=caa284070f48515b6d216eb3b684bb36
+11:52:58 | INFO     | [172.16.0.170] Abriendo página Save
+11:53:57 | INFO     | [172.16.0.170] Abriendo switch
+11:53:58 | INFO     | [172.16.0.170] Iniciando sesión
+11:56:44 | INFO     | Session was garbage collected: EDlWTfOKztyWmrzy
+11:56:51 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+11:56:51 | INFO     | Starting up TCP server on localhost:54426
+11:56:51 | INFO     | Flet app has started...
+11:56:51 | INFO     | App URL: tcp://localhost:54426
+11:56:51 | INFO     | Starting Flet View app...
+11:56:51 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+11:56:51 | INFO     | App session started
+11:56:51 | INFO     | Abriendo SQLite: switches.db
+11:56:51 | INFO     | Se encontraron 80 switches
+11:57:01 | ERROR    | Unhandled error in 'on_click' handler
+Traceback (most recent call last):
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\messaging\session.py", line 417, in dispatch_event
+    await control._trigger_event(event_name, event_data)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\controls\base_control.py", line 478, in _trigger_event
+    event_handler(e)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\screens\login_screen.py", line 194, in _submit
+    self.on_login(user)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 59, in handle_login
+    shell = AppShell(
+            ^^^^^^^^^
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\widget\app_sell.py", line 41, in __init__
+    self.header = AppHeader()
+                  ^^^^^^^^^^^
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\widget\app_header.py", line 58, in __init__
+    padding=ft.Padding(horizontal=24, vertical=16),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\controls\value_types.py", line 197, in _value_init
+    orig_init(self, *args, **kwargs)
+TypeError: Padding.__init__() got an unexpected keyword argument 'horizontal'
+11:58:41 | INFO     | Session was garbage collected: mHH8FSl0S001sBb4
+11:58:46 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+11:58:46 | INFO     | Starting up TCP server on localhost:59057
+11:58:46 | INFO     | Flet app has started...
+11:58:46 | INFO     | App URL: tcp://localhost:59057
+11:58:46 | INFO     | Starting Flet View app...
+11:58:46 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+11:58:46 | INFO     | App session started
+11:58:46 | INFO     | Abriendo SQLite: switches.db
+11:58:46 | INFO     | Se encontraron 80 switches
+11:58:52 | ERROR    | Unhandled error in 'on_click' handler
+Traceback (most recent call last):
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\messaging\session.py", line 417, in dispatch_event
+    await control._trigger_event(event_name, event_data)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\controls\base_control.py", line 478, in _trigger_event
+    event_handler(e)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\screens\login_screen.py", line 194, in _submit
+    self.on_login(user)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 59, in handle_login
+    shell = AppShell(
+            ^^^^^^^^^
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\widget\app_sell.py", line 41, in __init__
+    self.header = AppHeader()
+                  ^^^^^^^^^^^
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\widget\app_header.py", line 69, in __init__
+    ft.Icons.PERSON_CELEBRATION_OUTLINED,
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\controls\material\icons.py", line 72, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: PERSON_CELEBRATION_OUTLINED
+12:00:46 | INFO     | Session was garbage collected: XrrZAPeJP32AqyvN
+12:00:56 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+12:00:56 | INFO     | Starting up TCP server on localhost:51055
+12:00:56 | INFO     | Flet app has started...
+12:00:56 | INFO     | App URL: tcp://localhost:51055
+12:00:56 | INFO     | Starting Flet View app...
+12:00:56 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+12:00:56 | INFO     | App session started
+12:00:56 | INFO     | Abriendo SQLite: switches.db
+12:00:56 | INFO     | Se encontraron 80 switches
+12:01:03 | INFO     | Abriendo SQLite: switches.db
+12:01:03 | INFO     | Se encontraron 80 switches
+12:03:34 | INFO     | Abriendo SQLite: switches.db
+12:03:34 | INFO     | Se encontraron 80 switches
+12:03:43 | INFO     | Abriendo SQLite: switches.db
+12:03:43 | INFO     | Se encontraron 80 switches
+12:06:46 | INFO     | Session was garbage collected: YbjBSpYwdIQWH1Eb
+12:06:52 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+12:06:52 | INFO     | Starting up TCP server on localhost:50462
+12:06:52 | INFO     | Flet app has started...
+12:06:52 | INFO     | App URL: tcp://localhost:50462
+12:06:52 | INFO     | Starting Flet View app...
+12:06:52 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+12:06:52 | INFO     | App session started
+12:06:52 | INFO     | Abriendo SQLite: switches.db
+12:06:52 | INFO     | Se encontraron 80 switches
+12:07:00 | INFO     | Abriendo SQLite: switches.db
+12:07:00 | INFO     | Se encontraron 80 switches
+12:13:17 | INFO     | Session was garbage collected: bRsd7HGBBLXHl5CK
