@@ -6,18 +6,24 @@ from modules.logger import log
 
 class SSHClient:
 
-    def __init__(self, ip, usuario, password):
+    def __init__(self, ip, usuario, password, callback=None):
 
         self.ip = ip
         self.usuario = usuario
         self.password = password
+        self.callback = callback
 
         self.transport = None
         self.channel = None
 
+    def _emit(self, message):
+        if self.callback:
+            self.callback(message)
+
     def connect(self):
 
         log.info(f"[{self.ip}] Conectando por SSH...")
+        self._emit(f"[{self.ip}] Conectando por SSH")
 
         self.transport = paramiko.Transport((self.ip, 22))
 
@@ -28,12 +34,14 @@ class SSHClient:
             self.transport.auth_none(self.usuario)
 
             log.info(f"[{self.ip}] Autenticado mediante NONE")
+            self._emit(f"[{self.ip}] Autenticado mediante NONE")
 
         except Exception as e:
 
             log.warning(
                 f"[{self.ip}] auth_none falló: {e}"
             )
+            self._emit(f"[{self.ip}] auth_none fallo, usando password")
 
             self.transport.auth_password(
                 self.usuario,
@@ -43,6 +51,7 @@ class SSHClient:
             log.info(
                 f"[{self.ip}] Autenticado con contraseña"
             )
+            self._emit(f"[{self.ip}] Autenticado con password")
 
         self.channel = self.transport.open_session()
 
@@ -55,6 +64,7 @@ class SSHClient:
         self._leer()
 
         log.info(f"[{self.ip}] Consola lista")
+        self._emit(f"[{self.ip}] Consola lista")
 
     def _leer(self):
 
@@ -73,6 +83,7 @@ class SSHClient:
     def send(self, comando):
 
         log.info(f"[{self.ip}] >> {comando}")
+        self._emit(f"[{self.ip}] >> {comando}")
 
         self.channel.send(comando + "\n")
 
@@ -81,12 +92,15 @@ class SSHClient:
         salida = self._leer()
 
         log.info(salida)
+        if salida.strip():
+            self._emit(salida.strip())
 
         return salida
 
     def enable(self):
 
         log.info(f"[{self.ip}] Entrando a modo enable")
+        self._emit(f"[{self.ip}] Entrando a modo enable")
 
         self.channel.send("enable\n")
 
@@ -140,6 +154,7 @@ class SSHClient:
             raise Exception("No fue posible entrar en modo enable")
 
         log.info(f"[{self.ip}] Enable correcto")
+        self._emit(f"[{self.ip}] Enable correcto")
 
     def disconnect(self):
 
@@ -152,3 +167,4 @@ class SSHClient:
             self.transport.close()
 
         log.info(f"[{self.ip}] SSH cerrado")
+        self._emit(f"[{self.ip}] SSH cerrado")

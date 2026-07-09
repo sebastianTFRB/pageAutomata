@@ -17,7 +17,7 @@ def main():
 
     log.info("===== INICIO DEL PROCESO =====")
 
-    excel = ExcelManager("switches.xlsx")
+    excel = ExcelManager("switches.db")
 
     excel.abrir()
 

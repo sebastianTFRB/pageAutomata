@@ -1272,3 +1272,805 @@ AttributeError: module 'flet.controls.material.icons' has no attribute 'TERMINAL
 15:51:29 | INFO     | App session started
 15:51:39 | INFO     | Abriendo Excel: switches.xlsx
 15:51:40 | INFO     | Se encontraron 79 switches
+16:52:16 | INFO     | Abriendo Excel: C:\Users\sebax\AppData\Local\Temp\tmphtgiupez\switches.db
+16:55:25 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmpbxb1ww30\switches.db
+16:55:25 | INFO     | CSV importado desde C:\Users\sebax\AppData\Local\Temp\tmpbxb1ww30\switches.csv
+16:55:25 | INFO     | Se encontraron 1 switches
+16:55:25 | INFO     | Se encontraron 1 switches
+16:55:25 | INFO     | CSV exportado hacia C:\Users\sebax\AppData\Local\Temp\tmpbxb1ww30\export.csv
+16:55:49 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmpjbuakjee\switches.db
+16:55:49 | INFO     | CSV importado desde C:\Users\sebax\AppData\Local\Temp\tmpjbuakjee\switches.csv
+16:55:49 | INFO     | Se encontraron 1 switches
+16:55:49 | INFO     | Se encontraron 1 switches
+16:55:49 | INFO     | CSV exportado hacia C:\Users\sebax\AppData\Local\Temp\tmpjbuakjee\export.csv
+16:56:13 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmp96gaj2l7\switches.db
+16:56:13 | INFO     | CSV importado desde C:\Users\sebax\AppData\Local\Temp\tmp96gaj2l7\switches.csv
+16:56:13 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmp96gaj2l7\switches.db
+16:56:13 | INFO     | Se encontraron 1 switches
+16:56:13 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmp96gaj2l7\switches.db
+16:56:13 | INFO     | Se encontraron 1 switches
+16:56:13 | INFO     | CSV exportado hacia C:\Users\sebax\AppData\Local\Temp\tmp96gaj2l7\export.csv
+17:02:01 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmpbrmtyy_c\switches.db
+17:02:01 | INFO     | CSV importado desde C:\Users\sebax\AppData\Local\Temp\tmpbrmtyy_c\switches.csv
+17:02:01 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmpbrmtyy_c\switches.db
+17:02:01 | INFO     | Se encontraron 1 switches
+17:02:01 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmpbrmtyy_c\switches.db
+17:02:01 | INFO     | Se encontraron 1 switches
+17:02:01 | INFO     | CSV exportado hacia C:\Users\sebax\AppData\Local\Temp\tmpbrmtyy_c\export.csv
+17:05:37 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmpocbol1q9\switches.db
+17:05:37 | INFO     | CSV importado desde C:\Users\sebax\AppData\Local\Temp\tmpocbol1q9\switches.csv
+17:05:37 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmpocbol1q9\switches.db
+17:05:37 | INFO     | Se encontraron 1 switches
+17:05:37 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmpocbol1q9\switches.db
+17:05:37 | INFO     | Se encontraron 1 switches
+17:05:37 | INFO     | CSV exportado hacia C:\Users\sebax\AppData\Local\Temp\tmpocbol1q9\export.csv
+17:07:21 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmpcn9v9mvz\switches.db
+17:07:21 | INFO     | CSV importado desde C:\Users\sebax\AppData\Local\Temp\tmpcn9v9mvz\switches.csv
+17:07:21 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmpcn9v9mvz\switches.db
+17:07:21 | INFO     | Se encontraron 1 switches
+17:07:21 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmpcn9v9mvz\switches.db
+17:07:21 | INFO     | Se encontraron 1 switches
+17:07:21 | INFO     | CSV exportado hacia C:\Users\sebax\AppData\Local\Temp\tmpcn9v9mvz\export.csv
+17:10:18 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+17:10:18 | INFO     | Starting up TCP server on localhost:60782
+17:10:18 | INFO     | Flet app has started...
+17:10:18 | INFO     | App URL: tcp://localhost:60782
+17:10:18 | INFO     | Starting Flet View app...
+17:10:18 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+17:10:19 | INFO     | App session started
+17:10:19 | ERROR    | Unhandled error in main() handler
+Traceback (most recent call last):
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\app.py", line 354, in on_session_created
+    main(session.page)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 35, in main
+    color=ft.colors.GREEN_700,
+          ^^^^^^^^^
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\__init__.py", line 1220, in __getattr__
+    raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
+AttributeError: module 'flet' has no attribute 'colors'. Did you mean: 'Colors'?
+17:18:01 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+17:18:01 | INFO     | Starting up TCP server on localhost:53396
+17:18:01 | INFO     | Flet app has started...
+17:18:01 | INFO     | App URL: tcp://localhost:53396
+17:18:01 | INFO     | Starting Flet View app...
+17:18:01 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+17:18:02 | INFO     | App session started
+17:18:02 | ERROR    | Unhandled error in main() handler
+Traceback (most recent call last):
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\app.py", line 354, in on_session_created
+    main(session.page)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 39, in main
+    border=ft.border.all(1, "#c8e6c9"),
+           ^^^^^^^^^^^^^
+AttributeError: module 'flet.controls.border' has no attribute 'all'
+17:20:10 | INFO     | Session was garbage collected: 9SVYXDE1nPRHlcKV
+17:23:55 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+17:23:55 | INFO     | Starting up TCP server on localhost:59632
+17:23:55 | INFO     | Flet app has started...
+17:23:55 | INFO     | App URL: tcp://localhost:59632
+17:23:55 | INFO     | Starting Flet View app...
+17:23:55 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+17:23:56 | INFO     | App session started
+17:23:56 | ERROR    | Unhandled error in main() handler
+Traceback (most recent call last):
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\app.py", line 354, in on_session_created
+    main(session.page)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 39, in main
+    border=ft.border.all(1, "#c8e6c9"),
+           ^^^^^^^^^^^^^
+AttributeError: module 'flet.controls.border' has no attribute 'all'
+17:25:07 | INFO     | Session was garbage collected: sEE3JnqWoaRNcKiI
+17:25:38 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+17:25:38 | INFO     | Starting up TCP server on localhost:61067
+17:25:38 | INFO     | Flet app has started...
+17:25:38 | INFO     | App URL: tcp://localhost:61067
+17:25:38 | INFO     | Starting Flet View app...
+17:25:38 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+17:25:38 | INFO     | App session started
+17:25:38 | INFO     | Abriendo SQLite: switches.db
+17:25:38 | INFO     | Se encontraron 0 switches
+17:38:11 | INFO     | Abriendo SQLite: switches.db
+17:38:11 | INFO     | Se encontraron 0 switches
+17:41:26 | INFO     | Session was garbage collected: e2MeQqIbJZ9DOOQM
+17:41:33 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+17:41:33 | INFO     | Starting up TCP server on localhost:62149
+17:41:33 | INFO     | Flet app has started...
+17:41:33 | INFO     | App URL: tcp://localhost:62149
+17:41:33 | INFO     | Starting Flet View app...
+17:41:33 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+17:41:33 | INFO     | App session started
+17:41:33 | INFO     | Abriendo SQLite: switches.db
+17:41:33 | INFO     | Se encontraron 0 switches
+17:41:33 | ERROR    | Unhandled error in main() handler
+Traceback (most recent call last):
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\app.py", line 354, in on_session_created
+    main(session.page)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 52, in main
+    actualizar_estado()
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 49, in actualizar_estado
+    estado_db.value = f"Base de datos SQLite: switches.db · switches cargados: {count}"
+    ^^^^^^^^^
+NameError: cannot access free variable 'estado_db' where it is not associated with a value in enclosing scope
+17:41:40 | INFO     | Session was garbage collected: UDk5ODewVPZez1fp
+17:43:13 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+17:43:13 | INFO     | Starting up TCP server on localhost:50647
+17:43:13 | INFO     | Flet app has started...
+17:43:13 | INFO     | App URL: tcp://localhost:50647
+17:43:13 | INFO     | Starting Flet View app...
+17:43:13 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+17:43:14 | INFO     | App session started
+17:43:14 | INFO     | Abriendo SQLite: switches.db
+17:43:14 | INFO     | Se encontraron 0 switches
+17:43:14 | ERROR    | Unhandled error in main() handler
+Traceback (most recent call last):
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\app.py", line 354, in on_session_created
+    main(session.page)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 78, in main
+    ft.Icon(name="cloud_upload", size=40, color="#1565c0"),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Icon.__init__() got an unexpected keyword argument 'name'
+17:43:50 | INFO     | Session was garbage collected: WQeYJ2eFzNQZI2rD
+17:43:54 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+17:43:54 | INFO     | Starting up TCP server on localhost:50657
+17:43:54 | INFO     | Flet app has started...
+17:43:54 | INFO     | App URL: tcp://localhost:50657
+17:43:54 | INFO     | Starting Flet View app...
+17:43:54 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+17:43:54 | INFO     | App session started
+17:43:54 | INFO     | Abriendo SQLite: switches.db
+17:43:54 | INFO     | Se encontraron 0 switches
+17:43:54 | ERROR    | Unhandled error in main() handler
+Traceback (most recent call last):
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\app.py", line 354, in on_session_created
+    main(session.page)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 85, in main
+    border=ft.border.all(2, "#1565c0"),
+           ^^^^^^^^^^^^^
+AttributeError: module 'flet.controls.border' has no attribute 'all'
+17:43:59 | INFO     | Session was garbage collected: WDR7ljAit968Ywpi
+17:45:59 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+17:45:59 | INFO     | Starting up TCP server on localhost:51263
+17:45:59 | INFO     | Flet app has started...
+17:45:59 | INFO     | App URL: tcp://localhost:51263
+17:45:59 | INFO     | Starting Flet View app...
+17:45:59 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+17:45:59 | INFO     | App session started
+17:45:59 | INFO     | Abriendo SQLite: switches.db
+17:45:59 | INFO     | Se encontraron 0 switches
+17:46:00 | ERROR    | Unhandled error in main() handler
+Traceback (most recent call last):
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\app.py", line 354, in on_session_created
+    main(session.page)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 75, in main
+    area_drop = ft.Container(
+                ^^^^^^^^^^^^^
+TypeError: Container.__init__() got an unexpected keyword argument 'on_drop'
+17:46:03 | INFO     | Session was garbage collected: YVfV7PsY00Gvql3S
+17:49:38 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+17:49:38 | INFO     | Starting up TCP server on localhost:60922
+17:49:38 | INFO     | Flet app has started...
+17:49:38 | INFO     | App URL: tcp://localhost:60922
+17:49:38 | INFO     | Starting Flet View app...
+17:49:38 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+17:49:38 | INFO     | App session started
+17:49:38 | INFO     | Abriendo SQLite: switches.db
+17:49:38 | INFO     | Se encontraron 0 switches
+17:52:33 | INFO     | Abriendo SQLite: switches.db
+17:52:33 | INFO     | Excel importado desde C:\Users\sebax\OneDrive\Escritorio\switches.xlsx
+17:52:33 | INFO     | Abriendo SQLite: switches.db
+17:52:33 | INFO     | Se encontraron 0 switches
+17:52:45 | INFO     | Abriendo SQLite: switches.db
+17:52:45 | INFO     | Se encontraron 0 switches
+17:55:20 | INFO     | Session was garbage collected: XHgLIxn7qip1HgBb
+17:56:38 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+17:56:38 | INFO     | Starting up TCP server on localhost:49828
+17:56:38 | INFO     | Flet app has started...
+17:56:38 | INFO     | App URL: tcp://localhost:49828
+17:56:38 | INFO     | Starting Flet View app...
+17:56:38 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+17:56:38 | INFO     | App session started
+17:56:38 | INFO     | Abriendo SQLite: switches.db
+17:56:38 | INFO     | Se encontraron 0 switches
+17:57:05 | INFO     | Abriendo SQLite: switches.db
+17:57:05 | INFO     | Excel importado desde C:\Users\sebax\OneDrive\Escritorio\switches.xlsx
+17:57:05 | INFO     | Abriendo SQLite: switches.db
+17:57:05 | INFO     | Se encontraron 0 switches
+17:59:10 | INFO     | Session was garbage collected: z7bzk9ec2TVs3fwz
+17:59:16 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+17:59:16 | INFO     | Starting up TCP server on localhost:59210
+17:59:16 | INFO     | Flet app has started...
+17:59:16 | INFO     | App URL: tcp://localhost:59210
+17:59:16 | INFO     | Starting Flet View app...
+17:59:16 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+17:59:16 | INFO     | App session started
+17:59:16 | INFO     | Abriendo SQLite: switches.db
+17:59:16 | INFO     | Se encontraron 0 switches
+17:59:29 | INFO     | Abriendo SQLite: switches.db
+17:59:29 | INFO     | Headers detectados: {}
+17:59:29 | INFO     | Filas totales en Excel: 88
+17:59:29 | INFO     | Fila 2: IP=, Nombre=
+17:59:29 | INFO     | Fila 3: IP=, Nombre=
+17:59:29 | INFO     | Fila 4: IP=, Nombre=
+17:59:29 | INFO     | Fila 5: IP=, Nombre=
+17:59:29 | INFO     | Fila 6: IP=, Nombre=
+17:59:29 | INFO     | Fila 7: IP=, Nombre=
+17:59:29 | INFO     | Fila 8: IP=, Nombre=
+17:59:29 | INFO     | Fila 9: IP=, Nombre=
+17:59:29 | INFO     | Fila 10: IP=, Nombre=
+17:59:29 | INFO     | Fila 11: IP=, Nombre=
+17:59:29 | INFO     | Fila 12: IP=, Nombre=
+17:59:29 | INFO     | Fila 13: IP=, Nombre=
+17:59:29 | INFO     | Fila 14: IP=, Nombre=
+17:59:29 | INFO     | Fila 15: IP=, Nombre=
+17:59:29 | INFO     | Fila 16: IP=, Nombre=
+17:59:29 | INFO     | Fila 17: IP=, Nombre=
+17:59:29 | INFO     | Fila 18: IP=, Nombre=
+17:59:29 | INFO     | Fila 19: IP=, Nombre=
+17:59:29 | INFO     | Fila 20: IP=, Nombre=
+17:59:29 | INFO     | Fila 21: IP=, Nombre=
+17:59:29 | INFO     | Fila 22: IP=, Nombre=
+17:59:29 | INFO     | Fila 23: IP=, Nombre=
+17:59:29 | INFO     | Fila 24: IP=, Nombre=
+17:59:29 | INFO     | Fila 25: IP=, Nombre=
+17:59:29 | INFO     | Fila 26: IP=, Nombre=
+17:59:29 | INFO     | Fila 27: IP=, Nombre=
+17:59:29 | INFO     | Fila 28: IP=, Nombre=
+17:59:29 | INFO     | Fila 29: IP=, Nombre=
+17:59:29 | INFO     | Fila 30: IP=, Nombre=
+17:59:29 | INFO     | Fila 31: IP=, Nombre=
+17:59:29 | INFO     | Fila 32: IP=, Nombre=
+17:59:29 | INFO     | Fila 33: IP=, Nombre=
+17:59:29 | INFO     | Fila 34: IP=, Nombre=
+17:59:29 | INFO     | Fila 35: IP=, Nombre=
+17:59:29 | INFO     | Fila 36: IP=, Nombre=
+17:59:29 | INFO     | Fila 37: IP=, Nombre=
+17:59:29 | INFO     | Fila 38: IP=, Nombre=
+17:59:29 | INFO     | Fila 39: IP=, Nombre=
+17:59:29 | INFO     | Fila 40: IP=, Nombre=
+17:59:29 | INFO     | Fila 41: IP=, Nombre=
+17:59:29 | INFO     | Fila 42: IP=, Nombre=
+17:59:29 | INFO     | Fila 43: IP=, Nombre=
+17:59:29 | INFO     | Fila 44: IP=, Nombre=
+17:59:29 | INFO     | Fila 45: IP=, Nombre=
+17:59:29 | INFO     | Fila 46: IP=, Nombre=
+17:59:29 | INFO     | Fila 47: IP=, Nombre=
+17:59:29 | INFO     | Fila 48: IP=, Nombre=
+17:59:29 | INFO     | Fila 49: IP=, Nombre=
+17:59:29 | INFO     | Fila 50: IP=, Nombre=
+17:59:29 | INFO     | Fila 51: IP=, Nombre=
+17:59:29 | INFO     | Fila 52: IP=, Nombre=
+17:59:29 | INFO     | Fila 53: IP=, Nombre=
+17:59:29 | INFO     | Fila 54: IP=, Nombre=
+17:59:29 | INFO     | Fila 55: IP=, Nombre=
+17:59:29 | INFO     | Fila 56: IP=, Nombre=
+17:59:29 | INFO     | Fila 57: IP=, Nombre=
+17:59:29 | INFO     | Fila 58: IP=, Nombre=
+17:59:29 | INFO     | Fila 59: IP=, Nombre=
+17:59:29 | INFO     | Fila 60: IP=, Nombre=
+17:59:29 | INFO     | Fila 61: IP=, Nombre=
+17:59:29 | INFO     | Fila 62: IP=, Nombre=
+17:59:29 | INFO     | Fila 63: IP=, Nombre=
+17:59:29 | INFO     | Fila 64: IP=, Nombre=
+17:59:29 | INFO     | Fila 65: IP=, Nombre=
+17:59:29 | INFO     | Fila 66: IP=, Nombre=
+17:59:29 | INFO     | Fila 67: IP=, Nombre=
+17:59:29 | INFO     | Fila 68: IP=, Nombre=
+17:59:29 | INFO     | Fila 69: IP=, Nombre=
+17:59:29 | INFO     | Fila 70: IP=, Nombre=
+17:59:29 | INFO     | Fila 71: IP=, Nombre=
+17:59:29 | INFO     | Fila 72: IP=, Nombre=
+17:59:29 | INFO     | Fila 73: IP=, Nombre=
+17:59:29 | INFO     | Fila 74: IP=, Nombre=
+17:59:29 | INFO     | Fila 75: IP=, Nombre=
+17:59:29 | INFO     | Fila 76: IP=, Nombre=
+17:59:29 | INFO     | Fila 77: IP=, Nombre=
+17:59:29 | INFO     | Fila 78: IP=, Nombre=
+17:59:29 | INFO     | Fila 79: IP=, Nombre=
+17:59:29 | INFO     | Fila 80: IP=, Nombre=
+17:59:29 | INFO     | Fila 81: IP=, Nombre=
+17:59:29 | INFO     | Fila 82: IP=, Nombre=
+17:59:29 | INFO     | Fila 83: IP=, Nombre=
+17:59:29 | INFO     | Fila 84: IP=, Nombre=
+17:59:29 | INFO     | Fila 85: IP=, Nombre=
+17:59:29 | INFO     | Fila 86: IP=, Nombre=
+17:59:29 | INFO     | Fila 87: IP=, Nombre=
+17:59:29 | INFO     | Fila 88: IP=, Nombre=
+17:59:29 | INFO     | Excel importado desde C:\Users\sebax\OneDrive\Escritorio\switches.xlsx - 0 registros insertados
+17:59:29 | INFO     | Abriendo SQLite: switches.db
+17:59:29 | INFO     | Se encontraron 0 switches
+18:13:52 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmp0huhv4hu\switches.db
+18:13:52 | INFO     | CSV importado desde C:\Users\sebax\AppData\Local\Temp\tmp0huhv4hu\switches.csv
+18:13:52 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmp0huhv4hu\switches.db
+18:13:52 | INFO     | Se encontraron 1 switches
+18:13:52 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmp0huhv4hu\switches.db
+18:13:52 | INFO     | Se encontraron 1 switches
+18:13:52 | INFO     | CSV exportado hacia C:\Users\sebax\AppData\Local\Temp\tmp0huhv4hu\export.csv
+18:14:08 | INFO     | Session was garbage collected: s7dhzkYSIdWf1dkd
+18:14:13 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+18:14:13 | INFO     | Starting up TCP server on localhost:49727
+18:14:13 | INFO     | Flet app has started...
+18:14:13 | INFO     | App URL: tcp://localhost:49727
+18:14:13 | INFO     | Starting Flet View app...
+18:14:13 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+18:14:14 | INFO     | App session started
+18:14:14 | INFO     | Abriendo SQLite: switches.db
+18:14:14 | INFO     | Se encontraron 0 switches
+18:17:56 | INFO     | Abriendo SQLite: switches.db
+18:17:56 | INFO     | Switch agregado: prueba (172.16.0.170)
+18:17:56 | INFO     | Abriendo SQLite: switches.db
+18:17:56 | INFO     | Se encontraron 1 switches
+18:19:20 | INFO     | Abriendo SQLite: switches.db
+18:19:20 | INFO     | Se encontraron 1 switches
+18:19:21 | INFO     | [172.16.0.170] Abriendo switch
+18:19:21 | INFO     | [172.16.0.170] Iniciando sesión
+18:19:27 | INFO     | Session was garbage collected: g8o3RmFliWX9Un9A
+18:19:47 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+18:19:47 | INFO     | Starting up TCP server on localhost:63894
+18:19:47 | INFO     | Flet app has started...
+18:19:47 | INFO     | App URL: tcp://localhost:63894
+18:19:47 | INFO     | Starting Flet View app...
+18:19:47 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+18:19:47 | INFO     | App session started
+18:19:47 | INFO     | Abriendo SQLite: switches.db
+18:19:47 | INFO     | Se encontraron 1 switches
+18:19:51 | INFO     | Abriendo SQLite: switches.db
+18:19:51 | INFO     | Se encontraron 1 switches
+18:19:52 | INFO     | [172.16.0.170] Abriendo switch
+18:19:53 | INFO     | [172.16.0.170] Iniciando sesión
+18:19:59 | INFO     | [172.16.0.170] Login correcto
+18:19:59 | INFO     | [172.16.0.170] URL: http://172.16.0.170/webctrl.cgi?action=cgi_home_page&csrf_token=0e7e7fd23068dcf273fe05cfc757f901
+18:19:59 | INFO     | [172.16.0.170] Abriendo configuración SSH
+18:20:00 | INFO     | [172.16.0.170] Estado SSH actual: 1
+18:20:00 | INFO     | [172.16.0.170] SSH ya estaba habilitado
+18:20:00 | INFO     | URL después de Apply: http://172.16.0.170/webctrl.cgi?action=cgi_app_switch_cfg_ssh&csrf_token=0e7e7fd23068dcf273fe05cfc757f901
+18:20:00 | INFO     | [172.16.0.170] Abriendo página Save
+18:20:11 | INFO     | [172.16.0.170] Configuración guardada
+18:20:11 | INFO     | URL final: http://172.16.0.170/webctrl.cgi
+18:20:16 | INFO     | [172.16.0.170] Conectando por SSH...
+18:20:16 | INFO     | Connected (version 2.0, client dropbear_2024.84)
+18:20:17 | INFO     | Authentication (none) successful!
+18:20:17 | INFO     | [172.16.0.170] Autenticado mediante NONE
+18:20:18 | INFO     | [172.16.0.170] Consola lista
+18:20:18 | INFO     | [172.16.0.170] Entrando a modo enable
+18:20:20 | INFO     | enable
+TI-G102i>enable
+user:
+18:20:20 | INFO     | admin
+password:
+18:20:22 | INFO     | 
+TI-G102i#
+18:20:22 | INFO     | [172.16.0.170] Enable correcto
+18:20:22 | INFO     | [172.16.0.170] >> show system-info
+18:20:23 | INFO     | show system-info
+CLI auto-logout: 5 minutes.
+CPU loading: 52.26%
+Memory info: total 127636 KB, free 110564 KB, usage 13.38%
+
+TI-G102i#
+18:20:23 | INFO     | [172.16.0.170] SSH cerrado
+22:43:40 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+22:43:40 | INFO     | Starting up TCP server on localhost:59527
+22:43:40 | INFO     | Flet app has started...
+22:43:41 | INFO     | App URL: tcp://localhost:59527
+22:43:41 | INFO     | Starting Flet View app...
+22:43:41 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+22:43:41 | INFO     | App session started
+22:43:41 | INFO     | Abriendo SQLite: switches.db
+22:43:41 | INFO     | Se encontraron 1 switches
+22:53:45 | INFO     | Session was garbage collected: ZpSPZnPCqMHv8XVP
+22:56:18 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+22:56:18 | INFO     | Starting up TCP server on localhost:64492
+22:56:18 | INFO     | Flet app has started...
+22:56:18 | INFO     | App URL: tcp://localhost:64492
+22:56:18 | INFO     | Starting Flet View app...
+22:56:18 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+22:56:18 | INFO     | App session started
+22:56:18 | ERROR    | Unhandled error in main() handler
+Traceback (most recent call last):
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\app.py", line 354, in on_session_created
+    main(session.page)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 24, in main
+    devices_screen = DevicesScreen()
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\screens\devices_screen.py", line 49, in __init__
+    border=ft.border.all(1, ft.Colors.BLUE_GREY_100),
+           ^^^^^^^^^^^^^
+AttributeError: module 'flet.controls.border' has no attribute 'all'
+22:58:32 | INFO     | Session was garbage collected: mzul565YbpF1KsPD
+22:58:36 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+22:58:36 | INFO     | Starting up TCP server on localhost:51273
+22:58:36 | INFO     | Flet app has started...
+22:58:36 | INFO     | App URL: tcp://localhost:51273
+22:58:36 | INFO     | Starting Flet View app...
+22:58:36 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+22:58:36 | INFO     | App session started
+22:58:36 | ERROR    | Unhandled error in main() handler
+Traceback (most recent call last):
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\app.py", line 354, in on_session_created
+    main(session.page)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 24, in main
+    devices_screen = DevicesScreen()
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\screens\devices_screen.py", line 49, in __init__
+    border=ft.border.all(1, ft.Colors.BLUE_GREY_100),
+           ^^^^^^^^^^^^^
+AttributeError: module 'flet.controls.border' has no attribute 'all'
+22:58:40 | INFO     | Session was garbage collected: Y67hNW7qGQ05YQkT
+23:10:11 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+23:10:11 | INFO     | Starting up TCP server on localhost:65474
+23:10:11 | INFO     | Flet app has started...
+23:10:11 | INFO     | App URL: tcp://localhost:65474
+23:10:11 | INFO     | Starting Flet View app...
+23:10:11 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+23:10:12 | INFO     | App session started
+23:10:12 | INFO     | Abriendo SQLite: switches.db
+23:10:12 | INFO     | Se encontraron 1 switches
+23:10:12 | ERROR    | Unhandled error in main() handler
+Traceback (most recent call last):
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\app.py", line 354, in on_session_created
+    main(session.page)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 25, in main
+    process_screen = ProcessAutomaticsScreen(page)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\screens\process_automatics_screen.py", line 12, in __init__
+    self.page = page
+    ^^^^^^^^^
+AttributeError: property 'page' of 'ProcessAutomaticsScreen' object has no setter
+23:12:31 | INFO     | Session was garbage collected: ACNEasE7Q2wnxbz3
+23:12:39 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+23:12:39 | INFO     | Starting up TCP server on localhost:53131
+23:12:39 | INFO     | Flet app has started...
+23:12:39 | INFO     | App URL: tcp://localhost:53131
+23:12:39 | INFO     | Starting Flet View app...
+23:12:39 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+23:12:39 | INFO     | App session started
+23:12:39 | INFO     | Abriendo SQLite: switches.db
+23:12:39 | INFO     | Se encontraron 1 switches
+23:12:39 | ERROR    | Unhandled error in main() handler
+Traceback (most recent call last):
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\app.py", line 354, in on_session_created
+    main(session.page)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 95, in main
+    show_login()
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 92, in show_login
+    page.add(LoginScreen(on_login=handle_login))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\screens\login_screen.py", line 23, in __init__
+    alignment=ft.alignment.center,
+              ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'flet.controls.alignment' has no attribute 'center'
+23:14:07 | INFO     | Session was garbage collected: M5Gr4F5SNxqh3cW6
+23:14:12 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+23:14:12 | INFO     | Starting up TCP server on localhost:59103
+23:14:12 | INFO     | Flet app has started...
+23:14:12 | INFO     | App URL: tcp://localhost:59103
+23:14:12 | INFO     | Starting Flet View app...
+23:14:12 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+23:14:13 | INFO     | App session started
+23:14:13 | INFO     | Abriendo SQLite: switches.db
+23:14:13 | INFO     | Se encontraron 1 switches
+23:14:24 | INFO     | Abriendo SQLite: switches.db
+23:14:24 | INFO     | Se encontraron 1 switches
+23:14:33 | INFO     | Abriendo SQLite: switches.db
+23:14:33 | INFO     | Se encontraron 1 switches
+23:14:38 | INFO     | Abriendo SQLite: switches.db
+23:14:38 | INFO     | Se encontraron 1 switches
+23:14:43 | INFO     | Abriendo SQLite: switches.db
+23:14:43 | INFO     | Se encontraron 1 switches
+23:15:43 | INFO     | Abriendo SQLite: switches.db
+23:15:43 | INFO     | Se encontraron 1 switches
+23:22:21 | INFO     | Session was garbage collected: YkLd2OQqAoybG9OM
+23:25:16 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+23:25:16 | INFO     | Starting up TCP server on localhost:54833
+23:25:16 | INFO     | Flet app has started...
+23:25:16 | INFO     | App URL: tcp://localhost:54833
+23:25:16 | INFO     | Starting Flet View app...
+23:25:16 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+23:25:16 | INFO     | App session started
+23:25:16 | INFO     | Abriendo SQLite: switches.db
+23:25:16 | INFO     | Se encontraron 1 switches
+23:25:26 | INFO     | Abriendo SQLite: switches.db
+23:25:26 | INFO     | Se encontraron 1 switches
+23:37:15 | INFO     | Abriendo SQLite: switches.db
+23:37:15 | INFO     | Se encontraron 1 switches
+23:37:20 | INFO     | Abriendo SQLite: switches.db
+23:37:20 | INFO     | Se encontraron 1 switches
+23:37:23 | INFO     | [172.16.0.170] Abriendo switch
+23:37:23 | INFO     | [172.16.0.170] Iniciando sesión
+23:37:30 | INFO     | [172.16.0.170] Login correcto
+23:37:30 | INFO     | [172.16.0.170] URL: http://172.16.0.170/webctrl.cgi?action=cgi_home_page&csrf_token=84837136d27ff0648ef5adf3fedfad97
+23:37:30 | INFO     | [172.16.0.170] Abriendo configuración SSH
+23:37:31 | INFO     | [172.16.0.170] Estado SSH actual: 1
+23:37:31 | INFO     | [172.16.0.170] SSH ya estaba habilitado
+23:37:31 | INFO     | URL después de Apply: http://172.16.0.170/webctrl.cgi?action=cgi_app_switch_cfg_ssh&csrf_token=84837136d27ff0648ef5adf3fedfad97
+23:37:31 | INFO     | [172.16.0.170] Abriendo página Save
+23:37:41 | INFO     | [172.16.0.170] Configuración guardada
+23:37:41 | INFO     | URL final: http://172.16.0.170/webctrl.cgi
+23:37:46 | INFO     | [172.16.0.170] Conectando por SSH...
+23:37:46 | INFO     | Connected (version 2.0, client dropbear_2024.84)
+23:37:48 | INFO     | Authentication (none) successful!
+23:37:48 | INFO     | [172.16.0.170] Autenticado mediante NONE
+23:37:49 | INFO     | [172.16.0.170] Consola lista
+23:37:49 | INFO     | [172.16.0.170] Entrando a modo enable
+23:37:50 | INFO     | enable
+TI-G102i>enable
+user:
+23:37:51 | INFO     | admin
+password:
+23:37:52 | INFO     | 
+TI-G102i#
+23:37:52 | INFO     | [172.16.0.170] Enable correcto
+23:37:52 | INFO     | [172.16.0.170] >> show system-info
+23:37:53 | INFO     | show system-info
+CLI auto-logout: 5 minutes.
+CPU loading: 34.12%
+Memory info: total 127636 KB, free 110176 KB, usage 13.68%
+
+TI-G102i#
+23:37:53 | INFO     | [172.16.0.170] SSH cerrado
+23:38:18 | INFO     | Abriendo SQLite: switches.db
+23:38:18 | INFO     | Se encontraron 1 switches
+23:38:46 | INFO     | Abriendo SQLite: switches.db
+23:38:46 | INFO     | Headers detectados: {'modelo': 1, 'id': 2, 'ip': 3, 'mascara': 4, 'getway': 5, 'usuario': 6, 'password': 7, 'nombre': 9, 'estado': 10}
+23:38:46 | INFO     | Filas totales en Excel: 80
+23:38:46 | INFO     | Fila 2: IP=171.16.0.131, Nombre=SW12-COL CIUDADELA
+23:38:46 | INFO     | Fila 3: IP=172.16.0.135, Nombre=SW15-GUALCALOMA
+23:38:46 | INFO     | Fila 4: IP=172.16.0.134, Nombre=RESPALDO 
+23:38:46 | INFO     | Fila 5: IP=172.16.0.133, Nombre=SW14-FIGUEROA
+23:38:46 | INFO     | Fila 6: IP=172.16.0.132, Nombre=SW13-POLIDEPORTIVO TAMASAGRA
+23:38:46 | INFO     | Fila 7: IP=172.16.0.139, Nombre=SW19-EL PILAR
+23:38:46 | INFO     | Fila 8: IP=172.16.0.140, Nombre=SW20-VILLA FLOR BAN
+23:38:46 | INFO     | Fila 9: IP=172.16.0.136, Nombre=SW16-COLON
+23:38:46 | INFO     | Fila 10: IP=172.16.0.137, Nombre=SW17-POLVORIN
+23:38:46 | INFO     | Fila 11: IP=172.16.0.138, Nombre=SW18-EMILIO BOTERO
+23:38:46 | INFO     | Fila 12: IP=172.16.0.190, Nombre=SW72-BATALLON
+23:38:46 | INFO     | Fila 13: IP=172.16.0.161, Nombre=SW43-TORRES DE LA CAROLINA
+23:38:46 | INFO     | Fila 14: IP=172.16.0.165, Nombre=SW46-MERCADO POTRERILLO
+23:38:46 | INFO     | Fila 15: IP=172.16.0.162, Nombre=SW44-LA ESTRELLA
+23:38:46 | INFO     | Fila 16: IP=172.16.0.167, Nombre=SW48-PRINCIPAL SAN MARTIN
+23:38:46 | INFO     | Fila 17: IP=172.16.0.174, Nombre=SW56-CUJACAL BAJO
+23:38:46 | INFO     | Fila 18: IP=RESPALDO, Nombre=RESPALDO 
+23:38:46 | INFO     | Fila 19: IP=172.16.0.175, Nombre=SW55-CENTENARIO
+23:38:46 | INFO     | Fila 20: IP=172.16.0.187, Nombre=SW67-PROGRESO
+23:38:46 | INFO     | Fila 21: IP=172.16.0.169, Nombre=SW49-EMILIO BOTERO
+23:38:46 | INFO     | Fila 22: IP=172.16.0.190, Nombre=SW90-COM. PARQUE INFANTIL
+23:38:46 | INFO     | Fila 23: IP=172.16.0.188, Nombre=SW88-HOSPITAL CIVIL
+23:38:46 | INFO     | Fila 24: IP=172.16.0.191, Nombre=SW91 / 92 SALIDA NORTE CHAPULTEPEC
+23:38:46 | INFO     | Fila 25: IP=172.16.0.192, Nombre=SW 93/94 SALIDA GENOY
+23:38:46 | INFO     | Fila 26: IP=172.16.0.189, Nombre=SW89-LA COLINA
+23:38:46 | INFO     | Fila 27: IP=RESPALDO , Nombre=RESPALDO 
+23:38:46 | INFO     | Fila 28: IP=172.16.0.195, Nombre=SW99- PEDAGOGICO
+23:38:46 | INFO     | Fila 29: IP=172.16.0.196, Nombre=SW100 - CORPORACION
+23:38:46 | INFO     | Fila 30: IP=172.16.0.194, Nombre=SW97/98 B. POPULAR SALIDA AL ORIENTE
+23:38:46 | INFO     | Fila 31: IP=172.16.0.193, Nombre=SW95/96 SALIDA SUR
+23:38:46 | INFO     | Fila 32: IP=172.16.0.151, Nombre=SW32-CONCHA ACUSTICA
+23:38:46 | INFO     | Fila 33: IP=172.16.0.152, Nombre=SW34-BOMBONA PATY
+23:38:46 | INFO     | Fila 34: IP=172.16.0.153, Nombre=SW35-CASA EJERCICIOS
+23:38:46 | INFO     | Fila 35: IP=172.16.0.154, Nombre=SW36-TIERRA SANTA
+23:38:46 | INFO     | Fila 36: IP=172.16.0.155, Nombre=SW37-JESUS POLIDEPORTIVO
+23:38:46 | INFO     | Fila 37: IP=172.16.0.159, Nombre=SW41-ENTRADA COMUN
+23:38:46 | INFO     | Fila 38: IP=172.16.0.172, Nombre=SW54-QUINTAS DE SAN PEDRO
+23:38:46 | INFO     | Fila 39: IP=172.16.0.158, Nombre=SW40-PARQUE ANGANOY
+23:38:46 | INFO     | Fila 40: IP=172.16.0.157, Nombre=SW39-PANDIACO
+23:38:46 | INFO     | Fila 41: IP=172.16.0.156, Nombre=SW38-SOL DE ORIENTE
+23:38:46 | INFO     | Fila 42: IP=172.16.0.125, Nombre=SW06-GLORIETA BUCHELY
+23:38:46 | INFO     | Fila 43: IP=172.16.0.126, Nombre=SW07-B.BELEN
+23:38:46 | INFO     | Fila 44: IP=172.16.0.124, Nombre=SW05-CIUDAD REAL
+23:38:46 | INFO     | Fila 45: IP=172.16.0.123, Nombre=SW04-CHAMPAGÑAT
+23:38:46 | INFO     | Fila 46: IP=172.16.0.129, Nombre=SW10-ATAHUALPA
+23:38:46 | INFO     | Fila 47: IP=172.16.0.122, Nombre=SW02- DOTASOL
+23:38:46 | INFO     | Fila 48: IP=172.16.0.121, Nombre=SW01-AV IDEMA
+23:38:46 | INFO     | Fila 49: IP=172.16.0.128, Nombre=SW09-COL LA NORMAL
+23:38:46 | INFO     | Fila 50: IP=172.16.0.127, Nombre=SW08-PASTUSIDAD
+23:38:46 | INFO     | Fila 51: IP=172.16.0.130, Nombre=SW11-PANAMERICANA BACHUE
+23:38:46 | INFO     | Fila 52: IP=172.16.0.163, Nombre=SW45-CANCHALA
+23:38:46 | INFO     | Fila 53: IP=172.16.0.170, Nombre=SW58-SEPARADOR MERCABODEGA
+23:38:46 | INFO     | Fila 54: IP=172.16.0.171, Nombre=SW59-UDENAR
+23:38:46 | INFO     | Fila 55: IP=172.16.0.164, Nombre=SW61-DROGAS SANTA ISABEL
+23:38:46 | INFO     | Fila 56: IP=172.16.0.176, Nombre=SW64-PANORAMICO
+23:38:46 | INFO     | Fila 57: IP=172.16.0.160, Nombre=SW42-CLINICA LAS AMERICAS
+23:38:46 | INFO     | Fila 58: IP=172.16.0.168, Nombre=SW57-HOTEL AGUALONGO
+23:38:46 | INFO     | Fila 59: IP=172.16.0.166, Nombre=SW52-PPAL EL ROSARIO
+23:38:46 | INFO     | Fila 60: IP=172.16.0.173, Nombre=SW60-PARQUEADERO VILLANUEVA
+23:38:46 | INFO     | Fila 61: IP=172.16.0.177, Nombre=SW65-CARLOS PIZARRO
+23:38:46 | INFO     | Fila 62: IP=172.16.0.150, Nombre=SW31-CANCHA SEVEN ELEVEN
+23:38:46 | INFO     | Fila 63: IP=172.16.0.148, Nombre=SW29-SAN MIGUEL
+23:38:46 | INFO     | Fila 64: IP=172.16.0.149, Nombre=SW30-COL LIBERTAD
+23:38:46 | INFO     | Fila 65: IP=172.16.0.147, Nombre=SW28-CENTRO SALUD TAMASAGRA
+23:38:46 | INFO     | Fila 66: IP=172.16.0.146, Nombre=SW27-PASTO VIEJO
+23:38:46 | INFO     | Fila 67: IP=172.16.0.141, Nombre=SW21-CAI SAN AGUSTIN
+23:38:46 | INFO     | Fila 68: IP=172.16.0.142, Nombre=SW22-PUENTE LOS HEROES
+23:38:46 | INFO     | Fila 69: IP=172.16.0.143, Nombre=SW23-IGLESIA LA MERCED
+23:38:46 | INFO     | Fila 70: IP=172.16.0.144, Nombre=SW24-A.BACHUE
+23:38:46 | INFO     | Fila 71: IP=172.16.0.145, Nombre=SW25-FUNDACION PROINCO
+23:38:46 | INFO     | Fila 72: IP=172.16.0.178, Nombre=SW68-CCP LORENZO
+23:38:46 | INFO     | Fila 73: IP=172.16.0.180, Nombre=SW70-TEATRO IMPERIAL
+23:38:46 | INFO     | Fila 74: IP=172.16.0.185, Nombre=SW82- SAN JUAN BOSCO
+23:38:46 | INFO     | Fila 75: IP=172.16.0.186, Nombre=SW-84 GLORIETA ESTADIO
+23:38:46 | INFO     | Fila 76: IP=172.16.0.179, Nombre=SW69-LA MINGA ESCOMBRERA
+23:38:46 | INFO     | Fila 77: IP=172.16.0.182, Nombre=SW73-INTERCAMBIADOR VILLANUEVA
+23:38:46 | INFO     | Fila 78: IP=172.16.0.184, Nombre=SW77-SAN DIEGO NORTE
+23:38:46 | INFO     | Fila 79: IP=172.16.0.183, Nombre=SW74-U. COOPERATIVA
+23:38:46 | INFO     | Fila 80: IP=172.16.0.181, Nombre=SW71-CAICEDO BAJO MIRADOR
+23:38:46 | INFO     | Excel importado desde C:\Users\sebax\Downloads\Hoja de cálculo sin título.xlsx - 79 registros insertados
+23:38:46 | INFO     | Abriendo SQLite: switches.db
+23:38:46 | INFO     | Se encontraron 80 switches
+23:38:52 | INFO     | Abriendo SQLite: switches.db
+23:38:52 | INFO     | Se encontraron 80 switches
+23:39:05 | INFO     | Abriendo SQLite: switches.db
+23:39:05 | INFO     | Se encontraron 80 switches
+23:39:18 | INFO     | Abriendo SQLite: switches.db
+23:39:18 | INFO     | Se encontraron 80 switches
+23:39:31 | INFO     | Abriendo SQLite: switches.db
+23:39:31 | INFO     | Se encontraron 80 switches
+23:39:32 | INFO     | [172.16.0.170] Abriendo switch
+23:39:33 | INFO     | [172.16.0.170] Iniciando sesión
+23:39:41 | INFO     | Abriendo SQLite: switches.db
+23:39:41 | INFO     | Se encontraron 80 switches
+23:40:16 | INFO     | Abriendo SQLite: switches.db
+23:40:16 | INFO     | Se encontraron 80 switches
+23:40:28 | INFO     | [172.16.0.170] Abriendo switch
+23:40:29 | INFO     | [172.16.0.170] Iniciando sesión
+23:40:36 | INFO     | [172.16.0.170] Login correcto
+23:40:36 | INFO     | [172.16.0.170] URL: http://172.16.0.170/webctrl.cgi?action=cgi_home_page&csrf_token=e4891ee06e02cdf3f5e33fcbef2edd28
+23:40:36 | INFO     | [172.16.0.170] Abriendo configuración SSH
+23:40:36 | INFO     | [172.16.0.170] Estado SSH actual: 1
+23:40:36 | INFO     | [172.16.0.170] SSH ya estaba habilitado
+23:40:36 | INFO     | URL después de Apply: http://172.16.0.170/webctrl.cgi?action=cgi_app_switch_cfg_ssh&csrf_token=e4891ee06e02cdf3f5e33fcbef2edd28
+23:40:36 | INFO     | [172.16.0.170] Abriendo página Save
+23:40:47 | INFO     | [172.16.0.170] Configuración guardada
+23:40:47 | INFO     | URL final: http://172.16.0.170/webctrl.cgi
+23:40:52 | INFO     | [172.16.0.170] Conectando por SSH...
+23:40:52 | INFO     | Connected (version 2.0, client dropbear_2024.84)
+23:40:53 | INFO     | Authentication (none) successful!
+23:40:53 | INFO     | [172.16.0.170] Autenticado mediante NONE
+23:40:54 | INFO     | [172.16.0.170] Consola lista
+23:40:54 | INFO     | [172.16.0.170] Entrando a modo enable
+23:40:56 | INFO     | enable
+TI-G102i>enable
+user:
+23:40:56 | INFO     | admin
+password:
+23:40:58 | INFO     | 
+TI-G102i#
+23:40:58 | INFO     | [172.16.0.170] Enable correcto
+23:40:58 | INFO     | [172.16.0.170] >> show system-info
+23:40:59 | INFO     | show system-info
+CLI auto-logout: 5 minutes.
+CPU loading: 54.63%
+Memory info: total 127636 KB, free 110496 KB, usage 13.43%
+
+TI-G102i#
+23:40:59 | INFO     | [172.16.0.170] SSH cerrado
+23:52:07 | INFO     | Session was garbage collected: jgooKV0r3qzDVDRk
+23:54:12 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+23:54:12 | INFO     | Starting up TCP server on localhost:62293
+23:54:12 | INFO     | Flet app has started...
+23:54:12 | INFO     | App URL: tcp://localhost:62293
+23:54:12 | INFO     | Starting Flet View app...
+23:54:12 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+23:54:13 | INFO     | App session started
+23:54:13 | INFO     | Abriendo SQLite: switches.db
+23:54:13 | INFO     | Se encontraron 80 switches
+23:54:13 | ERROR    | Unhandled error in main() handler
+Traceback (most recent call last):
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\app.py", line 354, in on_session_created
+    main(session.page)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 100, in main
+    show_login()
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 97, in show_login
+    page.add(LoginScreen(on_login=handle_login))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\screens\login_screen.py", line 64, in __init__
+    ft.Text("ECO", size=28, weight=ft.FontWeight.W_800, color=GREEN_500, letter_spacing=1),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Text.__init__() got an unexpected keyword argument 'letter_spacing'
+23:55:27 | INFO     | Session was garbage collected: dWVqD6foP2zM6Q1m
+23:55:30 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+23:55:30 | INFO     | Starting up TCP server on localhost:50815
+23:55:30 | INFO     | Flet app has started...
+23:55:30 | INFO     | App URL: tcp://localhost:50815
+23:55:30 | INFO     | Starting Flet View app...
+23:55:30 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+23:55:31 | INFO     | App session started
+23:55:31 | INFO     | Abriendo SQLite: switches.db
+23:55:31 | INFO     | Se encontraron 80 switches
+23:59:17 | INFO     | Session was garbage collected: FMNKtbEMgUdPK7TQ
+23:59:21 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+23:59:21 | INFO     | Starting up TCP server on localhost:61777
+23:59:21 | INFO     | Flet app has started...
+23:59:21 | INFO     | App URL: tcp://localhost:61777
+23:59:21 | INFO     | Starting Flet View app...
+23:59:21 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+23:59:22 | INFO     | App session started
+23:59:22 | INFO     | Abriendo SQLite: switches.db
+23:59:22 | INFO     | Se encontraron 80 switches
+00:00:00 | INFO     | Abriendo SQLite: switches.db
+00:00:00 | INFO     | Se encontraron 80 switches
+00:07:35 | INFO     | Session was garbage collected: m2opIGf7Hz3sAGME
+00:07:40 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+00:07:40 | INFO     | Starting up TCP server on localhost:56745
+00:07:40 | INFO     | Flet app has started...
+00:07:40 | INFO     | App URL: tcp://localhost:56745
+00:07:40 | INFO     | Starting Flet View app...
+00:07:40 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+00:07:41 | INFO     | App session started
+00:07:41 | INFO     | Abriendo SQLite: switches.db
+00:07:41 | INFO     | Se encontraron 80 switches
+00:07:52 | INFO     | Abriendo SQLite: switches.db
+00:07:52 | INFO     | Se encontraron 80 switches
+00:08:10 | INFO     | Abriendo SQLite: switches.db
+00:08:10 | INFO     | Se encontraron 80 switches
+00:08:24 | INFO     | Abriendo SQLite: switches.db
+00:08:24 | INFO     | Se encontraron 80 switches
+00:08:25 | INFO     | [172.16.0.170] Abriendo switch
+00:08:26 | INFO     | [172.16.0.170] Iniciando sesión
+00:08:32 | INFO     | [172.16.0.170] Login correcto
+00:08:32 | INFO     | [172.16.0.170] URL: http://172.16.0.170/webctrl.cgi?action=cgi_home_page&csrf_token=c3abb8a38e530be554e1447913814d62
+00:08:32 | INFO     | [172.16.0.170] Abriendo configuración SSH
+00:08:33 | INFO     | [172.16.0.170] Estado SSH actual: 1
+00:08:33 | INFO     | [172.16.0.170] SSH ya estaba habilitado
+00:08:33 | INFO     | URL después de Apply: http://172.16.0.170/webctrl.cgi?action=cgi_app_switch_cfg_ssh&csrf_token=c3abb8a38e530be554e1447913814d62
+00:08:33 | INFO     | [172.16.0.170] Abriendo página Save
+00:08:43 | INFO     | [172.16.0.170] Configuración guardada
+00:08:43 | INFO     | URL final: http://172.16.0.170/webctrl.cgi
+00:08:48 | INFO     | [172.16.0.170] Conectando por SSH...
+00:08:48 | INFO     | Connected (version 2.0, client dropbear_2024.84)
+00:08:50 | INFO     | Authentication (none) successful!
+00:08:50 | INFO     | [172.16.0.170] Autenticado mediante NONE
+00:08:51 | INFO     | [172.16.0.170] Consola lista
+00:08:51 | INFO     | [172.16.0.170] Entrando a modo enable
+00:08:52 | INFO     | enable
+TI-G102i>enable
+user:
+00:08:53 | INFO     | admin
+password:
+00:08:54 | INFO     | 
+TI-G102i#
+00:08:54 | INFO     | [172.16.0.170] Enable correcto
+00:08:54 | INFO     | [172.16.0.170] >> show system-info
+00:08:55 | INFO     | show system-info
+CLI auto-logout: 5 minutes.
+CPU loading: 52.63%
+Memory info: total 127636 KB, free 110120 KB, usage 13.72%
+
+TI-G102i#
+00:08:55 | INFO     | [172.16.0.170] SSH cerrado
+00:09:49 | INFO     | [172.16.0.170] Abriendo switch
+00:09:50 | INFO     | [172.16.0.170] Iniciando sesión
+00:09:56 | INFO     | [172.16.0.170] Login correcto
+00:09:56 | INFO     | [172.16.0.170] URL: http://172.16.0.170/webctrl.cgi?action=cgi_home_page&csrf_token=a1cb14b44e4175677094c6bfaecb5f7d
+00:09:56 | INFO     | [172.16.0.170] Abriendo configuración SSH
+00:09:57 | INFO     | [172.16.0.170] Estado SSH actual: 1
+00:09:57 | INFO     | [172.16.0.170] SSH ya estaba habilitado
+00:09:57 | INFO     | URL después de Apply: http://172.16.0.170/webctrl.cgi?action=cgi_app_switch_cfg_ssh&csrf_token=a1cb14b44e4175677094c6bfaecb5f7d
+00:09:57 | INFO     | [172.16.0.170] Abriendo página Save
+00:10:07 | INFO     | [172.16.0.170] Configuración guardada
+00:10:07 | INFO     | URL final: http://172.16.0.170/webctrl.cgi
+00:10:12 | INFO     | [172.16.0.170] Conectando por SSH...
+00:10:12 | INFO     | Connected (version 2.0, client dropbear_2024.84)
+00:10:13 | INFO     | Authentication (none) successful!
+00:10:13 | INFO     | [172.16.0.170] Autenticado mediante NONE
+00:10:14 | INFO     | [172.16.0.170] Consola lista
+00:10:14 | INFO     | [172.16.0.170] Entrando a modo enable
+00:10:16 | INFO     | enable
+TI-G102i>enable
+user:
+00:10:16 | INFO     | admin
+password:
+00:10:18 | INFO     | 
+TI-G102i#
+00:10:18 | INFO     | [172.16.0.170] Enable correcto
+00:10:18 | INFO     | [172.16.0.170] >> show system-info
+00:10:19 | INFO     | show system-info
+CLI auto-logout: 5 minutes.
+CPU loading: 62.87%
+Memory info: total 127636 KB, free 110092 KB, usage 13.75%
+
+TI-G102i#
+00:10:19 | INFO     | [172.16.0.170] SSH cerrado
+00:10:31 | INFO     | Abriendo SQLite: switches.db
+00:10:31 | INFO     | Se encontraron 80 switches
+00:10:38 | INFO     | Abriendo SQLite: switches.db
+00:10:38 | INFO     | Se encontraron 80 switches
+00:11:51 | INFO     | Session was garbage collected: pBYgmbeuXza35mAC
