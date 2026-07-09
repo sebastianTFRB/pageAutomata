@@ -2410,3 +2410,550 @@ AttributeError: PERSON_CELEBRATION_OUTLINED
 12:07:00 | INFO     | Abriendo SQLite: switches.db
 12:07:00 | INFO     | Se encontraron 80 switches
 12:13:17 | INFO     | Session was garbage collected: bRsd7HGBBLXHl5CK
+12:20:17 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+12:20:17 | INFO     | Starting up TCP server on localhost:57625
+12:20:17 | INFO     | Flet app has started...
+12:20:17 | INFO     | App URL: tcp://localhost:57625
+12:20:17 | INFO     | Starting Flet View app...
+12:20:17 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+12:20:18 | INFO     | App session started
+12:20:18 | INFO     | Abriendo SQLite: switches.db
+12:20:18 | INFO     | Se encontraron 80 switches
+12:20:18 | ERROR    | Unhandled error in main() handler
+Traceback (most recent call last):
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\app.py", line 354, in on_session_created
+    main(session.page)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 32, in main
+    process_screen = ProcessAutomaticsScreen(page)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\screens\process_automatics_screen.py", line 144, in __init__
+    ft.Expanded(self.new_command_input),
+    ^^^^^^^^^^^
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\__init__.py", line 1220, in __getattr__
+    raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
+AttributeError: module 'flet' has no attribute 'Expanded'
+12:21:13 | INFO     | Session was garbage collected: g7NQzKBWnTpZ691o
+12:21:22 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+12:21:22 | INFO     | Starting up TCP server on localhost:54668
+12:21:22 | INFO     | Flet app has started...
+12:21:22 | INFO     | App URL: tcp://localhost:54668
+12:21:22 | INFO     | Starting Flet View app...
+12:21:22 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+12:21:22 | INFO     | App session started
+12:21:22 | INFO     | Abriendo SQLite: switches.db
+12:21:22 | INFO     | Se encontraron 80 switches
+12:21:22 | INFO     | Abriendo SQLite: switches.db
+12:21:22 | INFO     | Comando agregado a libreria SSH: show interface
+12:21:22 | INFO     | Comando agregado a libreria SSH: show running-config
+12:21:22 | INFO     | Comando agregado a libreria SSH: show mac-address-table
+12:21:22 | INFO     | Comando agregado a libreria SSH: show vlan
+12:21:22 | INFO     | Comando agregado a libreria SSH: show spanning-tree
+12:21:22 | INFO     | Abriendo SQLite: switches.db
+12:21:30 | INFO     | Abriendo SQLite: switches.db
+12:21:30 | INFO     | Se encontraron 80 switches
+12:25:48 | INFO     | Session was garbage collected: RWo4vv61lD31gv1V
+12:27:34 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+12:27:34 | INFO     | Starting up TCP server on localhost:51789
+12:27:34 | INFO     | Flet app has started...
+12:27:34 | INFO     | App URL: tcp://localhost:51789
+12:27:34 | INFO     | Starting Flet View app...
+12:27:34 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+12:27:35 | INFO     | App session started
+12:27:35 | INFO     | Abriendo SQLite: switches.db
+12:27:35 | INFO     | Se encontraron 80 switches
+12:27:35 | ERROR    | Unhandled error in main() handler
+Traceback (most recent call last):
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\app.py", line 354, in on_session_created
+    main(session.page)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 32, in main
+    process_screen = ProcessAutomaticsScreen(page)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\screens\process_automatics_screen.py", line 75, in __init__
+    self.process_tabs = self._build_process_tabs()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\screens\process_automatics_screen.py", line 139, in _build_process_tabs
+    ft.Tab(text="Proceso SSH"),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Tab.__init__() got an unexpected keyword argument 'text'
+12:27:38 | INFO     | Session was garbage collected: 3aAwDpB5gCNC6o0a
+12:28:48 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+12:28:48 | INFO     | Starting up TCP server on localhost:58179
+12:28:48 | INFO     | Flet app has started...
+12:28:49 | INFO     | App URL: tcp://localhost:58179
+12:28:49 | INFO     | Starting Flet View app...
+12:28:49 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+12:28:49 | INFO     | App session started
+12:28:49 | INFO     | Abriendo SQLite: switches.db
+12:28:49 | INFO     | Se encontraron 80 switches
+12:28:49 | ERROR    | Unhandled error in main() handler
+Traceback (most recent call last):
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\app.py", line 354, in on_session_created
+    main(session.page)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 32, in main
+    process_screen = ProcessAutomaticsScreen(page)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\screens\process_automatics_screen.py", line 75, in __init__
+    self.process_tabs = self._build_process_tabs()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\screens\process_automatics_screen.py", line 130, in _build_process_tabs
+    return ft.Tabs(
+           ^^^^^^^^
+TypeError: Tabs.__init__() got an unexpected keyword argument 'divider_color'
+12:29:28 | INFO     | Session was garbage collected: sNr7BmQ0MFrRmiSq
+12:29:33 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+12:29:33 | INFO     | Starting up TCP server on localhost:52297
+12:29:33 | INFO     | Flet app has started...
+12:29:33 | INFO     | App URL: tcp://localhost:52297
+12:29:33 | INFO     | Starting Flet View app...
+12:29:33 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+12:29:33 | INFO     | App session started
+12:29:33 | INFO     | Abriendo SQLite: switches.db
+12:29:33 | INFO     | Se encontraron 80 switches
+12:29:33 | INFO     | Abriendo SQLite: switches.db
+12:29:33 | INFO     | Abriendo SQLite: switches.db
+12:29:40 | INFO     | Abriendo SQLite: switches.db
+12:29:40 | INFO     | Se encontraron 80 switches
+12:31:56 | INFO     | Session was garbage collected: mZ9GLOgFPog5UJR8
+12:34:05 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+12:34:05 | INFO     | Starting up TCP server on localhost:54697
+12:34:05 | INFO     | Flet app has started...
+12:34:05 | INFO     | App URL: tcp://localhost:54697
+12:34:05 | INFO     | Starting Flet View app...
+12:34:05 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+12:34:05 | INFO     | App session started
+12:34:05 | INFO     | Abriendo SQLite: switches.db
+12:34:05 | INFO     | Se encontraron 80 switches
+12:34:05 | INFO     | Abriendo SQLite: switches.db
+12:34:05 | INFO     | Abriendo SQLite: switches.db
+12:34:14 | INFO     | Abriendo SQLite: switches.db
+12:34:14 | INFO     | Se encontraron 80 switches
+13:03:25 | INFO     | Session was garbage collected: 04QZTGzAPjuOPNcK
+13:03:31 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+13:03:31 | INFO     | Starting up TCP server on localhost:55700
+13:03:31 | INFO     | Flet app has started...
+13:03:31 | INFO     | App URL: tcp://localhost:55700
+13:03:31 | INFO     | Starting Flet View app...
+13:03:31 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+13:03:32 | INFO     | App session started
+13:03:32 | INFO     | Abriendo SQLite: switches.db
+13:03:32 | INFO     | Se encontraron 80 switches
+13:03:32 | INFO     | Abriendo SQLite: switches.db
+13:03:32 | INFO     | Abriendo SQLite: switches.db
+13:03:37 | INFO     | Abriendo SQLite: switches.db
+13:03:37 | INFO     | Se encontraron 80 switches
+13:03:41 | INFO     | Abriendo SQLite: switches.db
+13:03:48 | INFO     | Abriendo SQLite: switches.db
+13:03:50 | INFO     | Abriendo SQLite: switches.db
+13:03:50 | INFO     | Se encontraron 80 switches
+13:03:51 | INFO     | Abriendo SQLite: switches.db
+13:03:51 | INFO     | Se encontraron 80 switches
+13:04:23 | INFO     | Abriendo SQLite: switches.db
+13:04:23 | INFO     | Se encontraron 80 switches
+13:05:04 | INFO     | Session was garbage collected: DXSKUANXkjioVLxz
+13:08:07 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+13:08:07 | INFO     | Starting up TCP server on localhost:54242
+13:08:07 | INFO     | Flet app has started...
+13:08:07 | INFO     | App URL: tcp://localhost:54242
+13:08:07 | INFO     | Starting Flet View app...
+13:08:07 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+13:08:08 | INFO     | App session started
+13:08:08 | INFO     | Abriendo SQLite: switches.db
+13:08:08 | INFO     | Se encontraron 80 switches
+13:08:08 | INFO     | Abriendo SQLite: switches.db
+13:08:08 | INFO     | Abriendo SQLite: switches.db
+13:08:16 | INFO     | Abriendo SQLite: switches.db
+13:08:16 | INFO     | Se encontraron 80 switches
+13:08:43 | INFO     | Abriendo SQLite: switches.db
+13:16:46 | INFO     | Session was garbage collected: krNMORHBALDFte22
+13:16:50 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+13:16:50 | INFO     | Starting up TCP server on localhost:59003
+13:16:50 | INFO     | Flet app has started...
+13:16:50 | INFO     | App URL: tcp://localhost:59003
+13:16:50 | INFO     | Starting Flet View app...
+13:16:50 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+13:16:51 | INFO     | App session started
+13:16:51 | INFO     | Abriendo SQLite: switches.db
+13:16:51 | INFO     | Se encontraron 80 switches
+13:16:51 | INFO     | Abriendo SQLite: switches.db
+13:16:51 | INFO     | Abriendo SQLite: switches.db
+13:16:56 | INFO     | Abriendo SQLite: switches.db
+13:16:56 | INFO     | Se encontraron 80 switches
+13:17:00 | INFO     | Abriendo SQLite: switches.db
+13:27:14 | INFO     | Session was garbage collected: Eueq4waR3jMHhhCv
+13:37:20 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+13:37:20 | INFO     | Starting up TCP server on localhost:54394
+13:37:20 | INFO     | Flet app has started...
+13:37:20 | INFO     | App URL: tcp://localhost:54394
+13:37:20 | INFO     | Starting Flet View app...
+13:37:20 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+13:37:20 | INFO     | App session started
+13:37:20 | INFO     | Abriendo SQLite: switches.db
+13:37:20 | INFO     | Se encontraron 80 switches
+13:37:20 | INFO     | Abriendo SQLite: switches.db
+13:37:20 | INFO     | Abriendo SQLite: switches.db
+13:37:26 | INFO     | Abriendo SQLite: switches.db
+13:37:26 | INFO     | Se encontraron 80 switches
+13:37:29 | INFO     | Abriendo SQLite: switches.db
+13:38:23 | INFO     | Session was garbage collected: h3BIQPv8upSh2GUD
+13:44:41 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+13:44:41 | INFO     | Starting up TCP server on localhost:58596
+13:44:41 | INFO     | Flet app has started...
+13:44:41 | INFO     | App URL: tcp://localhost:58596
+13:44:41 | INFO     | Starting Flet View app...
+13:44:41 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+13:44:41 | INFO     | App session started
+13:44:41 | INFO     | Abriendo SQLite: switches.db
+13:44:41 | INFO     | Se encontraron 80 switches
+13:44:41 | INFO     | Abriendo SQLite: switches.db
+13:44:41 | INFO     | Abriendo SQLite: switches.db
+13:44:45 | INFO     | Abriendo SQLite: switches.db
+13:44:45 | INFO     | Se encontraron 80 switches
+13:44:51 | INFO     | Abriendo SQLite: switches.db
+13:44:53 | INFO     | Abriendo SQLite: switches.db
+13:44:55 | INFO     | Abriendo SQLite: switches.db
+13:46:02 | INFO     | Session was garbage collected: LpW2wHmXMQmTDCMf
+13:46:06 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+13:46:06 | INFO     | Starting up TCP server on localhost:64416
+13:46:06 | INFO     | Flet app has started...
+13:46:06 | INFO     | App URL: tcp://localhost:64416
+13:46:06 | INFO     | Starting Flet View app...
+13:46:06 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+13:46:06 | INFO     | App session started
+13:46:06 | INFO     | Abriendo SQLite: switches.db
+13:46:06 | INFO     | Se encontraron 80 switches
+13:46:06 | INFO     | Abriendo SQLite: switches.db
+13:46:06 | INFO     | Abriendo SQLite: switches.db
+13:46:11 | INFO     | Abriendo SQLite: switches.db
+13:46:11 | INFO     | Se encontraron 80 switches
+13:46:14 | INFO     | Abriendo SQLite: switches.db
+13:46:18 | INFO     | Session was garbage collected: GkxB14lKBox6Rs4Z
+13:47:16 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+13:47:16 | INFO     | Starting up TCP server on localhost:54436
+13:47:16 | INFO     | Flet app has started...
+13:47:16 | INFO     | App URL: tcp://localhost:54436
+13:47:16 | INFO     | Starting Flet View app...
+13:47:16 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+13:47:16 | INFO     | App session started
+13:47:16 | INFO     | Abriendo SQLite: switches.db
+13:47:16 | INFO     | Se encontraron 80 switches
+13:47:16 | INFO     | Abriendo SQLite: switches.db
+13:47:16 | INFO     | Abriendo SQLite: switches.db
+13:47:20 | INFO     | Abriendo SQLite: switches.db
+13:47:20 | INFO     | Se encontraron 80 switches
+13:47:22 | INFO     | Abriendo SQLite: switches.db
+13:47:26 | INFO     | Session was garbage collected: qTD4mFoeFYFTmafi
+13:57:17 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+13:57:17 | INFO     | Starting up TCP server on localhost:53493
+13:57:17 | INFO     | Flet app has started...
+13:57:17 | INFO     | App URL: tcp://localhost:53493
+13:57:17 | INFO     | Starting Flet View app...
+13:57:17 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+13:57:18 | INFO     | App session started
+13:57:18 | INFO     | Abriendo SQLite: switches.db
+13:57:18 | INFO     | Se encontraron 80 switches
+13:57:18 | INFO     | Abriendo SQLite: switches.db
+13:57:18 | INFO     | Abriendo SQLite: switches.db
+13:57:22 | INFO     | Abriendo SQLite: switches.db
+13:57:22 | INFO     | Se encontraron 80 switches
+13:57:25 | INFO     | Abriendo SQLite: switches.db
+14:04:06 | INFO     | Abriendo SQLite: switches.db
+14:05:15 | INFO     | Abriendo SQLite: switches.db
+14:05:15 | INFO     | Comando agregado a libreria SSH: show spanning-tree active
+14:05:15 | INFO     | Abriendo SQLite: switches.db
+14:05:17 | INFO     | Abriendo SQLite: switches.db
+14:05:37 | INFO     | Abriendo SQLite: switches.db
+14:05:37 | INFO     | Se encontraron 80 switches
+14:05:37 | INFO     | [172.16.0.170] Conectando por SSH...
+14:05:37 | INFO     | Connected (version 2.0, client dropbear_2024.84)
+14:05:38 | INFO     | Authentication (none) successful!
+14:05:38 | INFO     | [172.16.0.170] Autenticado mediante NONE
+14:05:39 | INFO     | [172.16.0.170] Consola lista
+14:05:39 | INFO     | [172.16.0.170] Entrando a modo enable
+14:05:41 | INFO     | enable
+TI-G102i>enable
+user:
+14:05:41 | INFO     | admin
+password:
+14:05:43 | INFO     | 
+TI-G102i#
+14:05:43 | INFO     | [172.16.0.170] Enable correcto
+14:05:43 | INFO     | [172.16.0.170] >> show spanning-tree active
+14:05:44 | INFO     | show spanning-tree active
+STP is disabled!
+
+TI-G102i#
+14:05:44 | INFO     | [172.16.0.170] SSH cerrado
+14:05:44 | INFO     | [171.16.0.131] Conectando por SSH...
+14:06:05 | INFO     | [171.16.0.131] SSH cerrado
+14:06:05 | INFO     | [172.16.0.135] Conectando por SSH...
+14:06:26 | INFO     | [172.16.0.135] SSH cerrado
+14:06:26 | INFO     | [172.16.0.134] Conectando por SSH...
+14:06:47 | INFO     | [172.16.0.134] SSH cerrado
+14:06:47 | INFO     | [172.16.0.133] Conectando por SSH...
+14:07:08 | INFO     | [172.16.0.133] SSH cerrado
+14:07:08 | INFO     | [172.16.0.132] Conectando por SSH...
+14:07:29 | INFO     | [172.16.0.132] SSH cerrado
+14:07:29 | INFO     | [172.16.0.139] Conectando por SSH...
+14:07:50 | INFO     | [172.16.0.139] SSH cerrado
+14:07:50 | INFO     | [172.16.0.140] Conectando por SSH...
+14:08:11 | INFO     | [172.16.0.140] SSH cerrado
+14:08:11 | INFO     | [172.16.0.136] Conectando por SSH...
+14:08:32 | INFO     | [172.16.0.136] SSH cerrado
+14:08:32 | INFO     | [172.16.0.137] Conectando por SSH...
+14:08:48 | INFO     | Abriendo SQLite: switches.db
+14:08:48 | INFO     | Se encontraron 80 switches
+14:08:53 | INFO     | [172.16.0.137] SSH cerrado
+14:08:53 | INFO     | [172.16.0.138] Conectando por SSH...
+14:09:14 | INFO     | [172.16.0.138] SSH cerrado
+14:09:14 | INFO     | [172.16.0.190] Conectando por SSH...
+14:09:35 | INFO     | [172.16.0.190] SSH cerrado
+14:09:35 | INFO     | [172.16.0.161] Conectando por SSH...
+14:09:57 | INFO     | [172.16.0.161] SSH cerrado
+14:09:57 | INFO     | [172.16.0.165] Conectando por SSH...
+14:10:18 | INFO     | [172.16.0.165] SSH cerrado
+14:10:18 | INFO     | [172.16.0.162] Conectando por SSH...
+14:10:39 | INFO     | [172.16.0.162] SSH cerrado
+14:10:39 | INFO     | [172.16.0.167] Conectando por SSH...
+14:11:00 | INFO     | [172.16.0.167] SSH cerrado
+14:11:00 | INFO     | [172.16.0.174] Conectando por SSH...
+14:11:21 | INFO     | [172.16.0.174] SSH cerrado
+14:11:21 | INFO     | [RESPALDO] Conectando por SSH...
+14:11:24 | INFO     | [RESPALDO] SSH cerrado
+14:11:24 | INFO     | [172.16.0.175] Conectando por SSH...
+14:11:45 | INFO     | [172.16.0.175] SSH cerrado
+14:11:45 | INFO     | [172.16.0.187] Conectando por SSH...
+14:12:06 | INFO     | [172.16.0.187] SSH cerrado
+14:12:06 | INFO     | [172.16.0.169] Conectando por SSH...
+14:12:21 | INFO     | Abriendo SQLite: switches.db
+14:12:27 | INFO     | [172.16.0.169] SSH cerrado
+14:12:27 | INFO     | [172.16.0.190] Conectando por SSH...
+14:12:48 | INFO     | [172.16.0.190] SSH cerrado
+14:12:48 | INFO     | [172.16.0.188] Conectando por SSH...
+14:13:09 | INFO     | [172.16.0.188] SSH cerrado
+14:13:09 | INFO     | [172.16.0.191] Conectando por SSH...
+14:13:30 | INFO     | [172.16.0.191] SSH cerrado
+14:13:30 | INFO     | [172.16.0.192] Conectando por SSH...
+14:13:51 | INFO     | [172.16.0.192] SSH cerrado
+14:13:51 | INFO     | [172.16.0.189] Conectando por SSH...
+14:13:56 | INFO     | Abriendo SQLite: switches.db
+14:13:56 | INFO     | Se encontraron 80 switches
+14:14:12 | INFO     | [172.16.0.189] SSH cerrado
+14:14:12 | INFO     | [RESPALDO] Conectando por SSH...
+14:14:15 | INFO     | [RESPALDO] SSH cerrado
+14:14:15 | INFO     | [172.16.0.195] Conectando por SSH...
+14:14:36 | INFO     | [172.16.0.195] SSH cerrado
+14:14:36 | INFO     | [172.16.0.196] Conectando por SSH...
+14:14:57 | INFO     | [172.16.0.196] SSH cerrado
+14:14:57 | INFO     | [172.16.0.194] Conectando por SSH...
+14:15:18 | INFO     | [172.16.0.194] SSH cerrado
+14:15:18 | INFO     | [172.16.0.193] Conectando por SSH...
+14:15:39 | INFO     | [172.16.0.193] SSH cerrado
+14:15:39 | INFO     | [172.16.0.151] Conectando por SSH...
+14:16:01 | INFO     | [172.16.0.151] SSH cerrado
+14:16:01 | INFO     | [172.16.0.152] Conectando por SSH...
+14:16:22 | INFO     | [172.16.0.152] SSH cerrado
+14:16:22 | INFO     | [172.16.0.153] Conectando por SSH...
+14:16:43 | INFO     | [172.16.0.153] SSH cerrado
+14:16:43 | INFO     | [172.16.0.154] Conectando por SSH...
+14:17:04 | INFO     | [172.16.0.154] SSH cerrado
+14:17:04 | INFO     | [172.16.0.155] Conectando por SSH...
+14:17:25 | INFO     | [172.16.0.155] SSH cerrado
+14:17:25 | INFO     | [172.16.0.159] Conectando por SSH...
+14:17:46 | INFO     | [172.16.0.159] SSH cerrado
+14:17:46 | INFO     | [172.16.0.172] Conectando por SSH...
+14:18:07 | INFO     | [172.16.0.172] SSH cerrado
+14:18:07 | INFO     | [172.16.0.158] Conectando por SSH...
+14:18:15 | INFO     | Session was garbage collected: PnXuVhSE2kHMFG9E
+14:19:38 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmpf7pphjx1\switches.db
+14:19:38 | INFO     | CSV importado desde C:\Users\sebax\AppData\Local\Temp\tmpf7pphjx1\switches.csv
+14:19:38 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmpf7pphjx1\switches.db
+14:19:38 | INFO     | Se encontraron 1 switches
+14:19:38 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmpf7pphjx1\switches.db
+14:19:38 | INFO     | Se encontraron 1 switches
+14:19:38 | INFO     | CSV exportado hacia C:\Users\sebax\AppData\Local\Temp\tmpf7pphjx1\export.csv
+14:20:15 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+14:20:15 | INFO     | Starting up TCP server on localhost:63166
+14:20:15 | INFO     | Flet app has started...
+14:20:15 | INFO     | App URL: tcp://localhost:63166
+14:20:15 | INFO     | Starting Flet View app...
+14:20:15 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+14:20:16 | INFO     | App session started
+14:20:16 | INFO     | Abriendo SQLite: switches.db
+14:20:16 | INFO     | Se encontraron 80 switches
+14:20:16 | INFO     | Abriendo SQLite: switches.db
+14:20:16 | INFO     | Abriendo SQLite: switches.db
+14:20:20 | INFO     | Abriendo SQLite: switches.db
+14:20:20 | INFO     | Se encontraron 80 switches
+14:20:25 | INFO     | Abriendo SQLite: switches.db
+14:20:25 | INFO     | Se encontraron 80 switches
+14:20:25 | INFO     | Abriendo SQLite: switches.db
+14:21:46 | INFO     | Abriendo SQLite: switches.db
+14:21:46 | INFO     | Se encontraron 80 switches
+14:21:47 | INFO     | Abriendo SQLite: switches.db
+14:21:47 | INFO     | Se encontraron 80 switches
+14:21:47 | INFO     | Abriendo SQLite: switches.db
+14:23:07 | INFO     | Abriendo SQLite: switches.db
+14:23:07 | INFO     | Se encontraron 80 switches
+14:23:08 | INFO     | Abriendo SQLite: switches.db
+14:23:08 | INFO     | Se encontraron 80 switches
+14:23:08 | INFO     | Abriendo SQLite: switches.db
+14:23:08 | INFO     | Se encontraron 80 switches
+14:23:08 | INFO     | Abriendo SQLite: switches.db
+14:24:28 | INFO     | Abriendo SQLite: switches.db
+14:24:28 | INFO     | Se encontraron 80 switches
+14:24:29 | INFO     | Abriendo SQLite: switches.db
+14:24:29 | INFO     | Se encontraron 80 switches
+14:24:29 | INFO     | Abriendo SQLite: switches.db
+14:25:49 | INFO     | Abriendo SQLite: switches.db
+14:25:49 | INFO     | Se encontraron 80 switches
+14:25:50 | INFO     | Abriendo SQLite: switches.db
+14:25:50 | INFO     | Se encontraron 80 switches
+14:25:50 | INFO     | Abriendo SQLite: switches.db
+14:27:10 | INFO     | Abriendo SQLite: switches.db
+14:27:10 | INFO     | Se encontraron 80 switches
+14:27:11 | INFO     | Session was garbage collected: yYu9xT9pt2a9YCzw
+14:28:41 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+14:28:41 | INFO     | Starting up TCP server on localhost:56791
+14:28:41 | INFO     | Flet app has started...
+14:28:41 | INFO     | App URL: tcp://localhost:56791
+14:28:41 | INFO     | Starting Flet View app...
+14:28:41 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+14:28:42 | INFO     | App session started
+14:28:42 | INFO     | Abriendo SQLite: switches.db
+14:28:42 | INFO     | Se encontraron 80 switches
+14:28:42 | INFO     | Abriendo SQLite: switches.db
+14:28:42 | INFO     | Abriendo SQLite: switches.db
+14:28:47 | INFO     | Abriendo SQLite: switches.db
+14:28:47 | INFO     | Se encontraron 80 switches
+14:28:53 | INFO     | Abriendo SQLite: switches.db
+14:28:53 | INFO     | Se encontraron 80 switches
+14:28:56 | INFO     | Abriendo SQLite: switches.db
+14:28:56 | INFO     | Se encontraron 80 switches
+14:28:56 | INFO     | Abriendo SQLite: switches.db
+14:30:18 | INFO     | Abriendo SQLite: switches.db
+14:30:18 | INFO     | Se encontraron 80 switches
+14:32:24 | INFO     | Session was garbage collected: HmLTQ7VZRab4G55j
+14:32:28 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+14:32:28 | INFO     | Starting up TCP server on localhost:64209
+14:32:28 | INFO     | Flet app has started...
+14:32:28 | INFO     | App URL: tcp://localhost:64209
+14:32:28 | INFO     | Starting Flet View app...
+14:32:28 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+14:32:28 | INFO     | App session started
+14:32:28 | INFO     | Abriendo SQLite: switches.db
+14:32:28 | INFO     | Se encontraron 80 switches
+14:32:28 | INFO     | Abriendo SQLite: switches.db
+14:32:28 | INFO     | Abriendo SQLite: switches.db
+14:32:33 | INFO     | Abriendo SQLite: switches.db
+14:32:33 | INFO     | Se encontraron 80 switches
+14:32:35 | INFO     | Abriendo SQLite: switches.db
+14:32:35 | INFO     | Se encontraron 80 switches
+14:32:37 | INFO     | Abriendo SQLite: switches.db
+14:32:37 | INFO     | Se encontraron 80 switches
+14:32:37 | INFO     | Abriendo SQLite: switches.db
+14:32:44 | INFO     | Session was garbage collected: ajtwaodN3IeNZUmt
+14:34:16 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+14:34:16 | INFO     | Starting up TCP server on localhost:55325
+14:34:16 | INFO     | Flet app has started...
+14:34:16 | INFO     | App URL: tcp://localhost:55325
+14:34:16 | INFO     | Starting Flet View app...
+14:34:16 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+14:34:16 | INFO     | App session started
+14:34:16 | ERROR    | Unhandled error in main() handler
+Traceback (most recent call last):
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\app.py", line 354, in on_session_created
+    main(session.page)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 30, in main
+    devices_screen = DevicesScreen(page)
+                     ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\screens\devices_screen.py", line 29, in __init__
+    self.status_progress_dialog = StatusUpdateProgressDialog(on_state_change=self._refresh_ui)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\widget\status_update_progress_dialog.py", line 24, in __init__
+    alignment=ft.alignment.center,
+              ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'flet.controls.alignment' has no attribute 'center'
+14:34:52 | INFO     | Session was garbage collected: zM3YfFwp9RJqSZsK
+14:34:56 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+14:34:56 | INFO     | Starting up TCP server on localhost:62959
+14:34:56 | INFO     | Flet app has started...
+14:34:56 | INFO     | App URL: tcp://localhost:62959
+14:34:56 | INFO     | Starting Flet View app...
+14:34:56 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+14:34:56 | INFO     | App session started
+14:34:56 | INFO     | Abriendo SQLite: switches.db
+14:34:56 | INFO     | Se encontraron 80 switches
+14:34:56 | INFO     | Abriendo SQLite: switches.db
+14:34:56 | INFO     | Abriendo SQLite: switches.db
+14:35:00 | INFO     | Abriendo SQLite: switches.db
+14:35:00 | INFO     | Se encontraron 80 switches
+14:35:04 | INFO     | Abriendo SQLite: switches.db
+14:35:04 | INFO     | Se encontraron 80 switches
+14:35:04 | INFO     | Abriendo SQLite: switches.db
+14:36:25 | INFO     | Abriendo SQLite: switches.db
+14:36:25 | INFO     | Se encontraron 80 switches
+14:39:06 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmpymmzv91m\switches.db
+14:39:06 | INFO     | CSV importado desde C:\Users\sebax\AppData\Local\Temp\tmpymmzv91m\switches.csv
+14:39:06 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmpymmzv91m\switches.db
+14:39:06 | INFO     | Se encontraron 1 switches
+14:39:06 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmpymmzv91m\switches.db
+14:39:06 | INFO     | Se encontraron 1 switches
+14:39:06 | INFO     | CSV exportado hacia C:\Users\sebax\AppData\Local\Temp\tmpymmzv91m\export.csv
+14:39:33 | INFO     | Session was garbage collected: nxcjtIietiTHn3mS
+14:39:51 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+14:39:51 | INFO     | Starting up TCP server on localhost:56898
+14:39:51 | INFO     | Flet app has started...
+14:39:51 | INFO     | App URL: tcp://localhost:56898
+14:39:51 | INFO     | Starting Flet View app...
+14:39:51 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+14:39:51 | INFO     | App session started
+14:39:51 | INFO     | Abriendo SQLite: switches.db
+14:39:51 | INFO     | Se encontraron 80 switches
+14:39:51 | INFO     | Abriendo SQLite: switches.db
+14:39:51 | INFO     | Abriendo SQLite: switches.db
+14:40:00 | INFO     | Abriendo SQLite: switches.db
+14:40:00 | INFO     | Se encontraron 80 switches
+14:40:38 | INFO     | Abriendo SQLite: switches.db
+14:40:47 | INFO     | Abriendo SQLite: switches.db
+14:40:47 | INFO     | Se encontraron 80 switches
+14:40:47 | INFO     | [172.16.0.170] Conectando por SSH...
+14:40:47 | INFO     | Connected (version 2.0, client dropbear_2024.84)
+14:40:48 | INFO     | Authentication (none) successful!
+14:40:48 | INFO     | [172.16.0.170] Autenticado mediante NONE
+14:40:50 | INFO     | [172.16.0.170] Consola lista
+14:40:50 | INFO     | [172.16.0.170] Entrando a modo enable
+14:40:51 | INFO     | enable
+TI-G102i>enable
+user:
+14:40:52 | INFO     | admin
+password:
+14:40:53 | INFO     | 
+TI-G102i#
+14:40:53 | INFO     | [172.16.0.170] Enable correcto
+14:40:53 | INFO     | [172.16.0.170] >> show spanning-tree active
+14:40:54 | INFO     | show spanning-tree active
+STP is disabled!
+
+TI-G102i#
+14:40:54 | INFO     | [172.16.0.170] SSH cerrado
+14:40:54 | INFO     | [172.16.0.170] Conectando por SSH...
+14:40:54 | INFO     | Connected (version 2.0, client dropbear_2024.84)
+14:40:55 | INFO     | Authentication (none) successful!
+14:40:55 | INFO     | [172.16.0.170] Autenticado mediante NONE
+14:40:56 | INFO     | [172.16.0.170] Consola lista
+14:40:56 | INFO     | [172.16.0.170] Entrando a modo enable
+14:40:58 | INFO     | enable
+TI-G102i>enable
+user:
+14:40:58 | INFO     | admin
+password:
+14:41:00 | INFO     | 
+TI-G102i#
+14:41:00 | INFO     | [172.16.0.170] Enable correcto
+14:41:00 | INFO     | [172.16.0.170] >> show spanning-tree active
+14:41:01 | INFO     | show spanning-tree active
+STP is disabled!
+
+TI-G102i#
+14:41:01 | INFO     | [172.16.0.170] SSH cerrado
+14:41:47 | INFO     | Session was garbage collected: 8GKKXcYxLumuCc4R

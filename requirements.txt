@@ -1,0 +1,4 @@
+# Errores y aprendizaje
+# Flet: no usar Container(expand=True) dentro de Row/Column anidados sin ancho definido.
+# Sintoma: panel en blanco sin traceback claro.
+# Solucion: usar width fijo o mover expand a un padre con espacio finito.

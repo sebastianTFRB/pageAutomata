@@ -44,6 +44,7 @@ class ExcelManager:
                 zona TEXT,
                 estado TEXT,
                 ssh TEXT,
+                spanning_tree TEXT,
                 fecha TEXT,
                 falla TEXT,
                 observacion TEXT
@@ -51,7 +52,31 @@ class ExcelManager:
             """
         )
 
+        # Migra columnas faltantes en bases antiguas.
+        self._asegurar_columna("switches", "spanning_tree", "TEXT")
+
+        self.cursor.execute(
+            """
+            CREATE TABLE IF NOT EXISTS ssh_command_library (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                comando TEXT NOT NULL UNIQUE,
+                descripcion TEXT,
+                created_at TEXT NOT NULL
+            )
+            """
+        )
+
         self.conn.commit()
+
+    def _asegurar_columna(self, tabla, columna, tipo_sql):
+
+        self.cursor.execute(f"PRAGMA table_info({tabla})")
+        columnas = [fila[1] for fila in self.cursor.fetchall()]
+
+        if columna in columnas:
+            return
+
+        self.cursor.execute(f"ALTER TABLE {tabla} ADD COLUMN {columna} {tipo_sql}")
 
     def abrir(self):
 
@@ -85,6 +110,7 @@ class ExcelManager:
                 "zona",
                 "estado",
                 "ssh",
+                "spanning_tree",
                 "fecha",
                 "falla",
                 "observacion"
@@ -112,10 +138,11 @@ class ExcelManager:
                 zona,
                 estado,
                 ssh,
+                spanning_tree,
                 fecha,
                 falla,
                 observacion
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """,
             (
                 self._normalizar(datos.get("nombre")),
@@ -125,6 +152,7 @@ class ExcelManager:
                 self._normalizar(datos.get("zona")),
                 self._normalizar(datos.get("estado") or "en funcionamiento"),
                 self._normalizar(datos.get("ssh")),
+                self._normalizar(datos.get("spanning_tree")),
                 self._normalizar(datos.get("fecha") or datetime.now().date().isoformat()),
                 self._normalizar(datos.get("falla")),
                 self._normalizar(datos.get("observacion"))
@@ -167,7 +195,7 @@ class ExcelManager:
         for fila in range(2, sheet.max_row + 1):
             datos = {}
 
-            for campo in ["nombre", "ip", "usuario", "password", "zona", "estado", "ssh", "fecha"]:
+            for campo in ["nombre", "ip", "usuario", "password", "zona", "estado", "ssh", "spanning_tree", "fecha"]:
                 col_idx = headers.get(campo)
                 if col_idx is None:
                     for key in headers:
@@ -203,7 +231,7 @@ class ExcelManager:
 
             self.cursor.execute(
                 """
-                SELECT id, nombre, ip, usuario, password, zona, estado, ssh, fecha, falla, observacion
+                SELECT id, nombre, ip, usuario, password, zona, estado, ssh, spanning_tree, fecha, falla, observacion
                 FROM switches
                 ORDER BY id
                 """
@@ -223,9 +251,10 @@ class ExcelManager:
                     "zona": self._normalizar(fila[5]),
                     "estado": self._normalizar(fila[6]),
                     "ssh": self._normalizar(fila[7]),
-                    "fecha": self._normalizar(fila[8]),
-                    "falla": self._normalizar(fila[9]),
-                    "observacion": self._normalizar(fila[10])
+                    "spanning_tree": self._normalizar(fila[8]),
+                    "fecha": self._normalizar(fila[9]),
+                    "falla": self._normalizar(fila[10]),
+                    "observacion": self._normalizar(fila[11])
                 })
 
             log.info(f"Se encontraron {len(switches)} switches")
@@ -263,6 +292,7 @@ class ExcelManager:
                 "zona": "",
                 "estado": "en funcionamiento",
                 "ssh": "",
+                "spanning_tree": "",
                 "fecha": ""
 
             })
@@ -305,7 +335,7 @@ class ExcelManager:
         with open(ruta_csv, "w", newline="", encoding="utf-8") as handle:
             writer = csv.DictWriter(
                 handle,
-                fieldnames=["id", "nombre", "ip", "usuario", "password", "zona", "estado", "ssh", "fecha"]
+                fieldnames=["id", "nombre", "ip", "usuario", "password", "zona", "estado", "ssh", "spanning_tree", "fecha"]
             )
             writer.writeheader()
 
@@ -319,6 +349,7 @@ class ExcelManager:
                     "zona": switch.get("zona", ""),
                     "estado": switch.get("estado", ""),
                     "ssh": switch.get("ssh", ""),
+                    "spanning_tree": switch.get("spanning_tree", ""),
                     "fecha": switch.get("fecha", "")
                 })
 
@@ -331,7 +362,7 @@ class ExcelManager:
         workbook = Workbook()
         sheet = workbook.active
         sheet.title = "Switches"
-        sheet.append(["id", "nombre", "ip", "usuario", "password", "zona", "estado", "ssh", "fecha"])
+        sheet.append(["id", "nombre", "ip", "usuario", "password", "zona", "estado", "ssh", "spanning_tree", "fecha"])
 
         for switch in self.obtener_switches():
             sheet.append([
@@ -343,6 +374,7 @@ class ExcelManager:
                 switch.get("zona", ""),
                 switch.get("estado", ""),
                 switch.get("ssh", ""),
+                switch.get("spanning_tree", ""),
                 switch.get("fecha", "")
             ])
 
@@ -368,7 +400,7 @@ class ExcelManager:
             self.conn = None
             self.cursor = None
 
-    def agregar_switch(self, nombre, ip, usuario="", password="", zona="", estado="en funcionamiento", ssh="", fecha=""):
+    def agregar_switch(self, nombre, ip, usuario="", password="", zona="", estado="en funcionamiento", ssh="", spanning_tree="", fecha=""):
 
         if self.conn is None:
             self.abrir()
@@ -381,6 +413,7 @@ class ExcelManager:
             "zona": zona,
             "estado": estado,
             "ssh": ssh,
+            "spanning_tree": spanning_tree,
             "fecha": fecha or datetime.now().date().isoformat()
         }
 
@@ -388,6 +421,69 @@ class ExcelManager:
         self.conn.commit()
 
         log.info(f"Switch agregado: {nombre} ({ip})")
+
+    def obtener_comandos_ssh(self):
+
+        if not self.is_sqlite:
+            return []
+
+        if self.conn is None:
+            self.abrir()
+
+        self.cursor.execute(
+            """
+            SELECT id, comando, descripcion, created_at
+            FROM ssh_command_library
+            ORDER BY comando COLLATE NOCASE
+            """
+        )
+
+        filas = self.cursor.fetchall()
+
+        comandos = []
+        for fila in filas:
+            comandos.append(
+                {
+                    "id": fila[0],
+                    "comando": self._normalizar(fila[1]),
+                    "descripcion": self._normalizar(fila[2]),
+                    "created_at": self._normalizar(fila[3]),
+                }
+            )
+
+        return comandos
+
+    def agregar_comando_ssh(self, comando, descripcion=""):
+
+        if not self.is_sqlite:
+            return
+
+        comando_limpio = self._normalizar(comando)
+        descripcion_limpia = self._normalizar(descripcion)
+
+        if not comando_limpio:
+            raise ValueError("El comando no puede estar vacio")
+
+        if self.conn is None:
+            self.abrir()
+
+        self.cursor.execute(
+            """
+            INSERT OR IGNORE INTO ssh_command_library (comando, descripcion, created_at)
+            VALUES (?, ?, ?)
+            """,
+            (
+                comando_limpio,
+                descripcion_limpia,
+                datetime.now().isoformat(timespec="seconds"),
+            ),
+        )
+        self.conn.commit()
+
+        if self.cursor.rowcount == 0:
+            raise ValueError("Ese comando ya existe en la libreria")
+
+        log.info(f"Comando agregado a libreria SSH: {comando_limpio}")
 
     def guardar(self):
 

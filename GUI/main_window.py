@@ -27,7 +27,7 @@ def main(page: ft.Page):
 
     current_user = {"name": ""}
 
-    devices_screen = DevicesScreen()
+    devices_screen = DevicesScreen(page)
 
     process_screen = ProcessAutomaticsScreen(page)
 

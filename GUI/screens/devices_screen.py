@@ -1,6 +1,10 @@
+import threading
+
 import flet as ft
 
 from modules.excel import ExcelManager
+from modules.ping import ping
+from GUI.widget.status_update_progress_dialog import StatusUpdateProgressDialog
 from GUI.theme import (
     AMBER_400,
     AMBER_600,
@@ -16,10 +20,13 @@ from GUI.theme import (
 
 
 class DevicesScreen(ft.Container):
-    def __init__(self):
+    def __init__(self, page: ft.Page | None = None):
         super().__init__(expand=True)
 
+        self._page = page
         self._switches = []
+        self._status_update_running = False
+        self.status_progress_dialog = StatusUpdateProgressDialog(on_state_change=self._refresh_ui)
 
         self.table = ft.DataTable(
             columns=[
@@ -27,6 +34,7 @@ class DevicesScreen(ft.Container):
                 ft.DataColumn(ft.Text("IP", color=SLATE_400, weight=ft.FontWeight.BOLD)),
                 ft.DataColumn(ft.Text("Estado", color=SLATE_400, weight=ft.FontWeight.BOLD)),
                 ft.DataColumn(ft.Text("SSH", color=SLATE_400, weight=ft.FontWeight.BOLD)),
+                ft.DataColumn(ft.Text("Spanning-Tree", color=SLATE_400, weight=ft.FontWeight.BOLD)),
             ],
             rows=[],
             column_spacing=18,
@@ -61,17 +69,41 @@ class DevicesScreen(ft.Container):
             label="Estado",
             width=200,
             options=[
-                ft.DropdownOption(key="en funcionamiento"),
-                ft.DropdownOption(key="sin funcionamiento"),
-                ft.DropdownOption(key="mantenimiento"),
+                ft.DropdownOption(key="funcionando"),
+                ft.DropdownOption(key="inactivo"),
             ],
-            value="en funcionamiento",
+            value="funcionando",
             color=INK,
             border_color=ft.Colors.with_opacity(0.16, "#FFFFFF"),
             focused_border_color=AMBER_600,
             label_style=ft.TextStyle(color=SLATE_400),
         )
-        self.input_ssh = ft.TextField(label="SSH", width=120, **field_style)
+        self.input_ssh = ft.Dropdown(
+            label="SSH",
+            width=140,
+            options=[
+                ft.DropdownOption(key="true"),
+                ft.DropdownOption(key="false"),
+            ],
+            value="false",
+            color=INK,
+            border_color=ft.Colors.with_opacity(0.16, "#FFFFFF"),
+            focused_border_color=AMBER_600,
+            label_style=ft.TextStyle(color=SLATE_400),
+        )
+        self.input_spanning_tree = ft.Dropdown(
+            label="Spanning-Tree",
+            width=160,
+            options=[
+                ft.DropdownOption(key="true"),
+                ft.DropdownOption(key="false"),
+            ],
+            value="false",
+            color=INK,
+            border_color=ft.Colors.with_opacity(0.16, "#FFFFFF"),
+            focused_border_color=AMBER_600,
+            label_style=ft.TextStyle(color=SLATE_400),
+        )
 
         self.form_container = card(
             content=ft.Column(
@@ -79,7 +111,7 @@ class DevicesScreen(ft.Container):
                     section_title(ft.Icons.ADD_CIRCLE_OUTLINE, "Agregar switch"),
                     ft.Row([self.input_nombre, self.input_ip], wrap=True),
                     ft.Row([self.input_usuario, self.input_password], wrap=True),
-                    ft.Row([self.input_zona, self.input_estado, self.input_ssh], wrap=True),
+                    ft.Row([self.input_zona, self.input_estado, self.input_ssh, self.input_spanning_tree], wrap=True),
                     ft.ElevatedButton(
                         content=ft.Text("Guardar switch", weight=ft.FontWeight.BOLD, color="#0B1D33"),
                         bgcolor=AMBER_600,
@@ -91,7 +123,7 @@ class DevicesScreen(ft.Container):
         )
         self.form_container.visible = False
 
-        self.content = ft.Column(
+        main_content = ft.Column(
             [
                 ft.Row(
                     [
@@ -116,7 +148,7 @@ class DevicesScreen(ft.Container):
                                 [ft.Icon(ft.Icons.SYNC, size=16, color=AMBER_400), ft.Text("Actualizar estatus automaticamente", color=INK)],
                                 spacing=8, tight=True,
                             ),
-                            on_click=self._dummy_auto_status,
+                            on_click=self._auto_update_status,
                             style=ft.ButtonStyle(side=ft.BorderSide(1, AMBER_600)),
                         ),
                         ft.OutlinedButton(
@@ -140,9 +172,28 @@ class DevicesScreen(ft.Container):
             ],
             spacing=12,
             expand=True,
+            scroll=ft.ScrollMode.AUTO,
+        )
+
+        self.content = ft.Stack(
+            [
+                main_content,
+                self.status_progress_dialog.overlay,
+            ],
+            expand=True,
         )
 
         self.load_switches()
+
+    def _refresh_ui(self):
+        page = self._page or self.page
+        if page is not None:
+            page.update()
+        else:
+            self.update()
+
+    def _format_bool_state(self, value):
+        return "Activo" if str(value).strip().lower() == "true" else "Inactivo"
 
     def load_switches(self):
         db_manager = ExcelManager("switches.db")
@@ -157,7 +208,8 @@ class DevicesScreen(ft.Container):
                         ft.DataCell(ft.Text(sw.get("nombre", ""), color="#F5F7FA")),
                         ft.DataCell(ft.Text(sw.get("ip", ""), color="#F5F7FA")),
                         ft.DataCell(ft.Text(sw.get("estado", ""), color="#F5F7FA")),
-                        ft.DataCell(ft.Text(sw.get("ssh", ""), color="#F5F7FA")),
+                        ft.DataCell(ft.Text(self._format_bool_state(sw.get("ssh", "false")), color="#F5F7FA")),
+                        ft.DataCell(ft.Text(self._format_bool_state(sw.get("spanning_tree", "false")), color="#F5F7FA")),
                     ]
                 )
             )
@@ -169,9 +221,74 @@ class DevicesScreen(ft.Container):
         self.load_switches()
         self.update()
 
-    def _dummy_auto_status(self, _):
-        self.feedback.value = "Actualizacion automatica de estatus: pendiente de implementacion"
-        self.update()
+    def _auto_update_status(self, _):
+        if self._status_update_running:
+            self.feedback.value = "La actualizacion de estado ya esta en proceso"
+            self.feedback.color = SLATE_400
+            self.update()
+            return
+
+        switches = ExcelManager("switches.db").obtener_switches()
+        switches_validos = [sw for sw in switches if (sw.get("ip") or "").strip()]
+
+        if not switches_validos:
+            self.feedback.value = "No hay switches registrados para actualizar"
+            self.feedback.color = SLATE_400
+            self.update()
+            return
+
+        dialog = self.status_progress_dialog
+
+        self._status_update_running = True
+        self.feedback.value = "Actualizando estatus..."
+        self.feedback.color = SLATE_400
+        dialog.open(total=len(switches_validos))
+        self._refresh_ui()
+
+        def runner():
+            ok = 0
+            fail = 0
+            db_manager = ExcelManager("switches.db")
+
+            try:
+                for idx, sw in enumerate(switches_validos, start=1):
+                    ip = (sw.get("ip") or "").strip()
+                    nombre = (sw.get("nombre") or "SW").strip()
+
+                    estado = "funcionando" if ping(ip) else "inactivo"
+                    if estado == "funcionando":
+                        ok += 1
+                    else:
+                        fail += 1
+
+                    db_manager.actualizar_resultado(sw.get("id"), estado)
+
+                    dialog.log(f"[{idx}/{len(switches_validos)}] {nombre} ({ip}) -> {estado}")
+                    dialog.set_progress(idx, len(switches_validos))
+                    self._refresh_ui()
+
+                self.load_switches()
+                self.feedback.value = f"Estatus actualizado por ping. Funcionando: {ok} | Inactivos: {fail}"
+                self.feedback.color = GREEN_700
+
+                dialog.finish(
+                    summary=f"Proceso finalizado. Funcionando: {ok} | Inactivos: {fail}",
+                    ok=True,
+                )
+
+            except Exception as ex:
+                self.feedback.value = f"Error actualizando estatus: {ex}"
+                self.feedback.color = DANGER
+
+                dialog.log(f"ERROR: {ex}")
+                dialog.finish("Proceso finalizado con errores", ok=False)
+
+            finally:
+                db_manager.cerrar()
+                self._status_update_running = False
+                self._refresh_ui()
+
+        threading.Thread(target=runner, daemon=True).start()
 
     def _toggle_form(self, _):
         self.form_visible = not self.form_visible
@@ -196,8 +313,9 @@ class DevicesScreen(ft.Container):
                 usuario=self.input_usuario.value or "",
                 password=self.input_password.value or "",
                 zona=self.input_zona.value or "",
-                estado=self.input_estado.value or "en funcionamiento",
-                ssh=self.input_ssh.value or "",
+                estado=self.input_estado.value or "funcionando",
+                ssh=self.input_ssh.value or "false",
+                spanning_tree=self.input_spanning_tree.value or "false",
             )
             self.feedback.value = f"Switch agregado: {nombre} ({ip})"
             self.feedback.color = GREEN_700
@@ -207,8 +325,9 @@ class DevicesScreen(ft.Container):
             self.input_usuario.value = ""
             self.input_password.value = ""
             self.input_zona.value = ""
-            self.input_estado.value = "en funcionamiento"
-            self.input_ssh.value = ""
+            self.input_estado.value = "funcionando"
+            self.input_ssh.value = "false"
+            self.input_spanning_tree.value = "false"
 
             self.load_switches()
             self.update()
