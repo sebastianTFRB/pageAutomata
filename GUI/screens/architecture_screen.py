@@ -83,14 +83,28 @@ class ArchitectureScreen(ft.Container):
                     "Subir Excel",
                     "Importa datos desde .xlsx, .xls o .csv a switches.db",
                     None,
-                    ft.ElevatedButton(
-                        content=ft.Row(
-                            [ft.Icon(ft.Icons.UPLOAD_FILE, size=16, color="#0B1D33"),
-                             ft.Text("Subir Excel/CSV", weight=ft.FontWeight.BOLD, color="#0B1D33")],
-                            spacing=8, tight=True,
-                        ),
-                        bgcolor="#C97A1B",
-                        on_click=self._pick_excel,
+                    ft.Column(
+                        [
+                            ft.ElevatedButton(
+                                content=ft.Row(
+                                    [ft.Icon(ft.Icons.UPLOAD_FILE, size=16, color="#0B1D33"),
+                                     ft.Text("Subir Excel/CSV de switches", weight=ft.FontWeight.BOLD, color="#0B1D33")],
+                                    spacing=8, tight=True,
+                                ),
+                                bgcolor="#C97A1B",
+                                on_click=self._pick_switch_excel,
+                            ),
+                            ft.ElevatedButton(
+                                content=ft.Row(
+                                    [ft.Icon(ft.Icons.UPLOAD_FILE, size=16, color="#0B1D33"),
+                                     ft.Text("Subir Excel/CSV de camaras", weight=ft.FontWeight.BOLD, color="#0B1D33")],
+                                    spacing=8, tight=True,
+                                ),
+                                bgcolor="#C97A1B",
+                                on_click=self._pick_camera_excel,
+                            ),
+                        ],
+                        spacing=8,
                     ),
                 ),
                 self.feedback,
@@ -115,12 +129,18 @@ class ArchitectureScreen(ft.Container):
         )
         self._on_db_selected(files)
 
-    async def _pick_excel(self, _):
+    async def _pick_switch_excel(self, _):
+        await self._pick_excel_for_type("switch", "switches")
+
+    async def _pick_camera_excel(self, _):
+        await self._pick_excel_for_type("camara", "camaras")
+
+    async def _pick_excel_for_type(self, tipo_default, etiqueta):
         files = await self._excel_picker.pick_files(
             allow_multiple=False,
             allowed_extensions=["xlsx", "xls", "csv"],
         )
-        self._on_excel_selected(files)
+        self._on_excel_selected(files, tipo_default, etiqueta)
 
     def _on_db_selected(self, files):
         try:
@@ -153,7 +173,7 @@ class ArchitectureScreen(ft.Container):
             self.feedback.color = DANGER
             self.update()
 
-    def _on_excel_selected(self, files):
+    def _on_excel_selected(self, files, tipo_default="switch", etiqueta="switches"):
         try:
             if not files:
                 return
@@ -162,12 +182,9 @@ class ArchitectureScreen(ft.Container):
             manager = ExcelManager("switches.db")
             manager.abrir()
 
-            if file_path.suffix.lower() == ".csv":
-                manager.importar_desde_csv(str(file_path))
-            else:
-                manager.importar_desde_excel(str(file_path))
+            manager.importar_desde_archivo(str(file_path), tipo_default=tipo_default)
 
-            self.feedback.value = f"Archivo importado: {file_path.name}"
+            self.feedback.value = f"Archivo importado para {etiqueta}: {file_path.name}"
             self.feedback.color = GREEN_700
             self._notify_change()
             self.update()

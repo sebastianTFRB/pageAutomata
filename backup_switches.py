@@ -82,11 +82,7 @@ PASSWORD_ENABLE = "P@sto2025"
 
 
 COMANDOS = [
-    "show interface",
-    "show running-config",
-    "show mac-address-table",
-    "show vlan",
-    "show spanning-tree"
+    "show spanning-tree active"
 ]
 
 

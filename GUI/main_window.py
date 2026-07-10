@@ -12,6 +12,7 @@ from GUI.screens.devices_screen import DevicesScreen
 from GUI.screens.login_screen import LoginScreen
 from GUI.screens.architecture_screen import ArchitectureScreen
 from GUI.screens.process_automatics_screen import ProcessAutomaticsScreen
+from GUI.screens.statistics_screen import StatisticsScreen
 from GUI.theme import APP_NAME, NAVY_900
 
 
@@ -30,6 +31,7 @@ def main(page: ft.Page):
     devices_screen = DevicesScreen(page)
 
     process_screen = ProcessAutomaticsScreen(page)
+    statistics_screen = StatisticsScreen(page)
 
     architecture_screen = ArchitectureScreen(
         page,
@@ -62,6 +64,7 @@ def main(page: ft.Page):
             devices_screen=devices_screen,
             process_screen=process_screen,
             architecture_screen=architecture_screen,
+            statistics_screen=statistics_screen,
             on_logout=show_login,
         )
 

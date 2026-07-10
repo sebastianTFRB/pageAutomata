@@ -73,6 +73,78 @@ class SQLiteManagerTests(unittest.TestCase):
             self.assertEqual(len(rows), 1)
             self.assertEqual(rows[0]["nombre"], "Switch A")
 
+    def test_generic_device_types_can_be_filtered(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            db_path = os.path.join(tmpdir, "switches.db")
+
+            manager = ExcelManager(db_path)
+            manager.abrir()
+            manager.agregar_dispositivo(
+                tipo="switch",
+                nombre="Switch Core",
+                ip="192.168.1.10",
+                usuario="admin",
+                password="secret",
+            )
+            manager.agregar_dispositivo(
+                tipo="camara",
+                nombre="Camara 1",
+                ip="192.168.1.20",
+                usuario="admin",
+                password="secret",
+            )
+            manager.agregar_dispositivo(
+                tipo="workstation",
+                nombre="PC 1",
+                ip="192.168.1.30",
+                usuario="user",
+                password="secret",
+            )
+
+            todos = manager.obtener_dispositivos()
+            switches = manager.obtener_switches()
+            camaras = manager.obtener_dispositivos("camara")
+
+            self.assertEqual(len(todos), 3)
+            self.assertEqual(len(switches), 1)
+            self.assertEqual(switches[0]["nombre"], "Switch Core")
+            self.assertEqual(len(camaras), 1)
+            self.assertEqual(camaras[0]["nombre"], "Camara 1")
+
+    def test_import_without_tipo_uses_default_type(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            db_path = os.path.join(tmpdir, "switches.db")
+            csv_path = os.path.join(tmpdir, "camaras.csv")
+
+            with open(csv_path, "w", newline="", encoding="utf-8") as handle:
+                writer = csv.DictWriter(
+                    handle,
+                    fieldnames=["nombre", "ip", "usuario", "password", "estado", "ssh", "fecha"],
+                )
+                writer.writeheader()
+                writer.writerow(
+                    {
+                        "nombre": "Camara Patio",
+                        "ip": "192.168.2.10",
+                        "usuario": "admin",
+                        "password": "secret",
+                        "estado": "en funcionamiento",
+                        "ssh": "false",
+                        "fecha": "2026-07-09",
+                    }
+                )
+
+            manager = ExcelManager(db_path)
+            manager.abrir()
+            manager.importar_desde_archivo(csv_path, tipo_default="camara")
+
+            camaras = manager.obtener_dispositivos("camara")
+            switches = manager.obtener_switches()
+
+            self.assertEqual(len(camaras), 1)
+            self.assertEqual(camaras[0]["nombre"], "Camara Patio")
+            self.assertEqual(len(switches), 0)
+
 
 if __name__ == "__main__":
     unittest.main()

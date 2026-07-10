@@ -25,16 +25,20 @@ class DevicesScreen(ft.Container):
 
         self._page = page
         self._switches = []
+        self._devices = []
         self._status_update_running = False
         self.status_progress_dialog = StatusUpdateProgressDialog(on_state_change=self._refresh_ui)
 
         self.table = ft.DataTable(
             columns=[
+                ft.DataColumn(ft.Text("Tipo", color=SLATE_400, weight=ft.FontWeight.BOLD)),
                 ft.DataColumn(ft.Text("Nombre", color=SLATE_400, weight=ft.FontWeight.BOLD)),
                 ft.DataColumn(ft.Text("IP", color=SLATE_400, weight=ft.FontWeight.BOLD)),
+                ft.DataColumn(ft.Text("Usuario", color=SLATE_400, weight=ft.FontWeight.BOLD)),
                 ft.DataColumn(ft.Text("Estado", color=SLATE_400, weight=ft.FontWeight.BOLD)),
                 ft.DataColumn(ft.Text("SSH", color=SLATE_400, weight=ft.FontWeight.BOLD)),
-                ft.DataColumn(ft.Text("Spanning-Tree", color=SLATE_400, weight=ft.FontWeight.BOLD)),
+                ft.DataColumn(ft.Text("Falla", color=SLATE_400, weight=ft.FontWeight.BOLD)),
+                ft.DataColumn(ft.Text("Observacion", color=SLATE_400, weight=ft.FontWeight.BOLD)),
             ],
             rows=[],
             column_spacing=18,
@@ -58,13 +62,52 @@ class DevicesScreen(ft.Container):
             label_style=ft.TextStyle(color=SLATE_400),
         )
 
+        self.filter_tipo = ft.Dropdown(
+            label="Mostrar",
+            width=180,
+            options=[
+                ft.DropdownOption(key="todos"),
+                ft.DropdownOption(key="switch"),
+                ft.DropdownOption(key="camara"),
+                ft.DropdownOption(key="workstation"),
+                ft.DropdownOption(key="videowall"),
+                ft.DropdownOption(key="rack"),
+            ],
+            value="todos",
+            color=INK,
+            border_color=ft.Colors.with_opacity(0.16, "#FFFFFF"),
+            focused_border_color=AMBER_600,
+            label_style=ft.TextStyle(color=SLATE_400),
+            on_select=self._reload,
+        )
+
         self.input_nombre = ft.TextField(label="Nombre *", width=220, **field_style)
         self.input_ip = ft.TextField(label="IP *", width=180, **field_style)
         self.input_usuario = ft.TextField(label="Usuario", width=180, **field_style)
         self.input_password = ft.TextField(
             label="Contrasena", width=180, password=True, can_reveal_password=True, **field_style
         )
-        self.input_zona = ft.TextField(label="Zona", width=160, **field_style)
+        self.input_tipo = ft.Dropdown(
+            label="Tipo",
+            width=180,
+            options=[
+                ft.DropdownOption(key="switch"),
+                ft.DropdownOption(key="camara"),
+                ft.DropdownOption(key="workstation"),
+                ft.DropdownOption(key="videowall"),
+                ft.DropdownOption(key="rack"),
+            ],
+            value="switch",
+            color=INK,
+            border_color=ft.Colors.with_opacity(0.16, "#FFFFFF"),
+            focused_border_color=AMBER_600,
+            label_style=ft.TextStyle(color=SLATE_400),
+        )
+        self.form_help = ft.Text(
+            "Alta manual de switches, camaras, workstation, videowall o rack.",
+            size=12,
+            color=SLATE_400,
+        )
         self.input_estado = ft.Dropdown(
             label="Estado",
             width=200,
@@ -91,31 +134,19 @@ class DevicesScreen(ft.Container):
             focused_border_color=AMBER_600,
             label_style=ft.TextStyle(color=SLATE_400),
         )
-        self.input_spanning_tree = ft.Dropdown(
-            label="Spanning-Tree",
-            width=160,
-            options=[
-                ft.DropdownOption(key="true"),
-                ft.DropdownOption(key="false"),
-            ],
-            value="false",
-            color=INK,
-            border_color=ft.Colors.with_opacity(0.16, "#FFFFFF"),
-            focused_border_color=AMBER_600,
-            label_style=ft.TextStyle(color=SLATE_400),
-        )
 
         self.form_container = card(
             content=ft.Column(
                 [
-                    section_title(ft.Icons.ADD_CIRCLE_OUTLINE, "Agregar switch"),
+                    section_title(ft.Icons.ADD_CIRCLE_OUTLINE, "Agregar dispositivo"),
+                    self.form_help,
                     ft.Row([self.input_nombre, self.input_ip], wrap=True),
-                    ft.Row([self.input_usuario, self.input_password], wrap=True),
-                    ft.Row([self.input_zona, self.input_estado, self.input_ssh, self.input_spanning_tree], wrap=True),
+                    ft.Row([self.input_tipo, self.input_usuario, self.input_password], wrap=True),
+                    ft.Row([self.input_estado, self.input_ssh], wrap=True),
                     ft.ElevatedButton(
-                        content=ft.Text("Guardar switch", weight=ft.FontWeight.BOLD, color="#0B1D33"),
+                        content=ft.Text("Guardar dispositivo manual", weight=ft.FontWeight.BOLD, color="#0B1D33"),
                         bgcolor=AMBER_600,
-                        on_click=self._add_switch,
+                        on_click=self._add_device,
                     ),
                 ],
                 spacing=10,
@@ -132,7 +163,10 @@ class DevicesScreen(ft.Container):
                     ],
                     spacing=10,
                 ),
-                ft.Text("Listado de switches y estado actual", size=13, color=SLATE_400),
+                ft.Text("Listado de dispositivos y estado actual", size=13, color=SLATE_400),
+                ft.Row([
+                    self.filter_tipo,
+                ]),
                 ft.Row(
                     [
                         ft.OutlinedButton(
@@ -153,7 +187,7 @@ class DevicesScreen(ft.Container):
                         ),
                         ft.OutlinedButton(
                             content=ft.Row(
-                                [ft.Icon(ft.Icons.ADD, size=16, color=AMBER_400), ft.Text("Mostrar formulario para agregar SW", color=INK)],
+                                [ft.Icon(ft.Icons.ADD, size=16, color=AMBER_400), ft.Text("Agregar manualmente", color=INK)],
                                 spacing=8, tight=True,
                             ),
                             on_click=self._toggle_form,
@@ -185,6 +219,23 @@ class DevicesScreen(ft.Container):
 
         self.load_switches()
 
+    def _tipo_label(self, value):
+
+        tipo = (value or "").strip().lower()
+
+        if tipo in ("", "all", "todos"):
+            return "Todos"
+
+        labels = {
+            "switch": "Switch",
+            "camara": "Camara",
+            "workstation": "Workstation",
+            "videowall": "Videowall",
+            "rack": "Rack",
+        }
+
+        return labels.get(tipo, tipo.title())
+
     def _refresh_ui(self):
         page = self._page or self.page
         if page is not None:
@@ -195,30 +246,49 @@ class DevicesScreen(ft.Container):
     def _format_bool_state(self, value):
         return "Activo" if str(value).strip().lower() == "true" else "Inactivo"
 
+    def _estado_color(self, value):
+        estado = (value or "").strip().lower()
+
+        if estado == "funcionando":
+            return GREEN_700
+
+        if estado == "inactivo":
+            return DANGER
+
+        return SLATE_400
+
     def load_switches(self):
+        self.load_devices()
+
+    def load_devices(self):
+        tipo_filtro = self.filter_tipo.value or "todos"
         db_manager = ExcelManager("switches.db")
         db_manager.abrir()
-        self._switches = db_manager.obtener_switches()
+        self._devices = db_manager.obtener_dispositivos(tipo_filtro)
+        self._switches = self._devices
 
         rows = []
-        for sw in self._switches:
+        for sw in self._devices:
             rows.append(
                 ft.DataRow(
                     cells=[
+                        ft.DataCell(ft.Text(self._tipo_label(sw.get("tipo", "switch")), color="#F5F7FA")),
                         ft.DataCell(ft.Text(sw.get("nombre", ""), color="#F5F7FA")),
                         ft.DataCell(ft.Text(sw.get("ip", ""), color="#F5F7FA")),
-                        ft.DataCell(ft.Text(sw.get("estado", ""), color="#F5F7FA")),
+                        ft.DataCell(ft.Text(sw.get("usuario", ""), color="#F5F7FA")),
+                        ft.DataCell(ft.Text(sw.get("estado", ""), color=self._estado_color(sw.get("estado", "")))),
                         ft.DataCell(ft.Text(self._format_bool_state(sw.get("ssh", "false")), color="#F5F7FA")),
-                        ft.DataCell(ft.Text(self._format_bool_state(sw.get("spanning_tree", "false")), color="#F5F7FA")),
+                        ft.DataCell(ft.Text(sw.get("falla", ""), color="#F5F7FA")),
+                        ft.DataCell(ft.Text(sw.get("observacion", ""), color="#F5F7FA")),
                     ]
                 )
             )
 
         self.table.rows = rows
-        self.feedback.value = f"Switches cargados: {len(self._switches)}"
+        self.feedback.value = f"Dispositivos cargados: {len(self._devices)}"
 
     def _reload(self, _):
-        self.load_switches()
+        self.load_devices()
         self.update()
 
     def _auto_update_status(self, _):
@@ -228,11 +298,11 @@ class DevicesScreen(ft.Container):
             self.update()
             return
 
-        switches = ExcelManager("switches.db").obtener_switches()
-        switches_validos = [sw for sw in switches if (sw.get("ip") or "").strip()]
+        dispositivos = ExcelManager("switches.db").obtener_dispositivos(self.filter_tipo.value or "todos")
+        switches_validos = [sw for sw in dispositivos if (sw.get("ip") or "").strip()]
 
         if not switches_validos:
-            self.feedback.value = "No hay switches registrados para actualizar"
+            self.feedback.value = "No hay dispositivos registrados para actualizar"
             self.feedback.color = SLATE_400
             self.update()
             return
@@ -256,12 +326,15 @@ class DevicesScreen(ft.Container):
                     nombre = (sw.get("nombre") or "SW").strip()
 
                     estado = "funcionando" if ping(ip) else "inactivo"
+                    falla = "" if estado == "funcionando" else "ping"
+                    observacion = "" if estado == "funcionando" else "Sin respuesta al ping"
+
                     if estado == "funcionando":
                         ok += 1
                     else:
                         fail += 1
 
-                    db_manager.actualizar_resultado(sw.get("id"), estado)
+                    db_manager.actualizar_resultado(sw.get("id"), estado, falla=falla, observacion=observacion)
 
                     dialog.log(f"[{idx}/{len(switches_validos)}] {nombre} ({ip}) -> {estado}")
                     dialog.set_progress(idx, len(switches_validos))
@@ -293,9 +366,24 @@ class DevicesScreen(ft.Container):
     def _toggle_form(self, _):
         self.form_visible = not self.form_visible
         self.form_container.visible = self.form_visible
+
+        if self.form_visible:
+            tipo_filtro = self.filter_tipo.value or "todos"
+            if tipo_filtro in ("switch", "camara", "workstation", "videowall", "rack"):
+                self.input_tipo.value = tipo_filtro
+
         self.update()
 
-    def _add_switch(self, _):
+    def _reset_manual_form(self, tipo="switch"):
+        self.input_nombre.value = ""
+        self.input_ip.value = ""
+        self.input_tipo.value = tipo
+        self.input_usuario.value = ""
+        self.input_password.value = ""
+        self.input_estado.value = "funcionando"
+        self.input_ssh.value = "false"
+
+    def _add_device(self, _):
         nombre = self.input_nombre.value.strip()
         ip = self.input_ip.value.strip()
 
@@ -307,31 +395,24 @@ class DevicesScreen(ft.Container):
 
         try:
             db_manager = ExcelManager("switches.db")
-            db_manager.agregar_switch(
+            db_manager.agregar_dispositivo(
+                tipo=self.input_tipo.value or "switch",
                 nombre=nombre,
                 ip=ip,
                 usuario=self.input_usuario.value or "",
                 password=self.input_password.value or "",
-                zona=self.input_zona.value or "",
                 estado=self.input_estado.value or "funcionando",
                 ssh=self.input_ssh.value or "false",
-                spanning_tree=self.input_spanning_tree.value or "false",
             )
-            self.feedback.value = f"Switch agregado: {nombre} ({ip})"
+            self.feedback.value = f"Dispositivo agregado: {nombre} ({ip})"
             self.feedback.color = GREEN_700
 
-            self.input_nombre.value = ""
-            self.input_ip.value = ""
-            self.input_usuario.value = ""
-            self.input_password.value = ""
-            self.input_zona.value = ""
-            self.input_estado.value = "funcionando"
-            self.input_ssh.value = "false"
-            self.input_spanning_tree.value = "false"
+            tipo_reinicio = self.filter_tipo.value if self.filter_tipo.value in ("switch", "camara", "workstation", "videowall", "rack") else "switch"
+            self._reset_manual_form(tipo_reinicio)
 
-            self.load_switches()
+            self.load_devices()
             self.update()
         except Exception as ex:
-            self.feedback.value = f"Error al agregar switch: {ex}"
+            self.feedback.value = f"Error al agregar dispositivo: {ex}"
             self.feedback.color = DANGER
             self.update()

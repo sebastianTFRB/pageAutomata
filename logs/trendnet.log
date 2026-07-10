@@ -2957,3 +2957,406 @@ STP is disabled!
 TI-G102i#
 14:41:01 | INFO     | [172.16.0.170] SSH cerrado
 14:41:47 | INFO     | Session was garbage collected: 8GKKXcYxLumuCc4R
+15:26:58 | INFO     | Assets path configured: C:\Users\sebax\AppData\Local\Temp\_MEI198722\assets
+15:26:58 | INFO     | Starting up TCP server on localhost:54695
+15:26:58 | INFO     | Flet app has started...
+15:26:58 | INFO     | App URL: tcp://localhost:54695
+15:26:58 | INFO     | Starting Flet View app...
+15:26:58 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+15:26:59 | INFO     | App session started
+15:26:59 | INFO     | Abriendo SQLite: switches.db
+15:26:59 | INFO     | Se encontraron 80 switches
+15:26:59 | INFO     | Abriendo SQLite: switches.db
+15:26:59 | INFO     | Abriendo SQLite: switches.db
+15:27:10 | INFO     | Session was garbage collected: rPUNLpcteWgYS2nv
+21:10:54 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+21:10:54 | INFO     | Starting up TCP server on localhost:60652
+21:10:54 | INFO     | Flet app has started...
+21:10:54 | INFO     | App URL: tcp://localhost:60652
+21:10:54 | INFO     | Starting Flet View app...
+21:10:54 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+21:10:55 | INFO     | App session started
+21:10:55 | INFO     | Abriendo SQLite: switches.db
+21:10:55 | INFO     | Se encontraron 80 switches
+21:10:55 | INFO     | Abriendo SQLite: switches.db
+21:10:55 | INFO     | Abriendo SQLite: switches.db
+21:11:05 | INFO     | Abriendo SQLite: switches.db
+21:11:05 | INFO     | Se encontraron 80 switches
+21:15:54 | INFO     | Abriendo SQLite: switches.db
+21:15:54 | INFO     | Se encontraron 80 switches
+21:21:11 | INFO     | Session was garbage collected: 8pIFPUIlmy8dQwa4
+21:21:16 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmpa592pbcs\switches.db
+21:21:16 | INFO     | CSV importado desde C:\Users\sebax\AppData\Local\Temp\tmpa592pbcs\switches.csv
+21:21:16 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmpa592pbcs\switches.db
+21:21:16 | INFO     | Se encontraron 1 dispositivos
+21:21:16 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmpa592pbcs\switches.db
+21:21:16 | INFO     | Se encontraron 1 dispositivos
+21:21:16 | INFO     | CSV exportado hacia C:\Users\sebax\AppData\Local\Temp\tmpa592pbcs\export.csv
+21:21:30 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmpdyo_hkox\switches.db
+21:21:30 | INFO     | Dispositivo agregado: Switch Core (192.168.1.10)
+21:21:30 | INFO     | Dispositivo agregado: Camara 1 (192.168.1.20)
+21:21:30 | INFO     | Dispositivo agregado: PC 1 (192.168.1.30)
+21:21:30 | INFO     | Se encontraron 3 dispositivos
+21:21:30 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmpdyo_hkox\switches.db
+21:21:30 | INFO     | Se encontraron 1 dispositivos
+21:21:30 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmpdyo_hkox\switches.db
+21:21:30 | INFO     | Se encontraron 1 dispositivos
+21:21:30 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmpswcdxba_\switches.db
+21:21:30 | INFO     | CSV importado desde C:\Users\sebax\AppData\Local\Temp\tmpswcdxba_\switches.csv
+21:21:30 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmpswcdxba_\switches.db
+21:21:30 | INFO     | Se encontraron 1 dispositivos
+21:21:30 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmpswcdxba_\switches.db
+21:21:30 | INFO     | Se encontraron 1 dispositivos
+21:21:30 | INFO     | CSV exportado hacia C:\Users\sebax\AppData\Local\Temp\tmpswcdxba_\export.csv
+21:22:16 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmpuzhhs3x7\switches.db
+21:22:16 | INFO     | Dispositivo agregado: Switch Core (192.168.1.10)
+21:22:16 | INFO     | Dispositivo agregado: Camara 1 (192.168.1.20)
+21:22:16 | INFO     | Dispositivo agregado: PC 1 (192.168.1.30)
+21:22:16 | INFO     | Se encontraron 3 dispositivos
+21:22:16 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmpuzhhs3x7\switches.db
+21:22:16 | INFO     | Se encontraron 1 dispositivos
+21:22:16 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmpuzhhs3x7\switches.db
+21:22:16 | INFO     | Se encontraron 1 dispositivos
+21:22:16 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmp_ida7i1x\switches.db
+21:22:16 | INFO     | CSV importado desde C:\Users\sebax\AppData\Local\Temp\tmp_ida7i1x\switches.csv
+21:22:16 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmp_ida7i1x\switches.db
+21:22:16 | INFO     | Se encontraron 1 dispositivos
+21:22:16 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmp_ida7i1x\switches.db
+21:22:16 | INFO     | Se encontraron 1 dispositivos
+21:22:16 | INFO     | CSV exportado hacia C:\Users\sebax\AppData\Local\Temp\tmp_ida7i1x\export.csv
+21:23:25 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+21:23:25 | INFO     | Starting up TCP server on localhost:56297
+21:23:25 | INFO     | Flet app has started...
+21:23:25 | INFO     | App URL: tcp://localhost:56297
+21:23:25 | INFO     | Starting Flet View app...
+21:23:25 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+21:23:25 | INFO     | App session started
+21:23:25 | ERROR    | Unhandled error in main() handler
+Traceback (most recent call last):
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\app.py", line 354, in on_session_created
+    main(session.page)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 30, in main
+    devices_screen = DevicesScreen(page)
+                     ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\screens\devices_screen.py", line 65, in __init__
+    self.filter_tipo = ft.Dropdown(
+                       ^^^^^^^^^^^^
+TypeError: Dropdown.__init__() got an unexpected keyword argument 'on_change'
+21:26:48 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmp0nf4_910\switches.db
+21:26:48 | INFO     | Dispositivo agregado: Switch Core (192.168.1.10)
+21:26:48 | INFO     | Dispositivo agregado: Camara 1 (192.168.1.20)
+21:26:48 | INFO     | Dispositivo agregado: PC 1 (192.168.1.30)
+21:26:48 | INFO     | Se encontraron 3 dispositivos
+21:26:48 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmp0nf4_910\switches.db
+21:26:48 | INFO     | Se encontraron 1 dispositivos
+21:26:48 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmp0nf4_910\switches.db
+21:26:48 | INFO     | Se encontraron 1 dispositivos
+21:26:48 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmp9ajscaiq\switches.db
+21:26:48 | INFO     | CSV importado desde C:\Users\sebax\AppData\Local\Temp\tmp9ajscaiq\switches.csv
+21:26:48 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmp9ajscaiq\switches.db
+21:26:48 | INFO     | Se encontraron 1 dispositivos
+21:26:48 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmp9ajscaiq\switches.db
+21:26:48 | INFO     | Se encontraron 1 dispositivos
+21:26:48 | INFO     | CSV exportado hacia C:\Users\sebax\AppData\Local\Temp\tmp9ajscaiq\export.csv
+21:26:53 | INFO     | Session was garbage collected: ABwPgmKs3yQ4pn6u
+21:27:00 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+21:27:00 | INFO     | Starting up TCP server on localhost:61549
+21:27:00 | INFO     | Flet app has started...
+21:27:00 | INFO     | App URL: tcp://localhost:61549
+21:27:00 | INFO     | Starting Flet View app...
+21:27:00 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+21:27:00 | INFO     | App session started
+21:27:01 | INFO     | Abriendo SQLite: switches.db
+21:27:01 | INFO     | Se encontraron 80 dispositivos
+21:27:01 | INFO     | Abriendo SQLite: switches.db
+21:27:01 | INFO     | Abriendo SQLite: switches.db
+21:27:06 | INFO     | Abriendo SQLite: switches.db
+21:27:06 | INFO     | Se encontraron 80 dispositivos
+21:27:25 | INFO     | Abriendo SQLite: switches.db
+21:27:25 | INFO     | Se encontraron 80 dispositivos
+21:27:27 | INFO     | Abriendo SQLite: switches.db
+21:27:27 | INFO     | Se encontraron 0 dispositivos
+21:27:46 | INFO     | Abriendo SQLite: switches.db
+21:27:46 | INFO     | Se encontraron 0 dispositivos
+21:27:58 | INFO     | Abriendo SQLite: switches.db
+21:27:58 | INFO     | Se encontraron 0 dispositivos
+21:31:46 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmpic6l7ohl\switches.db
+21:31:46 | INFO     | Dispositivo agregado: Switch Core (192.168.1.10)
+21:31:46 | INFO     | Dispositivo agregado: Camara 1 (192.168.1.20)
+21:31:46 | INFO     | Dispositivo agregado: PC 1 (192.168.1.30)
+21:31:46 | INFO     | Se encontraron 3 dispositivos
+21:31:46 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmpic6l7ohl\switches.db
+21:31:46 | INFO     | Se encontraron 1 dispositivos
+21:31:46 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmpic6l7ohl\switches.db
+21:31:46 | INFO     | Se encontraron 1 dispositivos
+21:31:46 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmpii9r56q_\switches.db
+21:31:46 | INFO     | CSV importado desde C:\Users\sebax\AppData\Local\Temp\tmpii9r56q_\switches.csv
+21:31:46 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmpii9r56q_\switches.db
+21:31:46 | INFO     | Se encontraron 1 dispositivos
+21:31:46 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmpii9r56q_\switches.db
+21:31:46 | INFO     | Se encontraron 1 dispositivos
+21:31:46 | INFO     | CSV exportado hacia C:\Users\sebax\AppData\Local\Temp\tmpii9r56q_\export.csv
+21:31:46 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmpjpcy81gc\switches.db
+21:31:46 | INFO     | CSV importado desde C:\Users\sebax\AppData\Local\Temp\tmpjpcy81gc\camaras.csv
+21:31:46 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmpjpcy81gc\switches.db
+21:31:46 | INFO     | Se encontraron 1 dispositivos
+21:31:46 | INFO     | Abriendo SQLite: C:\Users\sebax\AppData\Local\Temp\tmpjpcy81gc\switches.db
+21:31:46 | INFO     | Se encontraron 0 dispositivos
+21:36:29 | INFO     | Session was garbage collected: WJeN3pqLmFdKs0Xj
+21:36:32 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+21:36:32 | INFO     | Starting up TCP server on localhost:51614
+21:36:32 | INFO     | Flet app has started...
+21:36:32 | INFO     | App URL: tcp://localhost:51614
+21:36:32 | INFO     | Starting Flet View app...
+21:36:32 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+21:36:33 | INFO     | App session started
+21:36:33 | INFO     | Abriendo SQLite: switches.db
+21:36:33 | INFO     | Se encontraron 80 dispositivos
+21:36:33 | INFO     | Abriendo SQLite: switches.db
+21:36:33 | INFO     | Abriendo SQLite: switches.db
+21:36:39 | INFO     | Abriendo SQLite: switches.db
+21:36:39 | INFO     | Se encontraron 80 dispositivos
+21:49:33 | INFO     | Abriendo SQLite: switches.db
+21:49:33 | INFO     | Se encontraron 80 dispositivos
+21:51:15 | INFO     | Session was garbage collected: aAlkcDwQOAx4Nv40
+21:51:18 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+21:51:18 | INFO     | Starting up TCP server on localhost:50769
+21:51:18 | INFO     | Flet app has started...
+21:51:18 | INFO     | App URL: tcp://localhost:50769
+21:51:18 | INFO     | Starting Flet View app...
+21:51:18 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+21:51:19 | INFO     | App session started
+21:51:19 | INFO     | Abriendo SQLite: switches.db
+21:51:19 | INFO     | Se encontraron 80 dispositivos
+21:51:19 | INFO     | Abriendo SQLite: switches.db
+21:51:19 | INFO     | Abriendo SQLite: switches.db
+21:51:35 | INFO     | Abriendo SQLite: switches.db
+21:51:35 | INFO     | Se encontraron 80 dispositivos
+21:52:06 | INFO     | Abriendo SQLite: switches.db
+21:52:06 | INFO     | Headers detectados: {'modelo': 1, 'ip': 2, 'mascara': 3, 'getway': 4, 'usuario': 5, 'password': 6, 'nombre': 8, 'estado': 9}
+21:52:06 | INFO     | Filas totales en Excel: 81
+21:52:06 | INFO     | Fila 2: IP=172.16.0.103, Nombre=CAM82-SAN JUAN BOSCO
+21:52:06 | INFO     | Fila 3: IP=172.16.0.99, Nombre=CAM74-U COOPERATIVA
+21:52:06 | INFO     | Fila 4: IP=172.16.0.65, Nombre=CAM39-PANDIACO
+21:52:06 | INFO     | Fila 5: IP=172.16.0.64, Nombre=CAM38-SOL DE ORIENTE
+21:52:06 | INFO     | Fila 6: IP=172.16.0.31, Nombre=CAM01 AV IDEMA
+21:52:06 | INFO     | Fila 7: IP=172.16.0.32, Nombre=CAM02-DOTASOL
+21:52:06 | INFO     | Fila 8: IP=172.16.0.66, Nombre=CAM40-PARQUE ANGONOY
+21:52:06 | INFO     | Fila 9: IP=172.16.1.56, Nombre=CAM41- ENTRADA AL COMUN
+21:52:06 | INFO     | Fila 10: IP=172.16.0.72, Nombre=CAM46-MERCADO POTRERILLO
+21:52:06 | INFO     | Fila 11: IP=172.16.0.68, Nombre=CAM42-CLINICA LAS AMERICAS
+21:52:06 | INFO     | Fila 12: IP=172.16.1.52, Nombre=CAM90-COMF. PARQUE INFANTIL
+21:52:06 | INFO     | Fila 13: IP=172.16.1.57, Nombre=CAM69- LAMINGA
+21:52:06 | INFO     | Fila 14: IP=172.16.0.34, Nombre=CAM05-CIUDAD REAL
+21:52:06 | INFO     | Fila 15: IP=172.16.0.33, Nombre=CAM04-CHAMPAGÑAT
+21:52:06 | INFO     | Fila 16: IP=172.16.0.82, Nombre=CAM68-CCP LORENZO
+21:52:06 | INFO     | Fila 17: IP=172.16.0.81, Nombre=CAM65-CARLOS PIZARRO
+21:52:06 | INFO     | Fila 18: IP=172.16.0.43, Nombre=CAM14-FIGUEROA
+21:52:06 | INFO     | Fila 19: IP=172.16.0.44, Nombre=CAM15GUALCALOMA
+21:52:06 | INFO     | Fila 20: IP=172.16.0.83, Nombre=CAM54 QUINTAS DE SAN PEDRO
+21:52:06 | INFO     | Fila 21: IP=172.16.1.61, Nombre=CAM56-CUAJACAL BAJO
+21:52:06 | INFO     | Fila 22: IP=172.16.0.45, Nombre=CAM16-COLON
+21:52:06 | INFO     | Fila 23: IP=172.16.0.47, Nombre=CAM18-EMILIO BOTERO
+21:52:06 | INFO     | Fila 24: IP=172.16.0.80, Nombre=CAM64-PANORAMICO
+21:52:06 | INFO     | Fila 25: IP=172.16.0.70, Nombre=CAM44-LA ESTRELLA
+21:52:06 | INFO     | Fila 26: IP=172.16.0.42, Nombre=CAM13-POLIDEPORTIVO TAMASAGRA
+21:52:06 | INFO     | Fila 27: IP=172.16.0.41, Nombre=CAM12-COL CIUDADELA
+21:52:06 | INFO     | Fila 28: IP=172.16.0.60, Nombre=CAM34-BOMBONA PATY
+21:52:06 | INFO     | Fila 29: IP=172.16.1.60, Nombre=CAM35-CASA DE EJERCICIOS
+21:52:06 | INFO     | Fila 30: IP=172.16.1.55, Nombre=CAM37-JESUS POLIDEPORTIVO
+21:52:06 | INFO     | Fila 31: IP=172.16.0.62, Nombre=CAM36-TIERRA SANTA
+21:52:06 | INFO     | Fila 32: IP=172.16.0.49, Nombre=CAM20-VILLA FLOR
+21:52:06 | INFO     | Fila 33: IP=172.16.0.48, Nombre=CAM19-EL PILAR
+21:52:06 | INFO     | Fila 34: IP=172.16.0.51, Nombre=CAM22-PUENTE LOS HEROES
+21:52:06 | INFO     | Fila 35: IP=172.16.0.50, Nombre=CAM21-CAI SAN AGUSTIN
+21:52:06 | INFO     | Fila 36: IP=172.16.0.52, Nombre=CAM23-IGLESIA LA MERCED
+21:52:06 | INFO     | Fila 37: IP=172.16.0.54, Nombre=CAM25-FUNDACION PROINCO
+21:52:06 | INFO     | Fila 38: IP=172.16.0.53, Nombre=CAM24-BACHUE
+21:52:06 | INFO     | Fila 39: IP=172.16.0.60, Nombre=CAM31-CANCHA SEVEN ELEVEN
+21:52:06 | INFO     | Fila 40: IP=172.16.0.88, Nombre=CAM58- SEPARADOR MERCABODEGA
+21:52:06 | INFO     | Fila 41: IP=172.15.0.114, Nombre=CAM84- GLORIETA ESTADIO
+21:52:06 | INFO     | Fila 42: IP=172.16.0.102, Nombre=CAM72-BATALLON
+21:52:06 | INFO     | Fila 43: IP=172.16.0.69, Nombre=CAM43-TORRES DE LA CAROLINA
+21:52:06 | INFO     | Fila 44: IP=172.16.1.59, Nombre=CAM30-COL LA LIBERTAD
+21:52:06 | INFO     | Fila 45: IP=172.16.0.100, Nombre=CAM70-TEATRO IMPERIAL
+21:52:06 | INFO     | Fila 46: IP=172.16.0.38, Nombre=CAM09-COL NORMAL
+21:52:06 | INFO     | Fila 47: IP=172.16.0.37, Nombre=CAM08-PISTA ATLETICA PASTUSIDAD
+21:52:06 | INFO     | Fila 48: IP=172.16.1.54, Nombre=CAM77- SANDIEGO NORTE
+21:52:06 | INFO     | Fila 49: IP=172.16.0.46, Nombre=CAM17-POLVORIN
+21:52:06 | INFO     | Fila 50: IP=172.16.1.51, Nombre=CAM60-PARQUEADERO VILLANUEVA
+21:52:06 | INFO     | Fila 51: IP=172.16.1.58, Nombre=CAM61-DROGAS SAN ISABEL
+21:52:06 | INFO     | Fila 52: IP=172.16.0.85, Nombre=CAM55-CENTENARIO
+21:52:06 | INFO     | Fila 53: IP=172.16.0.55, Nombre=CAM27-PASTO VIEJO
+21:52:06 | INFO     | Fila 54: IP=172.16.0.35, Nombre=CAM06-GLORIETA JULIAN BUCHELY
+21:52:06 | INFO     | Fila 55: IP=172.16.0.36, Nombre=CAM07-B.BELEN
+21:52:06 | INFO     | Fila 56: IP=172.16.0.97, Nombre=CAM67-PROGRESO
+21:52:06 | INFO     | Fila 57: IP=172.16.0.73, Nombre=CAM48-PRINCIPAL SAN MARTIN
+21:52:06 | INFO     | Fila 58: IP=172.16.0.77, Nombre=CAM59-UDENAR
+21:52:06 | INFO     | Fila 59: IP=172.16.0.74, Nombre=CAM49-EMILIO BOTERO
+21:52:06 | INFO     | Fila 60: IP=172.16.0.101, Nombre=CAM71-CAICEDO BAJO MIRADOR
+21:52:06 | INFO     | Fila 61: IP=172.16.0.59, Nombre=CAM32-CONCHA ACUSTICA
+21:52:06 | INFO     | Fila 62: IP=172.16.0.56, Nombre=CAM28- CENTRO DE SALUD TAMASAGRA
+21:52:06 | INFO     | Fila 63: IP=172.16.0.57, Nombre=CAM29-SAN MIGUEL
+21:52:06 | INFO     | Fila 64: IP=172.16.1.53, Nombre=CAM88-HOSPITAL CIVIL
+21:52:06 | INFO     | Fila 65: IP=172.16.1.50, Nombre=CAM73-INTERCAMBIADOR VILLANUEVA
+21:52:06 | INFO     | Fila 66: IP=172.16.0.75, Nombre=CAM52-PRINCIPAL DEL ROSARIO
+21:52:06 | INFO     | Fila 67: IP=172.16.0.71, Nombre=CAM45-CANCHALA
+21:52:06 | INFO     | Fila 68: IP=172.16.0.39, Nombre=CAM10-ATAHUALPA
+21:52:06 | INFO     | Fila 69: IP=172.16.0.40, Nombre=CAM11-BACHUE
+21:52:06 | INFO     | Fila 70: IP=172.16.0.76, Nombre=CAM57-HOTEL AGUALONGO
+21:52:06 | INFO     | Fila 71: IP=172.16.1.64, Nombre=CAM89- LA COLINA
+21:52:06 | INFO     | Fila 72: IP=172.16.0.110, Nombre=CAM91-SALIDA AL NORTE 1
+21:52:06 | INFO     | Fila 73: IP=172.16.0.118, Nombre=CAM99-PEDAGOGICO
+21:52:06 | INFO     | Fila 74: IP=172.16.0.108, Nombre=CAM95-SALIDA SUR
+21:52:06 | INFO     | Fila 75: IP=172.16.0.117, Nombre=CAM98-SALIDA AL ORIENTE
+21:52:06 | INFO     | Fila 76: IP=172.16.0.115, Nombre=CAM96-SALIDA SUR
+21:52:06 | INFO     | Fila 77: IP=172.16.0.111, Nombre=CAM92-SALIDA AL NORTE 2
+21:52:06 | INFO     | Fila 78: IP=172.16.0.106, Nombre=CAM100-CORPORACION 100
+21:52:06 | INFO     | Fila 79: IP=172.16.0.113, Nombre=CAM94-SALIDA GENOY
+21:52:06 | INFO     | Fila 80: IP=172.16.0.112, Nombre=CAM93-SALIDA GENOY
+21:52:06 | INFO     | Fila 81: IP=172.16.0.116, Nombre=CAM97-SALIDA AL ORIENTE
+21:52:06 | INFO     | Excel importado desde C:\Users\sebax\Downloads\Hoja de cálculo sin título (2).xlsx - 80 registros insertados
+21:52:06 | INFO     | Abriendo SQLite: switches.db
+21:52:06 | INFO     | Se encontraron 160 dispositivos
+21:52:20 | INFO     | Abriendo SQLite: switches.db
+21:52:20 | INFO     | Se encontraron 160 dispositivos
+21:52:22 | INFO     | Abriendo SQLite: switches.db
+21:52:22 | INFO     | Se encontraron 160 dispositivos
+21:52:31 | INFO     | Abriendo SQLite: switches.db
+21:52:31 | INFO     | Se encontraron 80 dispositivos
+21:53:24 | INFO     | Abriendo SQLite: switches.db
+21:53:24 | INFO     | Se encontraron 0 dispositivos
+21:55:35 | INFO     | Abriendo SQLite: switches.db
+21:55:35 | INFO     | Se encontraron 0 dispositivos
+21:57:49 | INFO     | Abriendo SQLite: switches.db
+21:57:49 | INFO     | Dispositivo agregado: SERVER HICKVISION PRINCIPAL (172.16.0.11)
+21:57:49 | INFO     | Abriendo SQLite: switches.db
+21:57:49 | INFO     | Se encontraron 1 dispositivos
+21:59:14 | INFO     | Abriendo SQLite: switches.db
+21:59:14 | INFO     | Dispositivo agregado: SERVER NEURAL (172.16.0.13)
+21:59:14 | INFO     | Abriendo SQLite: switches.db
+21:59:14 | INFO     | Se encontraron 2 dispositivos
+22:00:43 | INFO     | Abriendo SQLite: switches.db
+22:00:43 | INFO     | Dispositivo agregado: SERVER HICKVISION RESPALDO (172.16.0.12)
+22:00:43 | INFO     | Abriendo SQLite: switches.db
+22:00:43 | INFO     | Se encontraron 3 dispositivos
+22:01:20 | INFO     | Abriendo SQLite: switches.db
+22:01:20 | INFO     | Se encontraron 0 dispositivos
+22:02:42 | INFO     | Abriendo SQLite: switches.db
+22:02:42 | INFO     | Dispositivo agregado: WORKSTATION ANTIGUA (172.19.172.21)
+22:02:42 | INFO     | Abriendo SQLite: switches.db
+22:02:42 | INFO     | Se encontraron 1 dispositivos
+22:04:28 | INFO     | Abriendo SQLite: switches.db
+22:04:28 | INFO     | Dispositivo agregado: JOYSTIC1 (172.16.0.3)
+22:04:28 | INFO     | Abriendo SQLite: switches.db
+22:04:28 | INFO     | Se encontraron 2 dispositivos
+22:05:06 | INFO     | Abriendo SQLite: switches.db
+22:05:06 | INFO     | Dispositivo agregado: JOYSTIC2 (172.16.0.4)
+22:05:06 | INFO     | Abriendo SQLite: switches.db
+22:05:06 | INFO     | Se encontraron 3 dispositivos
+22:06:08 | INFO     | Abriendo SQLite: switches.db
+22:06:08 | INFO     | Dispositivo agregado: JOYSTIC3 (172.16.0.5)
+22:06:08 | INFO     | Abriendo SQLite: switches.db
+22:06:08 | INFO     | Se encontraron 4 dispositivos
+22:06:45 | INFO     | Abriendo SQLite: switches.db
+22:06:45 | INFO     | Dispositivo agregado: JOYSTIC4 (172.16.0.6)
+22:06:45 | INFO     | Abriendo SQLite: switches.db
+22:06:45 | INFO     | Se encontraron 5 dispositivos
+22:07:36 | INFO     | Abriendo SQLite: switches.db
+22:07:36 | INFO     | Dispositivo agregado: JOYSTIC5 (172.16.0.7)
+22:07:36 | INFO     | Abriendo SQLite: switches.db
+22:07:36 | INFO     | Se encontraron 6 dispositivos
+22:08:56 | INFO     | Abriendo SQLite: switches.db
+22:08:56 | INFO     | Dispositivo agregado: JOYSTIC6 (172.16.0.9)
+22:08:56 | INFO     | Abriendo SQLite: switches.db
+22:08:56 | INFO     | Se encontraron 7 dispositivos
+22:09:11 | INFO     | Abriendo SQLite: switches.db
+22:09:11 | INFO     | Se encontraron 3 dispositivos
+22:09:14 | INFO     | Abriendo SQLite: switches.db
+22:09:14 | INFO     | Se encontraron 7 dispositivos
+22:09:18 | INFO     | Abriendo SQLite: switches.db
+22:09:18 | INFO     | Se encontraron 80 dispositivos
+22:09:24 | INFO     | Abriendo SQLite: switches.db
+22:09:24 | INFO     | Se encontraron 80 dispositivos
+22:09:30 | INFO     | Abriendo SQLite: switches.db
+22:09:30 | INFO     | Se encontraron 80 dispositivos
+22:10:41 | INFO     | Session was garbage collected: XJ3NTF1MiwLHvdQp
+22:10:47 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+22:10:47 | INFO     | Starting up TCP server on localhost:54090
+22:10:47 | INFO     | Flet app has started...
+22:10:47 | INFO     | App URL: tcp://localhost:54090
+22:10:47 | INFO     | Starting Flet View app...
+22:10:47 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+22:10:48 | INFO     | App session started
+22:10:48 | INFO     | Abriendo SQLite: switches.db
+22:10:48 | INFO     | Se encontraron 170 dispositivos
+22:10:48 | INFO     | Abriendo SQLite: switches.db
+22:10:48 | INFO     | Abriendo SQLite: switches.db
+22:10:57 | INFO     | Abriendo SQLite: switches.db
+22:10:57 | INFO     | Se encontraron 170 dispositivos
+22:11:07 | INFO     | Abriendo SQLite: switches.db
+22:11:07 | INFO     | Se encontraron 170 dispositivos
+22:12:22 | INFO     | Abriendo SQLite: switches.db
+22:12:22 | INFO     | Se encontraron 0 dispositivos
+22:16:39 | INFO     | Abriendo SQLite: switches.db
+22:16:39 | INFO     | Dispositivo agregado: videowall (172.16.0.20)
+22:16:39 | INFO     | Abriendo SQLite: switches.db
+22:16:39 | INFO     | Se encontraron 1 dispositivos
+22:17:15 | INFO     | Abriendo SQLite: switches.db
+22:17:15 | INFO     | Dispositivo agregado: Matriz de visualizacion (172.16.0.19)
+22:17:15 | INFO     | Abriendo SQLite: switches.db
+22:17:15 | INFO     | Se encontraron 2 dispositivos
+22:17:24 | INFO     | Abriendo SQLite: switches.db
+22:17:24 | INFO     | Se encontraron 172 dispositivos
+22:18:24 | INFO     | Abriendo SQLite: switches.db
+22:18:49 | INFO     | Session was garbage collected: NDaVlAEHyEUKNSTc
+22:23:59 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+22:23:59 | INFO     | Starting up TCP server on localhost:51538
+22:23:59 | INFO     | Flet app has started...
+22:23:59 | INFO     | App URL: tcp://localhost:51538
+22:23:59 | INFO     | Starting Flet View app...
+22:23:59 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+22:23:59 | INFO     | App session started
+22:23:59 | INFO     | Abriendo SQLite: switches.db
+22:23:59 | INFO     | Se encontraron 172 dispositivos
+22:23:59 | INFO     | Abriendo SQLite: switches.db
+22:23:59 | INFO     | Abriendo SQLite: switches.db
+22:23:59 | INFO     | Abriendo SQLite: switches.db
+22:23:59 | INFO     | Se encontraron 172 dispositivos
+22:23:59 | ERROR    | Unhandled error in main() handler
+Traceback (most recent call last):
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\app.py", line 354, in on_session_created
+    main(session.page)
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\main_window.py", line 34, in main
+    statistics_screen = StatisticsScreen(page)
+                        ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\screens\statistics_screen.py", line 67, in __init__
+    self.load_statistics()
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\screens\statistics_screen.py", line 233, in load_statistics
+    self.update()
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\controls\base_control.py", line 375, in update
+    if not self.page:
+           ^^^^^^^^^
+  File "C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\.venv\Lib\site-packages\flet\controls\base_control.py", line 279, in page
+    raise RuntimeError(
+RuntimeError: StatisticsScreen(3085) Control must be added to the page first
+22:25:02 | INFO     | Session was garbage collected: AzGlq3MV5LyjbTjW
+22:25:15 | INFO     | Assets path configured: C:\Users\sebax\OneDrive\Escritorio\TrendenetSSH\GUI\assets
+22:25:15 | INFO     | Starting up TCP server on localhost:51555
+22:25:15 | INFO     | Flet app has started...
+22:25:15 | INFO     | App URL: tcp://localhost:51555
+22:25:15 | INFO     | Starting Flet View app...
+22:25:15 | INFO     | Flet client found in cache: C:\Users\sebax\.flet\client\flet-desktop-full-0.85.3
+22:25:15 | INFO     | App session started
+22:25:15 | INFO     | Abriendo SQLite: switches.db
+22:25:15 | INFO     | Se encontraron 172 dispositivos
+22:25:15 | INFO     | Abriendo SQLite: switches.db
+22:25:15 | INFO     | Abriendo SQLite: switches.db
+22:25:15 | INFO     | Abriendo SQLite: switches.db
+22:25:15 | INFO     | Se encontraron 172 dispositivos
+22:25:23 | INFO     | Abriendo SQLite: switches.db
+22:25:23 | INFO     | Se encontraron 172 dispositivos
+22:25:29 | INFO     | Abriendo SQLite: switches.db
+22:25:29 | INFO     | Se encontraron 172 dispositivos
+22:26:27 | INFO     | Abriendo SQLite: switches.db
+22:26:47 | INFO     | Session was garbage collected: hsI0og5VWC3Jwh32

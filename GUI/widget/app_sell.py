@@ -16,6 +16,7 @@ class AppShell(ft.Container):
         devices_screen,
         process_screen,
         architecture_screen,
+        statistics_screen,
         on_logout,
     ):
         super().__init__(expand=True)
@@ -27,6 +28,7 @@ class AppShell(ft.Container):
         self.devices_screen = devices_screen
         self.process_screen = process_screen
         self.architecture_screen = architecture_screen
+        self.statistics_screen = statistics_screen
 
         # Transiciones suaves al montar shell y navegación.
         self.animate_opacity = 400
@@ -101,6 +103,11 @@ class AppShell(ft.Container):
                     label="Architecture",
                 ),
                 ft.NavigationRailDestination(
+                    icon=ft.Icons.QUERY_STATS_OUTLINED,
+                    selected_icon=ft.Icons.QUERY_STATS,
+                    label="Estadisticas",
+                ),
+                ft.NavigationRailDestination(
                     icon=ft.Icons.LOGOUT,
                     label="Salir",
                 ),
@@ -121,6 +128,10 @@ class AppShell(ft.Container):
 
         elif index == 2:
             self.content_host.content = self.architecture_screen
+
+        elif index == 3:
+            self.statistics_screen.load_statistics()
+            self.content_host.content = self.statistics_screen
 
         else:
             self.on_logout()
