@@ -26,6 +26,8 @@ class ProcessAutomaticsScreen(ft.Container):
         self._page = page
         self.controller = Controller()
         self._library_checkboxes = []
+        self._switch_checkboxes = []
+        self._switch_selection_expanded = False
 
         self.default_commands = [
             "show interface",
@@ -64,7 +66,12 @@ class ProcessAutomaticsScreen(ft.Container):
         )
         self.summary.visible = False
 
-        self.process_ssh_panel = ProcessSSHPanel(on_run=self._run_process)
+        self.process_ssh_panel = ProcessSSHPanel(
+            on_run=self._run_process,
+            on_toggle_switches=self._toggle_switch_selection,
+            on_select_all_switches=self._select_all_switches,
+            on_clear_all_switches=self._clear_switch_selection,
+        )
         self.ssh_commands_panel = SSHCommandsPanel(
             on_add_command=self._add_command_to_library,
             on_reload_library=self._reload_command_library,
@@ -102,6 +109,7 @@ class ProcessAutomaticsScreen(ft.Container):
 
         self._ensure_default_command_library()
         self._load_command_library()
+        self._load_switch_selector()
 
     @property
     def run_button(self):
@@ -157,6 +165,7 @@ class ProcessAutomaticsScreen(ft.Container):
             self._load_command_library()  # recarga justo al mostrar
             self.active_panel.content = self.ssh_commands_panel
         else:
+            self._load_switch_selector()
             self.active_panel.content = self.process_ssh_panel
 
         self.active_panel.update()
@@ -181,6 +190,8 @@ class ProcessAutomaticsScreen(ft.Container):
         def runner():
             try:
                 runner_fn()
+            except Exception as ex:
+                self._append_log(f"ERROR PROCESO: {ex}")
             finally:
                 self.run_button.disabled = False
                 self.run_commands_button.disabled = False
@@ -190,9 +201,123 @@ class ProcessAutomaticsScreen(ft.Container):
         thread.start()
 
     def _run_process(self, _):
+        selected_ids = self._collect_selected_switch_ids()
+
+        if not self._switch_checkboxes:
+            self.summary.visible = True
+            self.summary.content.controls[0].name = ft.Icons.ERROR_OUTLINE
+            self.summary.content.controls[0].color = DANGER
+            self.summary.content.controls[1].color = DANGER
+            self.summary.content.controls[1].value = "No hay switches en estado funcionando para ejecutar"
+            self._page.update()
+            return
+
+        if not selected_ids:
+            self.summary.visible = True
+            self.summary.content.controls[0].name = ft.Icons.ERROR_OUTLINE
+            self.summary.content.controls[0].color = DANGER
+            self.summary.content.controls[1].color = DANGER
+            self.summary.content.controls[1].value = "Selecciona al menos un switch funcionando"
+            self._page.update()
+            return
+
         self._start_process_run(
-            lambda: self.controller.ejecutar_activacion_ssh(self._append_log)
+            lambda: self.controller.ejecutar_activacion_ssh(self._append_log, selected_ids=selected_ids)
         )
+
+    def _is_active_state(self, estado):
+        return (estado or "").strip().lower() in {"funcionando", "en funcionamiento"}
+
+    def _load_switch_selector(self):
+        switches = ExcelManager("switches.db").obtener_switches()
+        activos = [
+            sw
+            for sw in switches
+            if self._is_active_state(sw.get("estado"))
+        ]
+
+        self._switch_checkboxes = []
+        controls = []
+
+        if not activos:
+            controls.append(
+                ft.Text(
+                    "No hay switches funcionando disponibles.",
+                    size=12,
+                    color=SLATE_400,
+                )
+            )
+
+        for sw in activos:
+            nombre = (sw.get("nombre") or "SW").strip()
+            ip = (sw.get("ip") or "sin-ip").strip() or "sin-ip"
+
+            checkbox = ft.Checkbox(
+                label=f"{nombre} ({ip})",
+                value=True,
+                label_style=ft.TextStyle(color=INK, size=12),
+                active_color=AMBER_600,
+                check_color="#0B1D33",
+                on_change=self._on_switch_checkbox_change,
+            )
+
+            self._switch_checkboxes.append((checkbox, sw.get("id")))
+            controls.append(checkbox)
+
+        self.process_ssh_panel.switches_list.controls = controls
+        self._refresh_switch_toggle_label()
+
+    def _refresh_switch_toggle_label(self):
+        selected_count = len(self._collect_selected_switch_ids())
+        total_count = len(self._switch_checkboxes)
+
+        if total_count == 0:
+            text = "Elegir switches (0 disponibles)"
+        else:
+            text = f"Elegir switches ({selected_count}/{total_count} seleccionados)"
+
+        icon_name = ft.Icons.EXPAND_LESS if self._switch_selection_expanded else ft.Icons.EXPAND_MORE
+
+        self.process_ssh_panel.toggle_switches_button.content = ft.Row(
+            [
+                ft.Icon(icon_name, size=16, color=INK),
+                ft.Text(text, color=INK),
+            ],
+            spacing=8,
+            tight=True,
+        )
+
+    def _toggle_switch_selection(self, _):
+        self._switch_selection_expanded = not self._switch_selection_expanded
+        self.process_ssh_panel.switches_panel.visible = self._switch_selection_expanded
+        self._refresh_switch_toggle_label()
+        self.update()
+
+    def _set_switch_selection(self, value):
+        for checkbox, _ in self._switch_checkboxes:
+            checkbox.value = value
+
+        self._refresh_switch_toggle_label()
+        self.update()
+
+    def _select_all_switches(self, _):
+        self._set_switch_selection(True)
+
+    def _clear_switch_selection(self, _):
+        self._set_switch_selection(False)
+
+    def _collect_selected_switch_ids(self):
+        selected = []
+
+        for checkbox, switch_id in self._switch_checkboxes:
+            if checkbox.value and switch_id is not None:
+                selected.append(switch_id)
+
+        return selected
+
+    def _on_switch_checkbox_change(self, _):
+        self._refresh_switch_toggle_label()
+        self.update()
 
     def _ensure_default_command_library(self):
         db = ExcelManager("switches.db")

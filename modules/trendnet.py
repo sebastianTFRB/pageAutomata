@@ -1,5 +1,6 @@
 from modules.logger import log
 import re
+from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
 
 
 class TrendnetSwitch:
@@ -7,7 +8,9 @@ class TrendnetSwitch:
     def __init__(self, page, ip):
         self.page = page
         self.ip = ip
-        self.page.set_default_timeout(10000)
+        # Algunos switches tardan en responder durante guardado/aplicacion.
+        # Subimos el timeout base para evitar falsos positivos por latencia.
+        self.page.set_default_timeout(20000)
 
     def open(self):
 
@@ -121,8 +124,13 @@ class TrendnetSwitch:
             lambda dialog: dialog.accept()
         )
 
-        with self.page.expect_navigation(wait_until="networkidle"):
-            self.page.locator("#submit_save_conf").click()
+        try:
+            with self.page.expect_navigation(wait_until="domcontentloaded", timeout=20000):
+                self.page.locator("#submit_save_conf").click()
+        except PlaywrightTimeoutError:
+            # Es normal que algunos switches tarden o corten brevemente la web
+            # al guardar; continuamos para validar SSH despues.
+            log.warning(f"[{self.ip}] Timeout durante guardado web; se continua con espera de estabilizacion")
 
         log.info(f"[{self.ip}] Configuración guardada")
         log.info(f"URL final: {self.page.url}")

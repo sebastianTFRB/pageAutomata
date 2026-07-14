@@ -16,6 +16,9 @@ from GUI.theme import (
 )
 
 class LoginScreen(ft.Container):
+    FIXED_USER = "SebastianAdmin"
+    FIXED_PASSWORD = "315680"
+
     def __init__(self, on_login):
         super().__init__(expand=True)
         self.on_login = on_login
@@ -189,6 +192,15 @@ class LoginScreen(ft.Container):
             self.update()
             return
 
+        if user != self.FIXED_USER or password != self.FIXED_PASSWORD:
+            self.error_text.value = "ERROR: Usuario o contrasena incorrecta"
+            self.user_input.border_color = DANGER
+            self.password_input.border_color = DANGER
+            self.update()
+            return
+
         self.error_text.value = ""
+        self.user_input.border_color = NAVY_700
+        self.password_input.border_color = NAVY_700
         self.update()
         self.on_login(user)

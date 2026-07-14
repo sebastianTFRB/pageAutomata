@@ -74,9 +74,48 @@ class SSHClient:
 
             datos = self.channel.recv(65535).decode(errors="ignore")
 
-            print(repr(datos))
-
             salida += datos
+
+        return salida
+
+    def _es_prompt(self, texto):
+
+        lineas = [linea.strip() for linea in (texto or "").splitlines() if linea.strip()]
+
+        if not lineas:
+            return False
+
+        ultima = lineas[-1]
+
+        return ultima.endswith("#") or ultima.endswith(">") or ultima.endswith("$")
+
+    def _leer_hasta_prompt(self, timeout=30, idle=1.0):
+
+        inicio = time.time()
+        ultimo_dato = inicio
+        salida = ""
+
+        while (time.time() - inicio) < timeout:
+
+            if self.channel.recv_ready():
+
+                datos = self.channel.recv(65535).decode(errors="ignore")
+
+                if datos:
+
+                    salida += datos
+                    ultimo_dato = time.time()
+
+                    # Algunos switches paginan con "--More--" y esperan espacio.
+                    if "--More--" in datos or "-- More --" in datos:
+                        self.channel.send(" ")
+
+                continue
+
+            if salida and (time.time() - ultimo_dato) >= idle and self._es_prompt(salida):
+                break
+
+            time.sleep(0.1)
 
         return salida
 
@@ -87,9 +126,7 @@ class SSHClient:
 
         self.channel.send(comando + "\n")
 
-        time.sleep(1)
-
-        salida = self._leer()
+        salida = self._leer_hasta_prompt(timeout=40, idle=1.1)
 
         log.info(salida)
         if salida.strip():

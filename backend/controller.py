@@ -14,9 +14,9 @@ class Controller:
         # Mantener compatibilidad con llamadas existentes.
         self.ejecutar_activacion_ssh(callback)
 
-    def ejecutar_activacion_ssh(self, callback):
+    def ejecutar_activacion_ssh(self, callback, selected_ids=None):
 
-        self.service.ejecutar(callback)
+        self.service.ejecutar(callback, selected_ids=selected_ids)
 
     def ejecutar_ssh_commands(self, callback, comandos):
 

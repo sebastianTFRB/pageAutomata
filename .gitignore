@@ -1,0 +1,43 @@
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Python compilado
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# PyInstaller
+build/
+dist/
+
+# Logs
+logs/
+*.log
+
+# Backups generados por la app
+backups/
+
+# Screenshots
+screenshots/
+
+# Variables de entorno y secretos
+.env
+.env.*
+
+# Caché de pytest
+.pytest_cache/
+
+# Cobertura de tests
+.coverage
+htmlcov/
+
+# IDEs
+.idea/
+.vscode/
+
+# Windows
+Thumbs.db
+desktop.ini

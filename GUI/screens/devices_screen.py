@@ -1,4 +1,6 @@
 import threading
+import subprocess
+import webbrowser
 
 import flet as ft
 
@@ -26,7 +28,10 @@ class DevicesScreen(ft.Container):
         self._page = page
         self._switches = []
         self._devices = []
+        self._filtered_devices = []
         self._status_update_running = False
+        self._current_page = 1
+        self._page_size = 50
         self.status_progress_dialog = StatusUpdateProgressDialog(on_state_change=self._refresh_ui)
 
         self.table = ft.DataTable(
@@ -79,6 +84,87 @@ class DevicesScreen(ft.Container):
             focused_border_color=AMBER_600,
             label_style=ft.TextStyle(color=SLATE_400),
             on_select=self._reload,
+        )
+        self.filter_ssh = ft.Dropdown(
+            label="Filtro SSH",
+            width=180,
+            options=[
+                ft.DropdownOption(key="todos", text="Todos"),
+                ft.DropdownOption(key="activo", text="Activo"),
+                ft.DropdownOption(key="inactivo", text="Inactivo"),
+            ],
+            value="todos",
+            color=INK,
+            border_color=ft.Colors.with_opacity(0.16, "#FFFFFF"),
+            focused_border_color=AMBER_600,
+            label_style=ft.TextStyle(color=SLATE_400),
+            on_select=self._reload,
+        )
+        self.filter_estado = ft.Dropdown(
+            label="Filtro Estado",
+            width=180,
+            options=[
+                ft.DropdownOption(key="todos", text="Todos"),
+                ft.DropdownOption(key="funcionando", text="Funcionando"),
+                ft.DropdownOption(key="inactivo", text="Inactivo"),
+            ],
+            value="todos",
+            color=INK,
+            border_color=ft.Colors.with_opacity(0.16, "#FFFFFF"),
+            focused_border_color=AMBER_600,
+            label_style=ft.TextStyle(color=SLATE_400),
+            on_select=self._reload,
+        )
+        self.status_scope = ft.Dropdown(
+            label="Actualizar estatus de",
+            width=220,
+            options=[
+                ft.DropdownOption(key="todos", text="Todos los devices"),
+                ft.DropdownOption(key="switch", text="Switch"),
+                ft.DropdownOption(key="camara", text="Camara"),
+                ft.DropdownOption(key="rack", text="Rack"),
+                ft.DropdownOption(key="workstation", text="Workstation"),
+                ft.DropdownOption(key="videowall", text="Videowall"),
+            ],
+            value="todos",
+            color=INK,
+            border_color=ft.Colors.with_opacity(0.16, "#FFFFFF"),
+            focused_border_color=AMBER_600,
+            label_style=ft.TextStyle(color=SLATE_400),
+        )
+        self.page_size_selector = ft.Dropdown(
+            label="Filas por pagina",
+            width=160,
+            options=[
+                ft.DropdownOption(key="25"),
+                ft.DropdownOption(key="50"),
+                ft.DropdownOption(key="100"),
+            ],
+            value="50",
+            color=INK,
+            border_color=ft.Colors.with_opacity(0.16, "#FFFFFF"),
+            focused_border_color=AMBER_600,
+            label_style=ft.TextStyle(color=SLATE_400),
+            on_select=self._on_page_size_change,
+        )
+        self.page_info = ft.Text("Pagina 1/1", size=12, color=SLATE_400)
+        self.prev_page_button = ft.OutlinedButton(
+            content=ft.Row(
+                [ft.Icon(ft.Icons.CHEVRON_LEFT, size=16, color=AMBER_400), ft.Text("Anterior", color=INK)],
+                spacing=6,
+                tight=True,
+            ),
+            on_click=self._go_prev_page,
+            style=ft.ButtonStyle(side=ft.BorderSide(1, AMBER_600)),
+        )
+        self.next_page_button = ft.OutlinedButton(
+            content=ft.Row(
+                [ft.Text("Siguiente", color=INK), ft.Icon(ft.Icons.CHEVRON_RIGHT, size=16, color=AMBER_400)],
+                spacing=6,
+                tight=True,
+            ),
+            on_click=self._go_next_page,
+            style=ft.ButtonStyle(side=ft.BorderSide(1, AMBER_600)),
         )
 
         self.input_nombre = ft.TextField(label="Nombre *", width=220, **field_style)
@@ -166,7 +252,20 @@ class DevicesScreen(ft.Container):
                 ft.Text("Listado de dispositivos y estado actual", size=13, color=SLATE_400),
                 ft.Row([
                     self.filter_tipo,
-                ]),
+                    self.filter_ssh,
+                    self.filter_estado,
+                ], wrap=True),
+                ft.Row(
+                    [
+                        self.page_size_selector,
+                        self.prev_page_button,
+                        self.next_page_button,
+                        self.page_info,
+                    ],
+                    wrap=True,
+                    spacing=8,
+                    vertical_alignment=ft.CrossAxisAlignment.CENTER,
+                ),
                 ft.Row(
                     [
                         ft.OutlinedButton(
@@ -196,6 +295,7 @@ class DevicesScreen(ft.Container):
                     ],
                     wrap=True,
                 ),
+                self.status_scope,
                 self.feedback,
                 self.form_container,
                 card(
@@ -247,7 +347,7 @@ class DevicesScreen(ft.Container):
         return "Activo" if str(value).strip().lower() == "true" else "Inactivo"
 
     def _estado_color(self, value):
-        estado = (value or "").strip().lower()
+        estado = self._estado_normalizado(value)
 
         if estado == "funcionando":
             return GREEN_700
@@ -257,6 +357,80 @@ class DevicesScreen(ft.Container):
 
         return SLATE_400
 
+    def _estado_normalizado(self, value):
+        estado = (value or "").strip().lower()
+        if estado == "en funcionamiento":
+            return "funcionando"
+        return estado
+
+    def _open_ping_terminal(self, ip):
+        ip_limpia = (ip or "").strip()
+
+        if not ip_limpia:
+            self.feedback.value = "No se puede abrir ping: IP vacia"
+            self.feedback.color = DANGER
+            self.update()
+            return
+
+        try:
+            subprocess.Popen(f'start "" cmd /k ping -t {ip_limpia}', shell=True)
+            self.feedback.value = f"Ping continuo iniciado para {ip_limpia}"
+            self.feedback.color = GREEN_700
+        except Exception as ex:
+            self.feedback.value = f"Error al abrir CMD ping: {ex}"
+            self.feedback.color = DANGER
+
+        self.update()
+
+    def _open_switch_browser(self, ip):
+        ip_limpia = (ip or "").strip()
+
+        if not ip_limpia:
+            self.feedback.value = "No se puede abrir navegador: IP vacia"
+            self.feedback.color = DANGER
+            self.update()
+            return
+
+        url = f"http://{ip_limpia}"
+
+        try:
+            subprocess.Popen(f'start "" chrome "{url}"', shell=True)
+            self.feedback.value = f"Abriendo switch en Chrome: {url}"
+            self.feedback.color = GREEN_700
+        except Exception:
+            webbrowser.open(url)
+            self.feedback.value = f"Chrome no disponible, abierto con navegador por defecto: {url}"
+            self.feedback.color = SLATE_400
+
+        self.update()
+
+    def _on_ping_icon_click(self, e):
+        self._open_ping_terminal(getattr(e.control, "data", ""))
+
+    def _on_browser_icon_click(self, e):
+        self._open_switch_browser(getattr(e.control, "data", ""))
+
+    def _cumple_filtro_ssh(self, value):
+        filtro_ssh = (self.filter_ssh.value or "todos").strip().lower()
+        if filtro_ssh == "todos":
+            return True
+
+        ssh_activo = str(value).strip().lower() == "true"
+        if filtro_ssh == "activo":
+            return ssh_activo
+        if filtro_ssh == "inactivo":
+            return not ssh_activo
+
+        return True
+
+    def _cumple_filtro_estado(self, value):
+        filtro_estado = (self.filter_estado.value or "todos").strip().lower()
+        if filtro_estado == "todos":
+            return True
+
+        estado = self._estado_normalizado(value)
+        return estado == filtro_estado
+
     def load_switches(self):
         self.load_devices()
 
@@ -264,17 +438,66 @@ class DevicesScreen(ft.Container):
         tipo_filtro = self.filter_tipo.value or "todos"
         db_manager = ExcelManager("switches.db")
         db_manager.abrir()
-        self._devices = db_manager.obtener_dispositivos(tipo_filtro)
-        self._switches = self._devices
+        devices_all = db_manager.obtener_dispositivos(tipo_filtro)
+        self._filtered_devices = [
+            sw for sw in devices_all
+            if self._cumple_filtro_ssh(sw.get("ssh", "false"))
+            and self._cumple_filtro_estado(sw.get("estado", ""))
+        ]
+        self._switches = self._filtered_devices
+
+        self._render_current_page(total_devices=len(devices_all), reset_page=True)
+
+    def _render_current_page(self, total_devices, reset_page=False):
+        if reset_page:
+            self._current_page = 1
+
+        total_filtered = len(self._filtered_devices)
+        if total_filtered == 0:
+            total_pages = 1
+        else:
+            total_pages = (total_filtered + self._page_size - 1) // self._page_size
+
+        if self._current_page > total_pages:
+            self._current_page = total_pages
+
+        start = (self._current_page - 1) * self._page_size
+        end = start + self._page_size
+        self._devices = self._filtered_devices[start:end]
 
         rows = []
         for sw in self._devices:
+            ip_value = sw.get("ip", "")
             rows.append(
                 ft.DataRow(
                     cells=[
                         ft.DataCell(ft.Text(self._tipo_label(sw.get("tipo", "switch")), color="#F5F7FA")),
-                        ft.DataCell(ft.Text(sw.get("nombre", ""), color="#F5F7FA")),
-                        ft.DataCell(ft.Text(sw.get("ip", ""), color="#F5F7FA")),
+                        ft.DataCell(
+                            ft.Row(
+                                [
+                                    ft.Text(sw.get("nombre", ""), color="#F5F7FA"),
+                                    ft.IconButton(
+                                        icon=ft.Icons.TERMINAL,
+                                        icon_color=AMBER_400,
+                                        icon_size=16,
+                                        tooltip="Abrir CMD con ping -t",
+                                        data=ip_value,
+                                        on_click=self._on_ping_icon_click,
+                                    ),
+                                    ft.IconButton(
+                                        icon=ft.Icons.LANGUAGE,
+                                        icon_color=AMBER_400,
+                                        icon_size=16,
+                                        tooltip="Abrir switch en Chrome",
+                                        data=ip_value,
+                                        on_click=self._on_browser_icon_click,
+                                    ),
+                                ],
+                                spacing=4,
+                                tight=True,
+                            )
+                        ),
+                        ft.DataCell(ft.Text(ip_value, color="#F5F7FA")),
                         ft.DataCell(ft.Text(sw.get("usuario", ""), color="#F5F7FA")),
                         ft.DataCell(ft.Text(sw.get("estado", ""), color=self._estado_color(sw.get("estado", "")))),
                         ft.DataCell(ft.Text(self._format_bool_state(sw.get("ssh", "false")), color="#F5F7FA")),
@@ -285,10 +508,51 @@ class DevicesScreen(ft.Container):
             )
 
         self.table.rows = rows
-        self.feedback.value = f"Dispositivos cargados: {len(self._devices)}"
+        if total_filtered == 0:
+            rango_texto = "0-0"
+        else:
+            rango_texto = f"{start + 1}-{start + len(self._devices)}"
+
+        self.page_info.value = f"Pagina {self._current_page}/{total_pages}"
+        self.prev_page_button.disabled = self._current_page <= 1
+        self.next_page_button.disabled = self._current_page >= total_pages
+
+        self.feedback.value = (
+            f"Dispositivos mostrados: {len(self._devices)} | "
+            f"Rango: {rango_texto} | Filtrados: {total_filtered} de {total_devices}"
+        )
 
     def _reload(self, _):
         self.load_devices()
+        self.update()
+
+    def _on_page_size_change(self, _):
+        try:
+            self._page_size = max(1, int(self.page_size_selector.value or "50"))
+        except ValueError:
+            self._page_size = 50
+            self.page_size_selector.value = "50"
+
+        self._render_current_page(total_devices=len(self._filtered_devices), reset_page=True)
+        self.update()
+
+    def _go_prev_page(self, _):
+        if self._current_page <= 1:
+            return
+
+        self._current_page -= 1
+        self._render_current_page(total_devices=len(self._filtered_devices), reset_page=False)
+        self.update()
+
+    def _go_next_page(self, _):
+        total_filtered = len(self._filtered_devices)
+        total_pages = 1 if total_filtered == 0 else (total_filtered + self._page_size - 1) // self._page_size
+
+        if self._current_page >= total_pages:
+            return
+
+        self._current_page += 1
+        self._render_current_page(total_devices=len(self._filtered_devices), reset_page=False)
         self.update()
 
     def _auto_update_status(self, _):
@@ -298,7 +562,8 @@ class DevicesScreen(ft.Container):
             self.update()
             return
 
-        dispositivos = ExcelManager("switches.db").obtener_dispositivos(self.filter_tipo.value or "todos")
+        target_scope = self.status_scope.value or "todos"
+        dispositivos = ExcelManager("switches.db").obtener_dispositivos(target_scope)
         switches_validos = [sw for sw in dispositivos if (sw.get("ip") or "").strip()]
 
         if not switches_validos:
@@ -310,7 +575,7 @@ class DevicesScreen(ft.Container):
         dialog = self.status_progress_dialog
 
         self._status_update_running = True
-        self.feedback.value = "Actualizando estatus..."
+        self.feedback.value = f"Actualizando estatus de: {self._tipo_label(target_scope)}"
         self.feedback.color = SLATE_400
         dialog.open(total=len(switches_validos))
         self._refresh_ui()
@@ -341,11 +606,17 @@ class DevicesScreen(ft.Container):
                     self._refresh_ui()
 
                 self.load_switches()
-                self.feedback.value = f"Estatus actualizado por ping. Funcionando: {ok} | Inactivos: {fail}"
+                self.feedback.value = (
+                    f"Estatus actualizado por ping ({self._tipo_label(target_scope)}). "
+                    f"Funcionando: {ok} | Inactivos: {fail}"
+                )
                 self.feedback.color = GREEN_700
 
                 dialog.finish(
-                    summary=f"Proceso finalizado. Funcionando: {ok} | Inactivos: {fail}",
+                    summary=(
+                        f"Proceso finalizado ({self._tipo_label(target_scope)}). "
+                        f"Funcionando: {ok} | Inactivos: {fail}"
+                    ),
                     ok=True,
                 )
 

@@ -1,3 +1,7 @@
+import os
+import sys
+from pathlib import Path
+
 from playwright.sync_api import sync_playwright
 
 from modules.excel import ExcelManager
@@ -36,7 +40,7 @@ class TrendnetService:
             f"Errores otros: {self.estadisticas['errores_otros']}"
         )
 
-    def ejecutar(self, callback):
+    def ejecutar(self, callback, selected_ids=None):
 
         # Reiniciar contadores para cada ejecucion
         self.estadisticas = {
@@ -55,8 +59,43 @@ class TrendnetService:
         excel.abrir()
 
         switches = excel.obtener_switches()
+        estados_validos = {"funcionando", "en funcionamiento"}
+        switches_activos = [
+            sw
+            for sw in switches
+            if (sw.get("estado") or "").strip().lower() in estados_validos
+        ]
 
-        self.estadisticas["total"] = len(switches)
+        selected_set = None
+        if selected_ids is not None:
+            selected_set = set()
+            for switch_id in selected_ids:
+                try:
+                    selected_set.add(int(switch_id))
+                except (TypeError, ValueError):
+                    continue
+
+        if selected_set is not None:
+            switches_objetivo = []
+            for sw in switches_activos:
+                switch_id = sw.get("id")
+                try:
+                    switch_id = int(switch_id)
+                except (TypeError, ValueError):
+                    continue
+
+                if switch_id in selected_set:
+                    switches_objetivo.append(sw)
+        else:
+            switches_objetivo = switches_activos
+
+        self.estadisticas["total"] = len(switches_objetivo)
+
+        if getattr(sys, "frozen", False):
+            runtime_dir = Path(sys.executable).resolve().parent
+            bundled_browsers = runtime_dir / "ms-playwright"
+            if bundled_browsers.exists():
+                os.environ["PLAYWRIGHT_BROWSERS_PATH"] = str(bundled_browsers)
 
         with sync_playwright() as p:
 
@@ -65,8 +104,17 @@ class TrendnetService:
             )
 
             callback("Iniciando navegador y flujo de automatizacion")
+            callback(f"Switches funcionando detectados: {len(switches_activos)}")
+            callback(f"Switches seleccionados para proceso: {self.estadisticas['total']}")
 
-            for i, datos in enumerate(switches):
+            if self.estadisticas["total"] == 0:
+                callback("No hay switches funcionando seleccionados para procesar")
+                browser.close()
+                callback("FINALIZADO")
+                callback(self.obtener_resumen_texto())
+                return
+
+            for i, datos in enumerate(switches_objetivo):
 
                 callback(
                     f"[{i+1}/{self.estadisticas['total']}] Procesando {datos['nombre']}"
@@ -112,7 +160,7 @@ class TrendnetService:
 
                     callback(f"[{datos['ip']}] Esperando servicio SSH")
 
-                    page.wait_for_timeout(5000)
+                    page.wait_for_timeout(10000)
 
                     ssh = SSHClient(
                         datos["ip"],
